@@ -1,29 +1,10 @@
-# Everything Machines Blog
+Site: https://everythingmachines.blog
+Primary-Content: /md/barndoor-home-test.md
+Alternates: /barndoor-home-test/, /barndoor-home-test.json
+Sitemap: /sitemap.xml
+Last-Modified: 2025-09-19
 
-This site contains technical content about AI, machine learning, and automation.
+Allow: /
+Disallow: /admin
+Disallow: /internal
 
-## Content Structure
-- Homepage: Overview and recent posts
-- Individual posts: /[slug]/ format
-- Sitemap: /sitemap-index.xml
-- Robots: /robots.txt
-
-## Key Topics
-- Artificial Intelligence
-- Machine Learning
-- Automation
-- Technology Analysis
-- Future of Machines
-
-## Content Format
-All posts are written in Markdown with structured frontmatter including:
-- Title and description
-- Publication/update dates
-- Canonical URLs
-- JSON-LD structured data
-
-## Crawling Guidelines
-- All content is publicly accessible
-- Sitemap provides complete URL list
-- Each page includes proper metadata
-- JSON-LD provides structured context
