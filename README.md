@@ -1,39 +1,46 @@
 # Everything Machines Blog
 
-An Astro static site for publishing Obsidian notes with full SEO control.
+A modern Astro static site for publishing technical content about AI, machine learning, and automation with full SEO control.
 
-## Features
+## 🚀 Live Site
 
-- **SEO Optimized**: Per-page control of title, description, canonical URLs, robots meta, and JSON-LD structured data
-- **Obsidian Compatible**: Renders markdown files with frontmatter from Obsidian
-- **Static Site Generation**: Fast, secure, and SEO-friendly static site
-- **Netlify Ready**: Configured for seamless deployment on Netlify
+Visit the blog at: **[everythingmachines.blog](https://everythingmachines.blog)**
 
-## Development
+## ✨ Features
+
+- **🔍 SEO Optimized**: Per-page control of title, description, canonical URLs, robots meta, and JSON-LD structured data
+- **📝 Obsidian Compatible**: Seamlessly renders markdown files with frontmatter from Obsidian
+- **⚡ Static Site Generation**: Fast, secure, and SEO-friendly static site built with Astro
+- **🤖 LLM Friendly**: Includes `llms.txt` for optimal AI crawler indexing
+- **🌐 Netlify Ready**: Configured for automatic deployment on Netlify
+
+## 🛠️ Development
+
+```bash
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Deployment
+
+## 🚀 Deployment
 
 The site is configured for automatic deployment on Netlify:
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Domain: `everythingmachines.blog`
+- **Build command**: `npm run build`
+- **Publish directory**: `dist`
+- **Domain**: `everythingmachines.blog`
+- **Auto-deploy**: Enabled on push to `main` branch
 
-## Adding Content
+## 📝 Adding Content
 
-1. Place your Obsidian `.md` files in `src/content/notes/`
-2. Ensure each note has proper frontmatter with SEO fields
-3. Commit and push - Netlify will auto-deploy
-
-## SEO Features
-
-- Automatic sitemap generation
-- Robots.txt configuration
-- OpenGraph and Twitter Card meta tags
-- JSON-LD structured data
-- Canonical URL management
+1. **Create new posts**: Place your Obsidian `.md` files in `src/content/notes/`
+2. **Add frontmatter**: Ensure each note has proper SEO frontmatter:
+   ```yaml
+   ---
+   title: "Your Post Title"
+   description: "SEO description for search engines"
+   updated: 2025-09-19
+   canonical: "https://everythingmachines.blog/your-post-slug"
+   ---
