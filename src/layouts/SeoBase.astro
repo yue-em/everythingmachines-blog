@@ -1,0 +1,77 @@
+---
+const { title, description, canonical, alt_md, alt_json, is_based_on, faq } = Astro.props;
+const site = {
+  name: "Everything Machines",
+  domain: "https://everythingmachines.blog",
+  image: "https://everythingmachines.blog/social-card.png",
+  logo: "https://everythingmachines.blog/icon.png",
+  published: "2025-09-19",
+  modified: "2025-09-19"
+};
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    {alt_md && <link rel="alternate" type="text/markdown" href={alt_md} />}
+    {alt_json && <link rel="alternate" type="application/json" href={alt_json} />}
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="llms" href="/llms.txt" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={site.image} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context":"https://schema.org","@type":"Organization",
+      name: site.name, url: site.domain, logo: site.logo, sameAs: []
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context":"https://schema.org","@type":"WebPage",
+      name: title, url: canonical, description,
+      isPartOf: {"@type":"WebSite","name": site.name,"url": site.domain},
+      primaryImageOfPage: site.image,
+      datePublished: site.published, dateModified: site.modified
+    })} />
+    {Array.isArray(faq) && faq.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context":"https://schema.org","@type":"FAQPage",
+        mainEntity: faq.map(({ q, a }) => ({
+          "@type":"Question", name: q, acceptedAnswer: {"@type":"Answer", text: a}
+        }))
+      })} />
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context":"https://schema.org","@type":"CreativeWork",
+      name: title, url: canonical, version: "1.0", inLanguage: "en",
+      creator: {"@type":"Organization","name": site.name,"url": site.domain},
+      publisher: {"@type":"Organization","name": site.name,"url": site.domain},
+      accountablePerson: {"@type":"Person","name":"Site Editor"},
+      isBasedOn: is_based_on || canonical,
+      dateCreated: site.published, dateModified: site.modified
+    })} />
+    <style>
+      :root {{ "--maxw":"880px","--fg":"#161617","--muted":"#5a5a5f" }}
+      body {{ margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--fg) }}
+      header,main,footer {{ max-width:var(--maxw); margin:0 auto; padding:20px }}
+      .meta {{ color:var(--muted) }}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>{title}</h1>
+      {description && <p class="meta">{description}</p>}
+    </header>
+    <main><slot /></main>
+    <footer>
+      <p>&copy; {new Date().getFullYear()} {site.name} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">sitemap</a></p>
+    </footer>
+  </body>
+</html>
