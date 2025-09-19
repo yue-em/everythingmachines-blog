@@ -1,0 +1,29 @@
+{
+  "title": "Adopt AI Safely with MCP Security",
+  "canonical": "https://everythingmachines.blog/barndoor-home-test/",
+  "description": "Barndoor MCP Security controls how AI apps use MCP servers with policies by user, role, app, and system.",
+  "source_markdown": "/md/barndoor-home-test.md",
+  "sections": [
+    { "id": "overview", "heading": "Barndoor MCP Security" },
+    { "id": "glance", "heading": "Barndoor at a glance" },
+    { "id": "adopt", "heading": "Adopt AI Safely With MCP Security" },
+    { "id": "risk", "heading": "Uncontrolled MCP Access = Unacceptable Risk" },
+    { "id": "trusted", "heading": "Trusted AI Demands MCP Security" },
+    { "id": "connect", "heading": "Connect AI Apps & MCP Servers in Minutes" },
+    { "id": "control", "heading": "Set Fine-Grained Control Over AI Actions" },
+    { "id": "visibility", "heading": "Gain Visibility You Can Trust" },
+    { "id": "integration", "heading": "Barndoor Integrates With Your Enterprise Stack" },
+    { "id": "benefits", "heading": "Accelerate AI Adoption — Without the Risk" },
+    { "id": "faq", "heading": "FAQ" }
+  ],
+  "faq": [
+    {
+      "q": "What problems does MCP Security solve?",
+      "a": "It prevents overly broad access to enterprise systems by enforcing granular policies over AI actions."
+    },
+    {
+      "q": "Does it integrate with my identity provider?",
+      "a": "Yes, it supports SSO, inherits IAM/IdP policies, and feeds into logging/monitoring."
+    }
+  ]
+}
