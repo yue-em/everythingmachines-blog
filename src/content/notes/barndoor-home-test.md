@@ -1,9 +1,30 @@
 ---
-title: "Barndoor MCP Security"
-description: "Control plane that enforces least-privilege guardrails for AI apps on MCP servers with real-time monitoring and audit logs"
-updated: 2025-09-16
-canonical: "https://everythingmachines.blog/barndoor-mcp-security"
+# uses the Astro layout we’ll add in step 2
+layout: ../../layouts/SeoBase.astro
+
+# SEO
+title: "Adopt AI Safely with MCP Security"
+description: "Barndoor MCP Security controls how AI apps use MCP servers with policies by user, role, app, and system."
+canonical: "https://everythingmachines.blog/barndoor-home-test/"
+
+# alternates for crawlers
+alt_md: "/md/barndoor-home-test.md"
+alt_json: "/barndoor-home-test.json"
+
+# optional provenance
+is_based_on: "https://barndoor.ai/#mcp-security"
+
+# optional structured FAQ (delete if you don’t want it)
+faq:
+  - q: "What problems does MCP Security solve?"
+    a: "It prevents overly broad access by enforcing granular policies over AI actions."
+  - q: "Does it integrate with my IdP?"
+    a: "Yes—SSO, IAM/IdP policy inheritance, and logging/monitoring."
+
+# keep content as usual below…
 ---
+
+
 
 # Barndoor MCP Security
 
