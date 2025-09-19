@@ -1,0 +1,63 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  robots?: string;
+  image?: string;
+  lang?: string;
+  schema?: {
+    type: string;
+    author?: string;
+    datePublished?: string;
+    dateModified?: string;
+  };
+}
+
+const {
+  title,
+  description,
+  canonical,
+  robots = 'index, follow',
+  image,
+  lang = 'en',
+  schema
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const imageURL = image ? new URL(image, Astro.site) : undefined;
+
+const jsonLd = schema ? {
+  "@context": "https://schema.org",
+  "@type": schema.type,
+  "name": title,
+  "description": description,
+  "url": canonicalURL.toString(),
+  ...(schema.author && { "author": { "@type": "Person", "name": schema.author } }),
+  ...(schema.datePublished && { "datePublished": schema.datePublished }),
+  ...(schema.dateModified && { "dateModified": schema.dateModified }),
+  ...(imageURL && { "image": imageURL.toString() })
+} : null;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={robots} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+{imageURL && <meta property="og:image" content={imageURL} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{imageURL && <meta name="twitter:image" content={imageURL} />}
+
+{jsonLd && (
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+)}

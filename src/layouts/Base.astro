@@ -1,0 +1,142 @@
+---
+import HeadSeo from '@/components/HeadSeo.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  robots?: string;
+  image?: string;
+  lang?: string;
+  schema?: {
+    type: string;
+    author?: string;
+    datePublished?: string;
+    dateModified?: string;
+  };
+}
+
+const {
+  title,
+  description,
+  canonical,
+  robots,
+  image,
+  lang = 'en',
+  schema
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <HeadSeo
+      title={title}
+      description={description}
+      canonical={canonical}
+      robots={robots}
+      image={image}
+      lang={lang}
+      schema={schema}
+    />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    
+    <style is:global>
+      :root {
+        --color-text: #0f172a;
+        --color-text-secondary: #475569;
+        --color-text-muted: #64748b;
+        --color-border: rgba(0,0,0,0.05);
+        --color-bg: #ffffff;
+        --color-surface: #f8fafc;
+        --color-accent: #3b82f6;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--color-text);
+        background-color: var(--color-bg);
+        letter-spacing: -0.01em;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 36px;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+      }
+
+      h3 {
+        font-size: 28px;
+        letter-spacing: -0.5px;
+        line-height: 1.4;
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+      }
+
+      h4 {
+        font-size: 24px;
+        letter-spacing: -0.5px;
+        line-height: 1.4;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: var(--color-text);
+      }
+
+      a {
+        color: var(--color-accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        h1 { font-size: 36px; }
+        h2 { font-size: 28px; }
+        h3 { font-size: 24px; }
+        h4 { font-size: 20px; }
+        main { padding: 1rem; }
+      }
+    </style>
+  </body>
+</html>

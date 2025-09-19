@@ -1,0 +1,29 @@
+# Everything Machines Blog
+
+This site contains technical content about AI, machine learning, and automation.
+
+## Content Structure
+- Homepage: Overview and recent posts
+- Individual posts: /[slug]/ format
+- Sitemap: /sitemap-index.xml
+- Robots: /robots.txt
+
+## Key Topics
+- Artificial Intelligence
+- Machine Learning
+- Automation
+- Technology Analysis
+- Future of Machines
+
+## Content Format
+All posts are written in Markdown with structured frontmatter including:
+- Title and description
+- Publication/update dates
+- Canonical URLs
+- JSON-LD structured data
+
+## Crawling Guidelines
+- All content is publicly accessible
+- Sitemap provides complete URL list
+- Each page includes proper metadata
+- JSON-LD provides structured context
