@@ -1,8 +1,8 @@
 ---
-// Homepage with cached content section
+// Homepage - simplified and concise
 const pageData = {
   title: "Everything Machines Blog",
-  description: "Exploring AI, automation, and the future of technology",
+  description: "everything.machines",
   canonicalUrl: "https://everythingmachines.blog/"
 };
 
@@ -56,39 +56,30 @@ const featuredCache = [
   </nav>
 
   <main class="max-w-6xl mx-auto px-4 py-8">
-    <!-- Hero Section -->
-    <div class="text-center mb-16">
-      <h1 class="text-5xl font-bold text-gray-900 mb-6">Everything Machines</h1>
-      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-        Exploring AI, automation, and the future of technology. Curating insights from across the web.
-      </p>
-      <div class="flex items-center justify-center space-x-4">
+    <!-- Hero Section - Simplified -->
+    <div class="text-center mb-12">
+      <h1 class="text-6xl font-bold text-gray-900 mb-4">everything.machines</h1>
+      <div class="flex items-center justify-center space-x-4 mt-8">
         <a href="/cache/" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-          Browse Cached Content
-        </a>
-        <a href="#featured-cache" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
-          See Latest
+          Browse Cache
         </a>
       </div>
     </div>
 
-    <!-- Featured Cached Content Section -->
-    <section id="featured-cache" class="mb-16">
-      <div class="flex items-center justify-between mb-8">
-        <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-2">Featured Cached Content</h2>
-          <p class="text-gray-600">Recently cached insights from leading AI and tech sources</p>
-        </div>
+    <!-- Featured Cached Content -->
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Latest Cache</h2>
         <a href="/cache/" class="text-blue-600 hover:text-blue-700 font-medium">
-          View All Cache →
+          View All →
         </a>
       </div>
 
-      <div class="grid gap-6">
+      <div class="grid gap-4">
         {featuredCache.map(item => (
           <div class="bg-white rounded-lg border shadow-sm hover:shadow-md transition-shadow overflow-hidden">
             <div class="p-6">
-              <div class="flex items-start justify-between mb-4">
+              <div class="flex items-start justify-between">
                 <div class="flex-1">
                   <div class="flex items-center space-x-2 mb-2">
                     <span class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
@@ -102,9 +93,9 @@ const featuredCache = [
                       {item.title}
                     </a>
                   </h3>
-                  <p class="text-gray-600 mb-4">{item.description}</p>
-                  <div class="flex items-center text-sm text-gray-500">
-                    <span>Last Updated: {item.lastUpdated}</span>
+                  <p class="text-gray-600 mb-3">{item.description}</p>
+                  <div class="text-sm text-gray-500">
+                    Last Updated: {item.lastUpdated}
                   </div>
                 </div>
                 <div class="ml-6">
@@ -112,7 +103,7 @@ const featuredCache = [
                     href={item.url}
                     class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors"
                   >
-                    Read More →
+                    View →
                   </a>
                 </div>
               </div>
@@ -122,58 +113,30 @@ const featuredCache = [
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="mb-16">
-      <div class="bg-white rounded-lg border p-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">What We Do</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">Content Caching</h3>
-            <p class="text-gray-600 mb-4">
-              We preserve valuable content from across the web, creating a searchable archive of AI and technology insights.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">Analysis & Curation</h3>
-            <p class="text-gray-600 mb-4">
-              Our team analyzes and curates the most important developments in AI, automation, and emerging technologies.
-            </p>
-          </div>
+    <!-- Simple Stats -->
+    <section class="mb-12">
+      <div class="grid grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg border p-4 text-center">
+          <div class="text-2xl font-bold text-blue-600 mb-1">1</div>
+          <div class="text-sm text-gray-600">Brand</div>
         </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="mb-16">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg border p-6 text-center">
-          <div class="text-3xl font-bold text-blue-600 mb-2">1</div>
-          <div class="text-gray-600">Brands Cached</div>
+        <div class="bg-white rounded-lg border p-4 text-center">
+          <div class="text-2xl font-bold text-green-600 mb-1">1</div>
+          <div class="text-sm text-gray-600">Page</div>
         </div>
-        <div class="bg-white rounded-lg border p-6 text-center">
-          <div class="text-3xl font-bold text-green-600 mb-2">1</div>
-          <div class="text-gray-600">Pages Archived</div>
-        </div>
-        <div class="bg-white rounded-lg border p-6 text-center">
-          <div class="text-3xl font-bold text-purple-600 mb-2">1</div>
-          <div class="text-gray-600">Categories</div>
+        <div class="bg-white rounded-lg border p-4 text-center">
+          <div class="text-2xl font-bold text-purple-600 mb-1">1</div>
+          <div class="text-sm text-gray-600">Category</div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Simple Footer -->
   <footer class="bg-white border-t mt-16">
-    <div class="max-w-6xl mx-auto px-4 py-8">
-      <div class="flex items-center justify-between">
-        <div>
-          <p class="text-gray-600">&copy; 2025 Everything Machines Blog. All rights reserved.</p>
-        </div>
-        <div class="flex items-center space-x-6">
-          <a href="/cache/" class="text-gray-600 hover:text-blue-600">Cache</a>
-          <a href="/about/" class="text-gray-600 hover:text-blue-600">About</a>
-          <a href="/contact/" class="text-gray-600 hover:text-blue-600">Contact</a>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 py-6">
+      <div class="text-center text-gray-600">
+        <p>&copy; 2025 everything.machines</p>
       </div>
     </div>
   </footer>
