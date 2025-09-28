@@ -1,0 +1,169 @@
+---
+// Cache index page - automatically lists all cached content
+const pageData = {
+  title: "Cached Content | Everything Machines Blog",
+  description: "Browse all cached content from various brands and sources, organized by category.",
+  canonicalUrl: "https://everythingmachines.blog/cache/"
+};
+
+// Manually curated cache entries (can be automated later with file system scanning)
+const cacheEntries = [
+  {
+    brand: "barndoor",
+    brandName: "Barndoor AI",
+    brandUrl: "https://barndoor.ai",
+    categories: [
+      {
+        name: "AI Tools",
+        slug: "ai-tools",
+        pages: [
+          {
+            title: "Clay - AI App Profile",
+            description: "AI-powered data orchestration platform for sales and marketing automation",
+            url: "/cache/barndoor/ai-tools/clay/",
+            lastUpdated: "2025-09-07",
+            cachedDate: "2025-09-28"
+          }
+        ]
+      }
+    ]
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageData.title}</title>
+  <meta name="description" content={pageData.description}>
+  <meta property="og:title" content={pageData.title}>
+  <meta property="og:description" content={pageData.description}>
+  <meta property="og:url" content={pageData.canonicalUrl}>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href={pageData.canonicalUrl}>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm border-b">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600">Everything Machines</a>
+          <span class="text-gray-400">|</span>
+          <span class="text-gray-600">Cached Content</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="/" class="text-gray-600 hover:text-blue-600">← Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Cached Content</h1>
+      <p class="text-xl text-gray-600 mb-6">
+        Browse cached content from various brands and sources, preserved for reference and analysis.
+      </p>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-white rounded-lg p-4 border shadow-sm">
+          <div class="text-2xl font-bold text-blue-600">{cacheEntries.length}</div>
+          <div class="text-gray-600">Brands Cached</div>
+        </div>
+        <div class="bg-white rounded-lg p-4 border shadow-sm">
+          <div class="text-2xl font-bold text-green-600">
+            {cacheEntries.reduce((total, brand) => total + brand.categories.reduce((catTotal, cat) => catTotal + cat.pages.length, 0), 0)}
+          </div>
+          <div class="text-gray-600">Total Pages</div>
+        </div>
+        <div class="bg-white rounded-lg p-4 border shadow-sm">
+          <div class="text-2xl font-bold text-purple-600">
+            {cacheEntries.reduce((total, brand) => total + brand.categories.length, 0)}
+          </div>
+          <div class="text-gray-600">Categories</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cache Entries by Brand -->
+    <div class="space-y-8">
+      {cacheEntries.map(brand => (
+        <div class="bg-white rounded-lg border shadow-sm overflow-hidden">
+          <!-- Brand Header -->
+          <div class="bg-gray-50 px-6 py-4 border-b">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900">{brand.brandName}</h2>
+                <p class="text-gray-600">
+                  Source: <a href={brand.brandUrl} class="text-blue-600 hover:underline" target="_blank" rel="noopener">{brand.brandUrl}</a>
+                </p>
+              </div>
+              <div class="text-right">
+                <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                  {brand.categories.reduce((total, cat) => total + cat.pages.length, 0)} pages
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="p-6">
+            {brand.categories.map(category => (
+              <div class="mb-6 last:mb-0">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                  <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  {category.name}
+                </h3>
+                
+                <div class="grid gap-4">
+                  {category.pages.map(page => (
+                    <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                          <h4 class="text-lg font-medium text-gray-900 mb-2">
+                            <a href={page.url} class="hover:text-blue-600 transition-colors">
+                              {page.title}
+                            </a>
+                          </h4>
+                          <p class="text-gray-600 mb-3">{page.description}</p>
+                          <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span>Last Updated: {page.lastUpdated}</span>
+                            <span>•</span>
+                            <span>Cached: {page.cachedDate}</span>
+                          </div>
+                        </div>
+                        <div class="ml-4">
+                          <a 
+                            href={page.url} 
+                            class="inline-flex items-center px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                          >
+                            View Page →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-12 pt-8 border-t border-gray-200">
+      <div class="text-center text-gray-500">
+        <p class="mb-2">Content cached for reference and analysis purposes</p>
+        <p class="text-sm">All cached content remains property of original sources</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
