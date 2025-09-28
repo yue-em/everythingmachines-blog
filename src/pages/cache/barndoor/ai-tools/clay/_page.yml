@@ -1,51 +1,30 @@
 title: "Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI"
 description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
-brand: "Barndoor.ai"
-originalUrl: "https://barndoor.ai/ai-tools/clay/"
-cachedDate: "2025-09-28"
+canonicalUrl: "https://barndoor.ai/ai-tools/clay/"
+ogImage: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png"
+brand: "barndoor"
+brandDomain: "barndoor.ai"
 lastUpdated: "2025-09-07"
-
-# SEO Metadata
-keywords: 
-  - "Clay AI"
-  - "clay app"
-  - "AI tool review"
-  - "AI software profile"
-  - "sales automation"
-  - "lead generation"
-  - "data enrichment"
-
-# Open Graph
-og:
-  title: "Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI"
-  description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
-  url: "https://barndoor.ai/ai-tools/clay/"
-  type: "website"
-  site_name: "Barndoor.ai - The Control Plane for Agentic AI"
-  image: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png"
+cachedDate: "2025-09-28"
+category: "ai-tools"
+subcategory: "clay"
 
 # Company Information
 company:
   name: "Clay"
-  website: "https://www.clay.com/"
-  logo: "https://logos.barndoor.ai/logos/symbol-logo-clay.png"
-  founded: "2017-07-25"
   type: "Startup"
-  financing: "$102M"
-  
-# Categories and Tags
-categories:
-  - "Sales, Marketing & Growth"
-  - "Agent & Workflow Automation"
+  founded: "2017-07-25"
+  website: "https://www.clay.com/"
+  totalFinancing: "$102M"
+  valuation: "$3.1B"
+  lastFundingRound: "Series C"
 
+# Specializations
 specializations:
   - "AI Research Agents"
   - "Data Enrichment AI"
-  - "AI Formatting"
-  - "AI Conditional Logic"
   - "Lead Scoring AI"
-  - "Intent Signal Processing"
-  - "Workflow Automation AI"
+  - "Workflow Automation"
 
 # Notable Customers
 customers:
@@ -57,30 +36,36 @@ customers:
   - "Vanta"
   - "Verkada"
 
-# Investors
+# Key Investors
 investors:
-  - "Builders VC"
-  - "BoxGroup"
-  - "Boldstart Ventures"
-  - "CSC Upshot"
+  - "Sequoia Capital"
   - "First Round Capital"
   - "Meritech Capital Partners"
-  - "Charge Ventures"
-  - "Sequoia Capital"
+  - "Boldstart Ventures"
 
+# SEO and Social
+seo:
+  keywords:
+    - "Clay AI"
+    - "AI data orchestration"
+    - "sales automation"
+    - "marketing automation"
+    - "lead scoring"
+    - "data enrichment"
+    - "prospect research"
+  
 # Content Structure
 sections:
-  - "Description"
-  - "Notable Customers"
-  - "Problem Clay Solves"
-  - "Pros and Cons"
-  - "Investors"
-  - "Latest News"
+  - "company-overview"
+  - "problem-solution"
+  - "features"
+  - "pros-cons"
+  - "recent-news"
+  - "customers-investors"
 
 # Cache Information
 cache:
-  source: "Barndoor.ai"
-  sourceUrl: "https://barndoor.ai"
-  scrapedAt: "2025-09-28T19:15:00-04:00"
-  contentHash: "clay-barndoor-ai-tools-profile"
+  sourceUrl: "https://barndoor.ai/ai-tools/clay/"
+  scrapedDate: "2025-09-28T19:54:00-04:00"
+  contentHash: "clay-barndoor-ai-tools-20250928"
   version: "1.0"
