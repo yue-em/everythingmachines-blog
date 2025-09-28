@@ -1,0 +1,96 @@
+---
+# Page Metadata for Clay AI Tool Profile Cache
+title: "Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI"
+description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
+canonical_url: "https://barndoor.ai/ai-tools/clay/"
+cache_date: "2025-09-28"
+cache_time: "18:40:04Z"
+
+# Source Information
+source:
+  brand: "Barndoor.ai"
+  domain: "barndoor.ai"
+  original_url: "https://barndoor.ai/ai-tools/clay/"
+  content_type: "AI Tool Profile"
+
+# SEO Metadata
+seo:
+  og_title: "Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI"
+  og_description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
+  og_image: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png"
+  og_url: "https://barndoor.ai/ai-tools/clay/"
+  twitter_card: "summary_large_image"
+
+# Subject Information
+subject:
+  company_name: "Clay"
+  company_type: "Startup"
+  founded_date: "2017-07-25"
+  website: "https://www.clay.com/"
+  total_financing: "$102M"
+  latest_valuation: "$3.1B"
+  description: "AI-powered data orchestration platform for go-to-market workflows"
+
+# Specializations
+specializations:
+  - "AI Research Agents"
+  - "Data Enrichment AI"
+  - "AI Formatting"
+  - "AI Conditional Logic"
+  - "Lead Scoring AI"
+  - "Intent Signal Processing"
+  - "Workflow Automation AI"
+
+# Notable Customers
+customers:
+  - "Canva"
+  - "HubSpot"
+  - "Notion"
+  - "Rippling"
+  - "OpenAI"
+  - "Vanta"
+  - "Verkada"
+
+# Investors
+investors:
+  - "Builders VC"
+  - "BoxGroup"
+  - "Boldstart Ventures"
+  - "CSC Upshot"
+  - "First Round Capital"
+  - "Meritech Capital Partners"
+  - "Charge Ventures"
+  - "Sequoia Capital"
+
+# Recent News
+recent_news:
+  - date: "2025-08"
+    headline: "Clay Raises $100M Series C at $3.1B Valuation"
+    summary: "Clay successfully raised $100 million in Series C funding, bringing the company's valuation to $3.1 billion."
+
+# File Structure
+files:
+  wrapper: "index.html"
+  content: "content.html"
+  metadata: "_page.yml"
+
+# Cache Settings
+cache:
+  enabled: true
+  last_updated: "2025-09-28T18:40:04Z"
+  update_frequency: "weekly"
+  auto_refresh: false
+
+# Tags
+tags:
+  - "AI Tools"
+  - "Sales Automation"
+  - "Data Enrichment"
+  - "Lead Generation"
+  - "Go-to-Market"
+  - "Workflow Automation"
+  - "B2B Software"
+  - "Startup"
+  - "Series C"
+  - "Barndoor AI"
+---
