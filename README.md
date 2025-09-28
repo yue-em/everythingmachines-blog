@@ -1,46 +1,41 @@
 # Everything Machines Blog
 
-A modern Astro static site for publishing technical content about AI, machine learning, and automation with full SEO control.
+This repository powers **[everythingmachines.blog](https://everythingmachines.blog)** — a static site designed to host **content caches** for various external sites.  
+
+The goal is to make content **readable by machines (LLMs, AI crawlers, search engines)** with consistent canonical references, JSON-LD, and SEO metadata. Pages here serve as structured wrappers of original content, enabling both humans and machines to consume the same context while preserving attribution.
+
+---
 
 ## 🚀 Live Site
+Visit: **[everythingmachines.blog](https://everythingmachines.blog)**
 
-Visit the blog at: **[everythingmachines.blog](https://everythingmachines.blog)**
+---
 
-## ✨ Features
+## ✨ Purpose & Features
 
-- **🔍 SEO Optimized**: Per-page control of title, description, canonical URLs, robots meta, and JSON-LD structured data
-- **📝 Obsidian Compatible**: Seamlessly renders markdown files with frontmatter from Obsidian
-- **⚡ Static Site Generation**: Fast, secure, and SEO-friendly static site built with Astro
-- **🤖 LLM Friendly**: Includes `llms.txt` for optimal AI crawler indexing
-- **🌐 Netlify Ready**: Configured for automatic deployment on Netlify
+- **🤖 Machine-Readable Caches**  
+  Each page mirrors content from an external URL (e.g., product page, blog post) and points canonical/OG/JSON-LD back to the source.
+
+- **🔍 SEO & Crawler Optimized**  
+  Supports per-page control of title, description, canonical URL, robots meta, and JSON-LD.  
+  Includes `llms.txt` for AI crawler indexing.
+
+- **📝 Markdown + HTML Workflow**  
+  Every cached page includes:  
+  - `source.md` → body text of the page (markdown)  
+  - `_page.yml` → metadata (URL, title, description, lastmod, brand info)  
+  - `index.html` → wrapper with SEO + structured data  
+
+- **⚡ Astro + Static Site Generation**  
+  Built with Astro for performance, security, and SEO-friendly output.
+
+- **🌐 Netlify Ready**  
+  Automatic deployments from GitHub → Netlify on each push.
+
+---
 
 ## 🛠️ Development
 
 ```bash
-
-```bash
 npm install
 npm run dev
-```
-
-
-## 🚀 Deployment
-
-The site is configured for automatic deployment on Netlify:
-
-- **Build command**: `npm run build`
-- **Publish directory**: `dist`
-- **Domain**: `everythingmachines.blog`
-- **Auto-deploy**: Enabled on push to `main` branch
-
-## 📝 Adding Content
-
-1. **Create new posts**: Place your Obsidian `.md` files in `src/content/notes/`
-2. **Add frontmatter**: Ensure each note has proper SEO frontmatter:
-   ```yaml
-   ---
-   title: "Your Post Title"
-   description: "SEO description for search engines"
-   updated: 2025-09-19
-   canonical: "https://everythingmachines.blog/your-post-slug"
-   ---
