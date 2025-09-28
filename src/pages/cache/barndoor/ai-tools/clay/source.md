@@ -1,39 +1,26 @@
 # Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI
 
-**Source:** [Barndoor.ai](https://barndoor.ai/ai-tools/clay/)  
-**Cached:** September 28, 2025  
-**Original URL:** https://barndoor.ai/ai-tools/clay/
+*Source: https://barndoor.ai/ai-tools/clay/*  
+*Cached on: September 28, 2025*
 
----
+## Overview
 
-## Company Overview
+Clay is an AI-powered data orchestration platform designed for sales and marketing automation. The platform consolidates over 130 data sources to help teams automate prospect research, data enrichment, and outreach workflows.
 
-**Clay** is an AI-powered data orchestration platform that automates lead research and outreach by enriching prospect data from 100+ sources, using AI research agents, and personalizing sales workflows at scale.
+## Company Information
 
-### Key Details
-- **Founded:** July 25, 2017
-- **Company Type:** Startup
-- **Total Financing:** $102M
-- **Website:** https://www.clay.com/
-
-### Categories
-- Sales, Marketing & Growth
-- Agent & Workflow Automation
+- **Company Type**: Startup
+- **Founded**: July 25, 2017
+- **Total Financing**: $102M
+- **Latest Valuation**: $3.1B (Series C)
+- **Website**: https://www.clay.com/
 
 ## Specializations
 
-Clay specializes in:
 - AI Research Agents
 - Data Enrichment AI
-- AI Formatting
-- AI Conditional Logic
 - Lead Scoring AI
-- Intent Signal Processing
-- Workflow Automation AI
-
-## Description
-
-Clay's AI-powered data orchestration platform integrates seamlessly with CRMs and marketing tools to streamline go-to-market workflows. It combines multi-provider data enrichment with intelligent lead scoring, custom signal detection, and automated outbound sequences. This empowers RevOps, sales, and growth marketing teams to conduct real-time prospect research, generate personalized copywriting, and automate trigger-based outreach, driving efficiency and revenue.
+- Workflow Automation
 
 ## Notable Customers
 
@@ -46,70 +33,67 @@ Clay serves several high-profile customers including:
 - Vanta
 - Verkada
 
-## Problem Clay Solves
+## Key Investors
 
-Sales teams frequently spend valuable hours manually researching prospects across numerous disconnected data sources and tools. This inefficiency slows down deal pipelines and diverts valuable sales time towards data aggregation rather than direct selling. Clay solves this by consolidating over 130 data sources with AI research automation. This allows teams to efficiently build enriched prospect lists and trigger outbound sequences from one unified platform, maximizing their time on revenue-generating activities.
+- Sequoia Capital
+- First Round Capital
+- Meritech Capital Partners
+- Boldstart Ventures
+
+## What Problem Does Clay Solve?
+
+Clay addresses the challenge of manual prospect research and data gathering by consolidating 130+ data sources into a single platform. Instead of juggling multiple tools and manually researching prospects, sales and marketing teams can use Clay's no-code interface to build sophisticated workflows that scale their outreach efforts.
+
+The platform eliminates the need for:
+- Manual data entry and research
+- Switching between multiple data sources
+- Time-consuming lead qualification processes
+- Complex technical integrations
+
+## Key Features
+
+### AI Research Agents
+Automated agents that can research prospects, companies, and market information across multiple data sources.
+
+### Data Enrichment
+Access to 130+ data sources for comprehensive contact and company information enrichment.
+
+### Lead Scoring
+AI-powered lead scoring to prioritize prospects based on various criteria and data points.
+
+### Workflow Automation
+No-code workflow builder that allows teams to create complex automation sequences for outreach and follow-up.
 
 ## Pros and Cons
 
 ### ✅ Pros
+- **Integrated Data Enrichment**: Access to 130+ data sources in one platform
+- **Automated AI Research Workflows**: Reduces manual research time significantly
+- **No-Code Interface**: Accessible to non-technical users for building scalable workflows
+- **Advanced Lead Scoring**: AI-powered scoring helps prioritize prospects effectively
+- **Strong Market Position**: Well-funded with notable customers and investors
 
-**Integrated Data Enrichment Engine:** Clay offers a data enrichment engine, providing access to a vast network of premium data providers and the flexibility to connect existing API keys, ensuring maximum data coverage and quality for prospects.
+### ❌ Cons
+- **Credit-Based Pricing**: Can become expensive with heavy usage
+- **Feature Overlap**: Some functionality overlaps with cheaper, specialized tools
+- **Complex Setup**: Advanced workflows may require significant setup time
+- **Learning Curve**: New users may need time to master the platform
+- **Potential Overkill**: May be too comprehensive for simple use cases
 
-**Automated Outreach Workflows:** Combines database enrichment, AI-powered copywriting, lead scoring, and multi-channel outreach in a single platform for streamlined GTM execution.
+## Recent News
 
-**No-code Scalability:** Enables non-technical GTM teams to design, launch, and adjust complex workflows without coding, accelerating deployment and reducing dependency on engineering.
+**August 2025**: Clay raised $100M in Series C funding at a $3.1B valuation, bringing their total funding to $102M. The round was led by Sequoia Capital with participation from existing investors.
 
-### ⚠️ Cons
+## Social Media & Links
 
-**Credit-Based Cost Structure:** Usage-based credits for enrichment and AI functions can lead to unpredictable monthly costs as volume and feature usage evolve.
+- **Website**: https://www.clay.com/
+- **LinkedIn**: [Clay Company Page]
+- **Twitter**: [Clay Twitter Account]
 
-**Overlapping Tool Functionality:** Core capabilities like workflows and outreach copying can be replicated using cheaper combinations of spreadsheets, open-source automation, and standalone tools.
+## Video Content
 
-**Complex Setup for Optimal Use:** Maximizing ROI requires designing waterfall enrichment flows, customizing AI agents, and integrating with CRM systems, which demands planning and skilled execution.
-
-## Investors
-
-Clay has received funding from notable investors including:
-- Builders VC
-- BoxGroup
-- Boldstart Ventures
-- CSC Upshot
-- First Round Capital
-- Meritech Capital Partners
-- Charge Ventures
-- Sequoia Capital
-
-## Latest News
-
-### AI GTM platform Clay hits $3.1bn valuation after $100m Series C
-**Source:** Verdict | Aug 6, 2025  
-**Link:** https://www.verdict.co.uk/ai-gtm-platform-clay-series-c/
-
-AI go-to-market (GTM) development platform Clay...
-
-### Clay: $100 Million Series C Raised At $3.1 Billion Valuation For AI-Based GTM Development Platform
-**Source:** Pulse 2.0 | Aug 6, 2025  
-**Link:** https://pulse2.com/clay-100-million-series-c-raised-at-3-1-billion-valuation-for-ai-based-gtm-development-platform/
-
-Clay, an AI-based go-to-market (GTM) development...
-
-### Clay, a Sales Tool for the A.I. Era, Raises $100 Million
-**Source:** The New York Times | Aug 5, 2025  
-**Link:** https://www.nytimes.com/2025/08/05/business/dealbook/clay-ai-marketing-fundraise.html
-
-Investors valued the company, which describes...
-
-### AI GTM Leader Clay Raises $100M Series C to Fuel GTM Engineering Roles Industrywide
-**Source:** AFP.com | Aug 5, 2025  
-**Link:** https://www.afp.com/en/infos/ai-gtm-leader-clay-raises-100m-series-c-fuel-gtm-engineering-roles-industrywide
-
-Clay, the leading AI go-to-market (GTM)...
+The original page includes a YouTube video explaining Clay's platform and capabilities, demonstrating how the AI research agents work and showcasing the workflow automation features.
 
 ---
 
-**Last updated:** September 7, 2025
-
-*All research and content is powered by people, with help from AI.*
-
-*All product names, logos and brands are property of their respective owners. Use is for educational and informational purposes only and does not imply endorsement. Links are to third-party sites not affiliated with Barndoor AI.*
+*This content was scraped and cached from barndoor.ai on September 28, 2025. For the most up-to-date information, please visit the original source.*
