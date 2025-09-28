@@ -1,113 +1,181 @@
 ---
-import Base from '@/layouts/Base.astro';
-import { getCollection } from 'astro:content';
+// Homepage with cached content section
+const pageData = {
+  title: "Everything Machines Blog",
+  description: "Exploring AI, automation, and the future of technology",
+  canonicalUrl: "https://everythingmachines.blog/"
+};
 
-const notes = await getCollection('notes');
-const sortedNotes = notes.sort((a, b) => {
-  const dateA = a.data.updated || new Date(0);
-  const dateB = b.data.updated || new Date(0);
-  return dateB.getTime() - dateA.getTime();
-});
+// Featured cached content
+const featuredCache = [
+  {
+    title: "Clay - AI App Profile",
+    description: "AI-powered data orchestration platform for sales and marketing automation",
+    brand: "Barndoor AI",
+    url: "/cache/barndoor/ai-tools/clay/",
+    category: "AI Tools",
+    lastUpdated: "2025-09-07"
+  }
+];
 ---
 
-<Base
-  title="Everything Machines"
-  description="Thoughts and notes on technology, AI, and the future of machines."
-  schema={{
-    type: "WebSite",
-    author: "Everything Machines"
-  }}
->
-  <header>
-    <h1>Everything Machines</h1>
-    <p>Thoughts and notes on technology, AI, and the future of machines.</p>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageData.title}</title>
+  <meta name="description" content={pageData.description}>
+  <meta property="og:title" content={pageData.title}>
+  <meta property="og:description" content={pageData.description}>
+  <meta property="og:url" content={pageData.canonicalUrl}>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href={pageData.canonicalUrl}>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm border-b">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-8">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600">Everything Machines</a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="/cache/" class="text-gray-600 hover:text-blue-600 transition-colors">Cache</a>
+            <a href="/about/" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+            <a href="/contact/" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="/cache/" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Browse Cache
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-  <section class="notes">
-    <h2>Recent Notes</h2>
-    {sortedNotes.length === 0 ? (
-      <p class="empty">No notes published yet. Check back soon!</p>
-    ) : (
-      <ul class="note-list">
-        {sortedNotes.map((note) => (
-          <li class="note-item">
-            <a href={`/${note.slug}/`}>
-              <h3>{note.data.title}</h3>
-              <p>{note.data.description}</p>
-              {note.data.updated && (
-                <time>{note.data.updated.toLocaleDateString()}</time>
-              )}
-            </a>
-          </li>
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-bold text-gray-900 mb-6">Everything Machines</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Exploring AI, automation, and the future of technology. Curating insights from across the web.
+      </p>
+      <div class="flex items-center justify-center space-x-4">
+        <a href="/cache/" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+          Browse Cached Content
+        </a>
+        <a href="#featured-cache" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+          See Latest
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Cached Content Section -->
+    <section id="featured-cache" class="mb-16">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-2">Featured Cached Content</h2>
+          <p class="text-gray-600">Recently cached insights from leading AI and tech sources</p>
+        </div>
+        <a href="/cache/" class="text-blue-600 hover:text-blue-700 font-medium">
+          View All Cache →
+        </a>
+      </div>
+
+      <div class="grid gap-6">
+        {featuredCache.map(item => (
+          <div class="bg-white rounded-lg border shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-4">
+                <div class="flex-1">
+                  <div class="flex items-center space-x-2 mb-2">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+                      {item.category}
+                    </span>
+                    <span class="text-gray-400">•</span>
+                    <span class="text-sm text-gray-500">{item.brand}</span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                    <a href={item.url} class="hover:text-blue-600 transition-colors">
+                      {item.title}
+                    </a>
+                  </h3>
+                  <p class="text-gray-600 mb-4">{item.description}</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <span>Last Updated: {item.lastUpdated}</span>
+                  </div>
+                </div>
+                <div class="ml-6">
+                  <a 
+                    href={item.url}
+                    class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                  >
+                    Read More →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
-    )}
-  </section>
+      </div>
+    </section>
 
-  <style>
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--color-border);
-    }
+    <!-- About Section -->
+    <section class="mb-16">
+      <div class="bg-white rounded-lg border p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">What We Do</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Content Caching</h3>
+            <p class="text-gray-600 mb-4">
+              We preserve valuable content from across the web, creating a searchable archive of AI and technology insights.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Analysis & Curation</h3>
+            <p class="text-gray-600 mb-4">
+              Our team analyzes and curates the most important developments in AI, automation, and emerging technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    header p {
-      font-size: 18px;
-      color: var(--color-text-secondary);
-      margin-top: 0.5rem;
-    }
+    <!-- Stats Section -->
+    <section class="mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg border p-6 text-center">
+          <div class="text-3xl font-bold text-blue-600 mb-2">1</div>
+          <div class="text-gray-600">Brands Cached</div>
+        </div>
+        <div class="bg-white rounded-lg border p-6 text-center">
+          <div class="text-3xl font-bold text-green-600 mb-2">1</div>
+          <div class="text-gray-600">Pages Archived</div>
+        </div>
+        <div class="bg-white rounded-lg border p-6 text-center">
+          <div class="text-3xl font-bold text-purple-600 mb-2">1</div>
+          <div class="text-gray-600">Categories</div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    .notes h2 {
-      margin-bottom: 1.5rem;
-    }
-
-    .empty {
-      text-align: center;
-      color: var(--color-text-muted);
-      font-style: italic;
-      padding: 2rem;
-    }
-
-    .note-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .note-item {
-      margin-bottom: 1.5rem;
-    }
-
-    .note-item a {
-      display: block;
-      padding: 1.5rem;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.2s ease;
-    }
-
-    .note-item a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-decoration: none;
-    }
-
-    .note-item h3 {
-      margin-bottom: 0.5rem;
-      color: var(--color-text);
-    }
-
-    .note-item p {
-      color: var(--color-text-secondary);
-      margin-bottom: 0.5rem;
-    }
-
-    .note-item time {
-      font-size: 14px;
-      color: var(--color-text-muted);
-    }
-  </style>
-</Base>
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-gray-600">&copy; 2025 Everything Machines Blog. All rights reserved.</p>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="/cache/" class="text-gray-600 hover:text-blue-600">Cache</a>
+          <a href="/about/" class="text-gray-600 hover:text-blue-600">About</a>
+          <a href="/contact/" class="text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
