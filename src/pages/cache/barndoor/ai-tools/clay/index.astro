@@ -1,7 +1,4 @@
 ---
-import Layout from '../../../../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-
 // Get the page metadata
 const pageData = {
   title: "Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
@@ -13,15 +10,25 @@ const pageData = {
 };
 ---
 
-<Layout 
-  title={pageData.title}
-  description={pageData.description}
-  ogImage={pageData.ogImage}
-  canonicalUrl={pageData.canonicalUrl}
->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageData.title}</title>
+  <meta name="description" content={pageData.description}>
+  <meta property="og:title" content={pageData.title}>
+  <meta property="og:description" content={pageData.description}>
+  <meta property="og:image" content={pageData.ogImage}>
+  <meta property="og:url" content={pageData.canonicalUrl}>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href={pageData.canonicalUrl}>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
   <main class="max-w-4xl mx-auto px-4 py-8">
     <!-- Brand Header -->
-    <div class="mb-8 p-4 bg-gray-50 rounded-lg">
+    <div class="mb-8 p-4 bg-gray-100 rounded-lg">
       <div class="flex items-center justify-between">
         <div>
           <h1 class="text-2xl font-bold text-gray-900 mb-2">Clay - AI App Profile</h1>
@@ -37,7 +44,7 @@ const pageData = {
     <!-- Content Container -->
     <div class="prose prose-lg max-w-none">
       <!-- Clay Company Overview -->
-      <div class="bg-white border rounded-lg p-6 mb-8">
+      <div class="bg-white border rounded-lg p-6 mb-8 shadow-sm">
         <div class="flex items-start justify-between mb-4">
           <div>
             <h2 class="text-3xl font-bold text-gray-900 mb-2">Clay</h2>
@@ -81,7 +88,7 @@ const pageData = {
       </div>
 
       <!-- Problem & Solution -->
-      <div class="bg-white border rounded-lg p-6 mb-8">
+      <div class="bg-white border rounded-lg p-6 mb-8 shadow-sm">
         <h3 class="text-xl font-bold text-gray-900 mb-4">What Clay Solves</h3>
         <p class="text-gray-700 mb-4">
           Clay consolidates 130+ data sources to automate prospect research and outreach. The platform eliminates the need for manual data gathering by providing AI-powered research agents that can find, enrich, and score leads automatically.
@@ -116,7 +123,7 @@ const pageData = {
       </div>
 
       <!-- Recent News -->
-      <div class="bg-white border rounded-lg p-6 mb-8">
+      <div class="bg-white border rounded-lg p-6 mb-8 shadow-sm">
         <h3 class="text-xl font-bold text-gray-900 mb-4">Recent News</h3>
         <p class="text-gray-700">
           <strong>August 2025:</strong> Clay raised $100M in Series C funding at a $3.1B valuation, bringing their total funding to $102M. The round was led by Sequoia Capital with participation from existing investors.
@@ -132,4 +139,5 @@ const pageData = {
       </div>
     </div>
   </main>
-</Layout>
+</body>
+</html>
