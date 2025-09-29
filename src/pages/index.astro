@@ -1,140 +1,42 @@
 ---
-// Homepage - simplified and concise
-const pageData = {
-  title: "Everything Machines Blog",
-  description: "everything.machines",
-  canonicalUrl: "https://everythingmachines.blog/"
-};
-
-// Featured cached content
-const featuredCache = [
-  {
-    title: "Clay - AI App Profile",
-    brand: "Barndoor AI",
-    url: "/cache/barndoor/ai-tools/clay/",
-    category: "AI Tools",
-    lastUpdated: "2025-09-07"
-  }
-];
+const yr = new Date().getFullYear();
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{pageData.title}</title>
-  <meta name="description" content={pageData.description}>
-  <meta property="og:title" content={pageData.title}>
-  <meta property="og:description" content={pageData.description}>
-  <meta property="og:url" content={pageData.canonicalUrl}>
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href={pageData.canonicalUrl}>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Everything Machines – Content Cache</title>
+  <meta name="description" content="Machine-readable content caches for LLMs and crawlers." />
+  <style>
+    :root { --maxw: 880px; --fg:#161617; --muted:#5a5a5f; }
+    body { margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--fg); }
+    main, header, footer { max-width:var(--maxw); margin:0 auto; padding:24px; }
+    h1 { margin-bottom: 8px; }
+    .meta { color: var(--muted); margin-top: 0; }
+    ul { padding-left: 18px; }
+    a { color:#0b65c2; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-  <!-- Navigation -->
-  <nav class="bg-white shadow-sm border-b">
-    <div class="max-w-6xl mx-auto px-4 py-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-8">
-          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600">Everything Machines</a>
-          <div class="hidden md:flex items-center space-x-6">
-            <a href="/cache/" class="text-gray-600 hover:text-blue-600 transition-colors">Cache</a>
-          </div>
-        </div>
-        <div class="flex items-center space-x-4">
-          <a href="/cache/" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Browse Cache
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+<body>
+  <header>
+    <h1>Everything Machines – Content Cache</h1>
+    <p class="meta">LLM-friendly cached pages with canonical references to originals.</p>
+  </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-8">
-    <!-- Hero Section - Simplified -->
-    <div class="text-center mb-12">
-      <h1 class="text-6xl font-bold text-gray-900 mb-4">everything.machines</h1>
-      <div class="flex items-center justify-center space-x-4 mt-8">
-        <a href="/cache/" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-          Browse Cache
-        </a>
-      </div>
-    </div>
-
-    <!-- Featured Cached Content -->
-    <section class="mb-12">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-gray-900">Latest Cache</h2>
-        <a href="/cache/" class="text-blue-600 hover:text-blue-700 font-medium">
-          View All →
-        </a>
-      </div>
-
-      <div class="grid gap-4">
-        {featuredCache.map(item => (
-          <div class="bg-white rounded-lg border shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <div class="flex-1">
-                  <div class="flex items-center space-x-2 mb-2">
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
-                      {item.category}
-                    </span>
-                    <span class="text-gray-400">•</span>
-                    <span class="text-sm text-gray-500">{item.brand}</span>
-                  </div>
-                  <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                    <a href={item.url} class="hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </a>
-                  </h3>
-                  <div class="text-sm text-gray-500">
-                    Last Updated: {item.lastUpdated}
-                  </div>
-                </div>
-                <div class="ml-6">
-                  <a 
-                    href={item.url}
-                    class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-                  >
-                    View →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <!-- Simple Stats -->
-    <section class="mb-12">
-      <div class="grid grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg border p-4 text-center">
-          <div class="text-2xl font-bold text-blue-600 mb-1">1</div>
-          <div class="text-sm text-gray-600">Brand</div>
-        </div>
-        <div class="bg-white rounded-lg border p-4 text-center">
-          <div class="text-2xl font-bold text-green-600 mb-1">1</div>
-          <div class="text-sm text-gray-600">Page</div>
-        </div>
-        <div class="bg-white rounded-lg border p-4 text-center">
-          <div class="text-2xl font-bold text-purple-600 mb-1">1</div>
-          <div class="text-sm text-gray-600">Category</div>
-        </div>
-      </div>
-    </section>
+  <main>
+    <h2>Available Caches</h2>
+    <ul>
+      <li><a href="/cache/barndoor/">Barndoor – Homepage Cache</a></li>
+      <li><a href="/cache/barndoor/ai-tools/clay/">Barndoor – Clay Page</a></li>
+      <!-- Add more links here as you add caches -->
+    </ul>
   </main>
 
-  <!-- Simple Footer -->
-  <footer class="bg-white border-t mt-16">
-    <div class="max-w-6xl mx-auto px-4 py-6">
-      <div class="text-center text-gray-600">
-        <p>&copy; 2025 everything.machines</p>
-      </div>
-    </div>
+  <footer>
+    <small>© {yr} Everything Machines</small>
   </footer>
 </body>
 </html>
