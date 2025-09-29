@@ -1,5 +1,14 @@
 ---
 const yr = new Date().getFullYear();
+
+// Find all cache index pages at build time
+const files = Object.keys(import.meta.glob('./cache/**/index.astro', { eager: true }));
+
+// Convert file paths to site URLs: ./cache/foo/bar/index.astro -> /cache/foo/bar/
+const links = files
+  .map(p => p.replace('./cache', '/cache').replace(/\/index\.astro$/, '/'))
+  // Optional: order root brand path before its subpages
+  .sort((a, b) => a.localeCompare(b));
 ---
 
 <!doctype html>
@@ -29,11 +38,18 @@ const yr = new Date().getFullYear();
   <main>
     <h2>Available Caches</h2>
     <ul>
-      <li><a href="/cache/barndoor/">Barndoor – Homepage Cache</a></li>
-      <li><a href="/cache/barndoor/ai-tools/clay/">Barndoor – Clay Page</a></li>
-      <!-- Add more links here as you add caches -->
+      {links.map(href => (
+        <li><a href={href}>{href}</a></li>
+      ))}
     </ul>
   </main>
+
+  <footer>
+    <small>© {yr} Everything Machines</small>
+  </footer>
+</body>
+</html>
+
 
   <footer>
     <small>© {yr} Everything Machines</small>
