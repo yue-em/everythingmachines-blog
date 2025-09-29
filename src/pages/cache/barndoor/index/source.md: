@@ -1,115 +1,16 @@
-[Skip to main content](https://barndoor.ai/#brx-content) [Skip to footer](https://barndoor.ai/#brx-footer)
+<!-- Source: https://barndoor.ai/ -->
+<!-- Retrieved: 2025-09-28 -->
+<!-- Notes: Body-only cache for LLMs (no <head>/scripts). Replace with full live copy when convenient. -->
 
-# Adopt AI Safely  With MCP Security
+# Adopt AI Safely with MCP Security
 
-Controlled MCP access gives you the guardrails to trust AI apps with your most important enterprise systems and drive results.
+Barndoor is the control plane that governs how AI apps interact with MCP servers — enforcing least-privilege policies by user, role, app, and system, with real-time monitoring and auditable logs.
 
+## Highlights
+- Policy enforcement across users, roles, apps, and systems  
+- Fine-grained control over read/write/delete actions  
+- Real-time visibility and audit trails  
+- Integrates with SSO/IdP, logging, and monitoring
+
+## Call to Action
 [Get a Demo](https://barndoor.ai/get-a-demo/)
-
-![Dashboard showing AI agent management interface with real-time monitoring and control panels](https://barndoor.ai/wp-content/uploads/2025/05/Homepage-Hero-RAW-1024x588.png)
-
-## Uncontrolled MCP Access = Unacceptable Risk
-
-#### MCP Unlocks Context
-
-It lets AI apps connect to core 
-business systems.
-
-#### But Access Is Wide Open
-
-AI apps can read, write, or delete 
-without limits.
-
-#### So Adoption Gets Stalled
-
-Enterprises silo AI, limiting its potential.
-
-## Trusted AI Demands MCP Security
-
-Barndoor is the control plane that governs how AI apps use MCP servers — enforcing policies by user, role, app, and system so you can adopt AI safely.
-
-![Flowchart showing how Barndoor.ai enforces policies to allow or block access from humans, roles, actions, services, and AI apps to MCP servers like Salesforce, Slack, Google, Box, and Atlassian.](https://barndoor.ai/wp-content/uploads/2025/09/Homepage-New-Sep-16th-Desktop.webp)
-
-### Faster Time to Value
-
-Accelerate AI adoption with seamless integration of AI apps & MCP servers.
-
-### Safer AI Adoption
-
-Enhance security and reduce business risk by ensuring AI tools act only within guardrails.
-
-### Scale Confidently
-
-Scale AI usage with centralized visibility and management.
-
-## Connect AI Apps & MCP Servers in Minutes
-
-#### Connect Every AI App
-
-Bring both internal and third-party AI apps into Barndoor with just a few clicks.
-
-#### Manage MCP Servers
-
-Create secure connections and switch access on or off anytime.
-
-![](data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%201980%201375\'%3E%3C/svg%3E)
-
-## Set Fine-Grained Control Over AI Actions
-
-![](data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%201024%20642\'%3E%3C/svg%3E)
-
-#### Prevent Costly Mistakes
-
-Control MCP tool calls to stop AI from destructive actions like unauthorized deletes or writes.
-
-#### Align AI to Policy
-
-Ensure every action maps to the right system, role, and user permissions.
-
-## Gain Visibility You Can Trust
-
-#### Control From One Place
-
-Full audit trails and real-time alerts keep you compliant and ahead of risk.
-
-#### Maximize AI’s Impact
-
-Track usage, learn what works, and adjust policies to unlock more value.
-
-![](data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%201980%201453\'%3E%3C/svg%3E)
-
-## Barndoor Integrates With Your Enterprise Stack
-
-Connects to MCP servers with built-in auth
-
-Supports SSO providers
-
-Inherits IAM and IdP polices
-
-Feeds into logging & monitoring systems
-
-[Get a Demo](https://barndoor.ai/get-a-demo/)
-
-![](data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%202500%202880\'%3E%3C/svg%3E)[Get a Demo](https://barndoor.ai/?p=2780)
-
-## Accelerate AI Adoption — Without the Risk
-
-### IT Admins
-
-Register MCP servers, create granular policies, and manage access in one place — with full visibility into usage.
-
-### Security Teams
-
-Monitor agent behavior in real time with immutable logs, drift detection, and compliance-ready reporting.
-
-### Business Teams
-
-Get access to pre-approved AI tools and agents — turning AI from a risk into a growth driver.
-
-[Get a Demo](https://barndoor.ai/get-a-demo/)
-
-We use cookies
-
-By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
-
-OK
