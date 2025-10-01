@@ -1,15 +1,25 @@
-title: "Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI"
+# Core metadata used by index.astro
+page_url: "https://barndoor.ai/ai-tools/clay/"
+title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI"
 description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
-canonicalUrl: "https://barndoor.ai/ai-tools/clay/"
-ogImage: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png"
-brand: "barndoor"
-brandDomain: "barndoor.ai"
-lastUpdated: "2025-09-07"
-cachedDate: "2025-09-28"
-category: "ai-tools"
-subcategory: "clay"
+og_image: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png"
+lastmod: "2025-10-01"
+brand_name: "Barndoor.ai"
+brand_root: "https://barndoor.ai/"
 
-# Company Information
+# Schema / SEO controls
+page_type: "webpage"   # options: webpage | article | product | dataset | faqpage | itemlist
+robots_directive: "index,follow,max-image-preview:large"
+keywords:
+  - "Clay AI"
+  - "AI data orchestration"
+  - "sales automation"
+  - "marketing automation"
+  - "lead scoring"
+  - "data enrichment"
+  - "prospect research"
+
+# Company Information (kept from your current file)
 company:
   name: "Clay"
   type: "Startup"
@@ -43,18 +53,7 @@ investors:
   - "Meritech Capital Partners"
   - "Boldstart Ventures"
 
-# SEO and Social
-seo:
-  keywords:
-    - "Clay AI"
-    - "AI data orchestration"
-    - "sales automation"
-    - "marketing automation"
-    - "lead scoring"
-    - "data enrichment"
-    - "prospect research"
-  
-# Content Structure
+# Content Structure (optional hints for agents)
 sections:
   - "company-overview"
   - "problem-solution"
@@ -63,9 +62,9 @@ sections:
   - "recent-news"
   - "customers-investors"
 
-# Cache Information
+# Cache/Provenance
 cache:
   sourceUrl: "https://barndoor.ai/ai-tools/clay/"
-  scrapedDate: "2025-09-28T19:54:00-04:00"
-  contentHash: "clay-barndoor-ai-tools-20250928"
+  scrapedDate: "2025-10-01"
+  contentHash: "clay-barndoor-ai-tools-20251001"
   version: "1.0"
