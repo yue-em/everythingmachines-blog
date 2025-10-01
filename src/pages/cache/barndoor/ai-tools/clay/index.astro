@@ -1,7 +1,6 @@
 ---
 import Source from './source.md';
 
-/* Keep this in sync with _page.yml (manual for now) */
 const page = {
   url: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
@@ -11,58 +10,46 @@ const page = {
   brandRoot: "https://barndoor.ai/",
   lastmod: "2025-10-01",
   robots: "index,follow,max-image-preview:large",
-  keywords: ["Clay AI","AI data orchestration","sales automation","marketing automation","lead scoring","data enrichment","prospect research"],
+  keywords: [
+    "Clay AI",
+    "AI data orchestration",
+    "sales automation",
+    "marketing automation",
+    "lead scoring",
+    "data enrichment",
+    "prospect research"
+  ],
   company: {
     name: "Clay",
     website: "https://www.clay.com/",
     founded: "2017-07-25",
     totalFinancing: "$102M",
     valuation: "$3.1B (Series C)"
+  },
+  video: {
+    name: "Clay Product Overview",
+    description: "Demo of Clay’s AI-powered enrichment and outreach workflows.",
+    url: "https://www.youtube.com/watch?v=5miLzYgVUNk",
+    thumbnailUrl: "https://i.ytimg.com/vi/5miLzYgVUNk/hqdefault.jpg",
+    uploadDate: "2025-08-01"
   }
 };
 
-/* Build derived strings */
 const keywordsContent = page.keywords?.join(", ");
 
-/* JSON-LD objects (stringified below to avoid template parsing issues) */
-const webPageLd = {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  name: page.title,
-  url: page.url,
-  description: page.description,
-  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
-  primaryImageOfPage: page.ogImage,
-  dateModified: page.lastmod,
-  inLanguage: "en",
-  ...(keywordsContent ? { keywords: keywordsContent } : {})
-};
-
-const breadcrumbLd = {
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  itemListElement: [
-    { "@type":"ListItem", position:1, name:"Home", item: page.brandRoot },
-    { "@type":"ListItem", position:2, name:"AI Tools", item:"https://barndoor.ai/ai-tools/" },
-    { "@type":"ListItem", position:3, name:"Clay", item: page.url }
-  ]
-};
-
-/* SoftwareApplication schema (product-style) */
 const softwareApplicationLd = {
   "@context":"https://schema.org",
   "@type":"SoftwareApplication",
+  "@id":"#clay-software-app",
   name: "Clay",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: page.url,
   description: page.description,
-  brand: { "@type":"Organization", "name":"Clay", "url": page.company.website },
-  publisher: { "@type":"Organization", "name": page.brandName, "url": page.brandRoot }
-  // Add offers/price/aggregateRating later if you have them
+  brand: { "@type":"Organization", name:"Clay", url: page.company.website },
+  publisher: { "@type":"Organization", name: page.brandName, url: page.brandRoot }
 };
 
-/* Simple FAQ (expand later or source from _page.yml) */
 const faqLd = {
   "@context":"https://schema.org",
   "@type":"FAQPage",
@@ -80,8 +67,44 @@ const faqLd = {
   ]
 };
 
+const webPageLd = {
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  name: page.title,
+  url: page.url,
+  description: page.description,
+  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
+  primaryImageOfPage: page.ogImage,
+  dateModified: page.lastmod,
+  inLanguage: "en",
+  ...(keywordsContent ? { keywords: keywordsContent } : {}),
+  mainEntity: { "@id":"#clay-software-app" }
+};
+
+const breadcrumbLd = {
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  itemListElement: [
+    { "@type":"ListItem", position:1, name:"Home", item: page.brandRoot },
+    { "@type":"ListItem", position:2, name:"AI Tools", item:"https://barndoor.ai/ai-tools/" },
+    { "@type":"ListItem", position:3, name:"Clay", item: page.url }
+  ]
+};
+
+const videoLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: page.video.name,
+  description: page.video.description,
+  thumbnailUrl: [page.video.thumbnailUrl],
+  uploadDate: page.video.uploadDate,
+  contentUrl: page.video.url,
+  embedUrl: page.video.url
+};
+
 const yr = new Date().getFullYear();
 ---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -94,11 +117,12 @@ const yr = new Date().getFullYear();
   {keywordsContent && <meta name="keywords" content={keywordsContent} />}
   <meta property="article:modified_time" content={page.lastmod} />
   <meta property="og:updated_time" content={page.lastmod} />
+  <meta property="og:locale" content="en_US" />
 
-  <!-- Canonical always points to the original (your strategy) -->
+  <!-- Canonical (keep pointing to original) -->
   <link rel="canonical" href={page.url} />
 
-  <!-- Alternates for crawlers -->
+  <!-- Alternates -->
   <link rel="alternate" type="text/markdown" href="./source.md" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="llms" href="/llms.txt" />
@@ -115,10 +139,11 @@ const yr = new Date().getFullYear();
   <meta name="twitter:description" content={page.description} />
   <meta name="twitter:image" content={page.ogImage} />
 
-  <!-- JSON-LD (safe stringify) -->
+  <!-- JSON-LD -->
+  <script type="application/ld+json" is:inline>{JSON.stringify(softwareApplicationLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(webPageLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(breadcrumbLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(softwareApplicationLd)}</script>
+  <script type="application/ld+json" is:inline>{JSON.stringify(videoLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(faqLd)}</script>
 
   <style>
@@ -132,10 +157,10 @@ const yr = new Date().getFullYear();
     .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin:16px 0; }
     table { border-collapse: collapse; width: 100%; margin: 1em 0; }
     th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-    /* Basic prose tweaks for Markdown */
     :where(main) h1, h2, h3 { margin: 1.2em 0 .4em; }
     :where(main) p { margin: .6em 0; }
     :where(main) ul { padding-left: 18px; }
+    iframe { width:100%; max-width: 800px; aspect-ratio: 16 / 9; border:0; }
   </style>
 </head>
 <body>
@@ -146,9 +171,20 @@ const yr = new Date().getFullYear();
   </header>
 
   <main>
-    <!-- Auto-render the full Markdown body -->
     <section class="card">
       <Source />
+    </section>
+
+    <section class="card" aria-label="Video">
+      <h2>Product Video</h2>
+      <iframe
+        loading="lazy"
+        src="https://www.youtube.com/embed/5miLzYgVUNk"
+        title="Clay Product Overview"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
     </section>
   </main>
 
@@ -158,10 +194,4 @@ const yr = new Date().getFullYear();
 </body>
 </html>
 
-
-  <footer>
-    <small>© {yr} {page.brandName} · Cached on everythingmachines.blog</small>
-  </footer>
-</body>
-</html>
 
