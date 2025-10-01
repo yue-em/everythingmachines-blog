@@ -1,10 +1,11 @@
 ---
-/* Build-time data (inline for now). Keep in sync with _page.yml. */
+import Source from './source.md';
+
+/* Keep this in sync with _page.yml (manual for now) */
 const page = {
   url: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
-  description:
-    "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
+  description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
   ogImage: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
   brandName: "Barndoor.ai",
   brandRoot: "https://barndoor.ai/",
@@ -12,14 +13,18 @@ const page = {
   robots: "index,follow,max-image-preview:large",
   keywords: ["Clay AI","AI data orchestration","sales automation","marketing automation","lead scoring","data enrichment","prospect research"],
   company: {
+    name: "Clay",
+    website: "https://www.clay.com/",
     founded: "2017-07-25",
     totalFinancing: "$102M",
-    valuation: "$3.1B (Series C)",
-    website: "https://www.clay.com/"
+    valuation: "$3.1B (Series C)"
   }
 };
 
-/* JSON-LD objects (stringify later to avoid template issues) */
+/* Build derived strings */
+const keywordsContent = page.keywords?.join(", ");
+
+/* JSON-LD objects (stringified below to avoid template parsing issues) */
 const webPageLd = {
   "@context":"https://schema.org",
   "@type":"WebPage",
@@ -30,7 +35,7 @@ const webPageLd = {
   primaryImageOfPage: page.ogImage,
   dateModified: page.lastmod,
   inLanguage: "en",
-  ...(page.keywords?.length ? { keywords: page.keywords.join(", ") } : {})
+  ...(keywordsContent ? { keywords: keywordsContent } : {})
 };
 
 const breadcrumbLd = {
@@ -40,6 +45,38 @@ const breadcrumbLd = {
     { "@type":"ListItem", position:1, name:"Home", item: page.brandRoot },
     { "@type":"ListItem", position:2, name:"AI Tools", item:"https://barndoor.ai/ai-tools/" },
     { "@type":"ListItem", position:3, name:"Clay", item: page.url }
+  ]
+};
+
+/* SoftwareApplication schema (product-style) */
+const softwareApplicationLd = {
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  name: "Clay",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: page.url,
+  description: page.description,
+  brand: { "@type":"Organization", "name":"Clay", "url": page.company.website },
+  publisher: { "@type":"Organization", "name": page.brandName, "url": page.brandRoot }
+  // Add offers/price/aggregateRating later if you have them
+};
+
+/* Simple FAQ (expand later or source from _page.yml) */
+const faqLd = {
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  mainEntity: [
+    {
+      "@type":"Question",
+      name:"What is Clay?",
+      acceptedAnswer:{ "@type":"Answer", text:"Clay is an AI-powered data orchestration platform for sales and marketing automation, consolidating 130+ data sources for research, enrichment, and outreach workflows." }
+    },
+    {
+      "@type":"Question",
+      name:"Who uses Clay?",
+      acceptedAnswer:{ "@type":"Answer", text:"Sales and marketing teams seeking to automate prospect research, enrichment, and personalized outreach at scale." }
+    }
   ]
 };
 
@@ -54,9 +91,11 @@ const yr = new Date().getFullYear();
   <title>{page.title}</title>
   <meta name="description" content={page.description} />
   <meta name="robots" content={page.robots} />
-  {page.keywords?.length && <meta name="keywords" content={page.keywords.join(", ")} />}
+  {keywordsContent && <meta name="keywords" content={keywordsContent} />}
+  <meta property="article:modified_time" content={page.lastmod} />
+  <meta property="og:updated_time" content={page.lastmod} />
 
-  <!-- Canonical to original -->
+  <!-- Canonical always points to the original (your strategy) -->
   <link rel="canonical" href={page.url} />
 
   <!-- Alternates for crawlers -->
@@ -79,6 +118,8 @@ const yr = new Date().getFullYear();
   <!-- JSON-LD (safe stringify) -->
   <script type="application/ld+json" is:inline>{JSON.stringify(webPageLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(breadcrumbLd)}</script>
+  <script type="application/ld+json" is:inline>{JSON.stringify(softwareApplicationLd)}</script>
+  <script type="application/ld+json" is:inline>{JSON.stringify(faqLd)}</script>
 
   <style>
     :root { --maxw: 880px; --fg:#161617; --muted:#5a5a5f; --bg:#f8f9fb; --card:#ffffff; --border:#e6e7eb; }
@@ -89,42 +130,34 @@ const yr = new Date().getFullYear();
     a { color:#0b65c2; text-decoration:none; }
     a:hover { text-decoration:underline; }
     .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin:16px 0; }
-    .grid { display:grid; gap:16px; }
-    @media (min-width: 768px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
-    table { border-collapse:collapse; width:100%; margin:1em 0; }
-    th, td { border:1px solid var(--border); padding:8px; text-align:left; }
-    .pill { display:inline-block; padding:4px 10px; border-radius:999px; background:#eef5ff; color:#0b65c2; font-weight:600; font-size:12px; }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    /* Basic prose tweaks for Markdown */
+    :where(main) h1, h2, h3 { margin: 1.2em 0 .4em; }
+    :where(main) p { margin: .6em 0; }
+    :where(main) ul { padding-left: 18px; }
   </style>
 </head>
 <body>
   <header>
     <h1>Clay</h1>
-    <p class="meta">Cached copy of <a href={page.url}>{page.url}</a> for LLM indexing.</p>
+    <p class="meta">Cached copy of <a href={page.url}>{page.url}</a> for LLM-friendly indexing.</p>
     <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
   </header>
 
   <main>
+    <!-- Auto-render the full Markdown body -->
     <section class="card">
-      <div class="grid grid-2">
-        <div>
-          <h2 class="meta" style="text-transform:uppercase; letter-spacing:.06em;">Overview</h2>
-          <p>{page.description}</p>
-        </div>
-        <div>
-          <span class="pill">Startup</span>
-          <ul class="meta" style="margin:12px 0 0 0; padding:0; list-style:none;">
-            <li><strong>Founded:</strong> {page.company.founded}</li>
-            <li><strong>Total Financing:</strong> {page.company.totalFinancing}</li>
-            <li><strong>Valuation:</strong> {page.company.valuation}</li>
-            <li><strong>Website:</strong> <a href={page.company.website}>clay.com</a></li>
-          </ul>
-        </div>
-      </div>
+      <Source />
     </section>
-
-    <!-- Optional: paste rendered content from source.md below -->
-    <!-- {{ rendered_body_html }} -->
   </main>
+
+  <footer>
+    <small>© {yr} {page.brandName} · Cached on everythingmachines.blog</small>
+  </footer>
+</body>
+</html>
+
 
   <footer>
     <small>© {yr} {page.brandName} · Cached on everythingmachines.blog</small>
