@@ -1,143 +1,133 @@
 ---
-// Get the page metadata
-const pageData = {
-  title: "Clay - AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
-  description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
+/* Injected from your _page.yml and/or kept in sync manually */
+const page = {
+  url: "https://barndoor.ai/ai-tools/clay/",
+  title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
+  description:
+    "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
   ogImage: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
-  canonicalUrl: "https://barndoor.ai/ai-tools/clay/",
-  brand: "barndoor",
-  lastUpdated: "2025-09-07"
+  brandName: "Barndoor.ai",
+  brandRoot: "https://barndoor.ai/",
+  lastmod: "2025-10-01",
+  robots: "index,follow,max-image-preview:large",
+  keywords: ["Clay AI","AI data orchestration","sales automation","marketing automation","lead scoring","data enrichment","prospect research"],
+  company: {
+    founded: "2017-07-25",
+    totalFinancing: "$102M",
+    valuation: "$3.1B (Series C)",
+    website: "https://www.clay.com/"
+  }
 };
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{pageData.title}</title>
-  <meta name="description" content={pageData.description}>
-  <meta property="og:title" content={pageData.title}>
-  <meta property="og:description" content={pageData.description}>
-  <meta property="og:image" content={pageData.ogImage}>
-  <meta property="og:url" content={pageData.canonicalUrl}>
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href={pageData.canonicalUrl}>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>{page.title}</title>
+  <meta name="description" content={page.description} />
+  <meta name="robots" content={page.robots} />
+  {page.keywords?.length && <meta name="keywords" content={page.keywords.join(", ")} />}
+
+  <!-- Canonical points to the original (your chosen strategy) -->
+  <link rel="canonical" href={page.url} />
+
+  <!-- Alternates for machines -->
+  <link rel="alternate" type="text/markdown" href="./source.md" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="llms" href="/llms.txt" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={page.brandName} />
+  <meta property="og:title" content={page.title} />
+  <meta property="og:description" content={page.description} />
+  <meta property="og:url" content={page.url} />
+  <meta property="og:image" content={page.ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={page.title} />
+  <meta name="twitter:description" content={page.description} />
+  <meta name="twitter:image" content={page.ogImage} />
+
+  <!-- JSON-LD: WebPage -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"{page.title}",
+    "url":"{page.url}",
+    "description":"{page.description}",
+    "isPartOf":{"@type":"WebSite","name":"{page.brandName}","url":"{page.brandRoot}"},
+    "primaryImageOfPage":"{page.ogImage}",
+    "dateModified":"{page.lastmod}",
+    "inLanguage":"en",
+    "keywords":"{page.keywords && page.keywords.join(', ')}"
+  }
+  </script>
+
+  <!-- JSON-LD: Breadcrumbs -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"{page.brandRoot}"},
+      {"@type":"ListItem","position":2,"name":"AI Tools","item":"https://barndoor.ai/ai-tools/"},
+      {"@type":"ListItem","position":3,"name":"Clay","item":"{page.url}"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root { --maxw: 880px; --fg:#161617; --muted:#5a5a5f; --bg:#f8f9fb; --card:#ffffff; --border:#e6e7eb; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+    header, main, footer { max-width:var(--maxw); margin:0 auto; padding:24px; }
+    .meta { color:var(--muted); }
+    a { color:#0b65c2; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin:16px 0; }
+    .grid { display:grid; gap:16px; }
+    @media (min-width: 768px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+    table { border-collapse:collapse; width:100%; margin:1em 0; }
+    th, td { border:1px solid var(--border); padding:8px; text-align:left; }
+    .pill { display:inline-block; padding:4px 10px; border-radius:999px; background:#eef5ff; color:#0b65c2; font-weight:600; font-size:12px; }
+  </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-  <main class="max-w-4xl mx-auto px-4 py-8">
-    <!-- Brand Header -->
-    <div class="mb-8 p-4 bg-gray-100 rounded-lg">
-      <div class="flex items-center justify-between">
+<body>
+  <header>
+    <h1>Clay</h1>
+    <p class="meta">Cached copy of <a href={page.url}>{page.url}</a> for LLM-friendly indexing.</p>
+    <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="grid grid-2">
         <div>
-          <h1 class="text-2xl font-bold text-gray-900 mb-2">Clay - AI App Profile</h1>
-          <p class="text-gray-600">Cached from <a href={pageData.canonicalUrl} class="text-blue-600 hover:underline" target="_blank" rel="noopener">barndoor.ai</a></p>
+          <h2 class="meta" style="text-transform:uppercase; letter-spacing:.06em;">Overview</h2>
+          <p>{page.description}</p>
         </div>
-        <div class="text-right">
-          <p class="text-sm text-gray-500">Brand: {pageData.brand}</p>
-          <p class="text-sm text-gray-500">Last Updated: {pageData.lastUpdated}</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Content Container -->
-    <div class="prose prose-lg max-w-none">
-      <!-- Clay Company Overview -->
-      <div class="bg-white border rounded-lg p-6 mb-8 shadow-sm">
-        <div class="flex items-start justify-between mb-4">
-          <div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">Clay</h2>
-            <p class="text-xl text-gray-600 mb-4">AI-powered data orchestration platform for sales and marketing automation</p>
-          </div>
-          <div class="text-right">
-            <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Startup</span>
-          </div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-2">Company Details</h3>
-            <ul class="space-y-1 text-gray-600">
-              <li><strong>Founded:</strong> July 25, 2017</li>
-              <li><strong>Total Financing:</strong> $102M</li>
-              <li><strong>Valuation:</strong> $3.1B (Series C)</li>
-              <li><strong>Website:</strong> <a href="https://www.clay.com/" class="text-blue-600 hover:underline" target="_blank" rel="noopener">clay.com</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-2">Specializations</h3>
-            <ul class="space-y-1 text-gray-600">
-              <li>• AI Research Agents</li>
-              <li>• Data Enrichment AI</li>
-              <li>• Lead Scoring AI</li>
-              <li>• Workflow Automation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="mb-6">
-          <h3 class="font-semibold text-gray-900 mb-2">Notable Customers</h3>
-          <p class="text-gray-600">Canva, HubSpot, Notion, Rippling, OpenAI, Vanta, Verkada</p>
-        </div>
-
-        <div class="mb-6">
-          <h3 class="font-semibold text-gray-900 mb-2">Key Investors</h3>
-          <p class="text-gray-600">Sequoia Capital, First Round Capital, Meritech Capital Partners, Boldstart Ventures</p>
-        </div>
-      </div>
-
-      <!-- Problem & Solution -->
-      <div class="bg-white border rounded-lg p-6 mb-8 shadow-sm">
-        <h3 class="text-xl font-bold text-gray-900 mb-4">What Clay Solves</h3>
-        <p class="text-gray-700 mb-4">
-          Clay consolidates 130+ data sources to automate prospect research and outreach. The platform eliminates the need for manual data gathering by providing AI-powered research agents that can find, enrich, and score leads automatically.
-        </p>
-        <p class="text-gray-700">
-          Instead of juggling multiple tools and manually researching prospects, sales and marketing teams can use Clay's no-code interface to build sophisticated workflows that scale their outreach efforts.
-        </p>
-      </div>
-
-      <!-- Pros & Cons -->
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-green-50 border border-green-200 rounded-lg p-6">
-          <h3 class="text-lg font-bold text-green-900 mb-4">✅ Pros</h3>
-          <ul class="space-y-2 text-green-800">
-            <li>• Integrated data enrichment from 130+ sources</li>
-            <li>• Automated AI research workflows</li>
-            <li>• No-code interface for scalability</li>
-            <li>• Advanced lead scoring capabilities</li>
-            <li>• Strong customer base and funding</li>
-          </ul>
-        </div>
-        <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-          <h3 class="text-lg font-bold text-red-900 mb-4">❌ Cons</h3>
-          <ul class="space-y-2 text-red-800">
-            <li>• Credit-based pricing can get expensive</li>
-            <li>• Overlapping functionality with cheaper tools</li>
-            <li>• Complex setup for advanced workflows</li>
-            <li>• Learning curve for new users</li>
-            <li>• May be overkill for simple use cases</li>
+        <div>
+          <span class="pill">Startup</span>
+          <ul class="meta" style="margin:12px 0 0 0; padding:0; list-style:none;">
+            <li><strong>Founded:</strong> {page.company.founded}</li>
+            <li><strong>Total Financing:</strong> {page.company.totalFinancing}</li>
+            <li><strong>Valuation:</strong> {page.company.valuation}</li>
+            <li><strong>Website:</strong> <a href={page.company.website}>clay.com</a></li>
           </ul>
         </div>
       </div>
+    </section>
 
-      <!-- Recent News -->
-      <div class="bg-white border rounded-lg p-6 mb-8 shadow-sm">
-        <h3 class="text-xl font-bold text-gray-900 mb-4">Recent News</h3>
-        <p class="text-gray-700">
-          <strong>August 2025:</strong> Clay raised $100M in Series C funding at a $3.1B valuation, bringing their total funding to $102M. The round was led by Sequoia Capital with participation from existing investors.
-        </p>
-      </div>
-
-      <!-- Footer -->
-      <div class="mt-12 pt-8 border-t border-gray-200">
-        <div class="flex items-center justify-between text-sm text-gray-500">
-          <p>Content cached from <a href={pageData.canonicalUrl} class="text-blue-600 hover:underline" target="_blank" rel="noopener">barndoor.ai</a></p>
-          <p>Last updated: {pageData.lastUpdated}</p>
-        </div>
-      </div>
-    </div>
+    <!-- If you want the full body, paste rendered HTML from source.md below -->
+    <!-- {{ rendered_body_html }} -->
   </main>
+
+  <footer>
+    <small>© {new Date().getFullYear()} {page.brandName} · Cached on everythingmachines.blog</small>
+  </footer>
 </body>
 </html>
