@@ -1,5 +1,5 @@
 ---
-/* Injected from your _page.yml and/or kept in sync manually */
+/* Build-time data (inline for now). Keep in sync with _page.yml. */
 const page = {
   url: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
@@ -18,8 +18,33 @@ const page = {
     website: "https://www.clay.com/"
   }
 };
----
 
+/* JSON-LD objects (stringify later to avoid template issues) */
+const webPageLd = {
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  name: page.title,
+  url: page.url,
+  description: page.description,
+  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
+  primaryImageOfPage: page.ogImage,
+  dateModified: page.lastmod,
+  inLanguage: "en",
+  ...(page.keywords?.length ? { keywords: page.keywords.join(", ") } : {})
+};
+
+const breadcrumbLd = {
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  itemListElement: [
+    { "@type":"ListItem", position:1, name:"Home", item: page.brandRoot },
+    { "@type":"ListItem", position:2, name:"AI Tools", item:"https://barndoor.ai/ai-tools/" },
+    { "@type":"ListItem", position:3, name:"Clay", item: page.url }
+  ]
+};
+
+const yr = new Date().getFullYear();
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,10 +56,10 @@ const page = {
   <meta name="robots" content={page.robots} />
   {page.keywords?.length && <meta name="keywords" content={page.keywords.join(", ")} />}
 
-  <!-- Canonical points to the original (your chosen strategy) -->
+  <!-- Canonical to original -->
   <link rel="canonical" href={page.url} />
 
-  <!-- Alternates for machines -->
+  <!-- Alternates for crawlers -->
   <link rel="alternate" type="text/markdown" href="./source.md" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="llms" href="/llms.txt" />
@@ -51,34 +76,9 @@ const page = {
   <meta name="twitter:description" content={page.description} />
   <meta name="twitter:image" content={page.ogImage} />
 
-  <!-- JSON-LD: WebPage -->
-  <script type="application/ld+json" is:inline>
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"{page.title}",
-    "url":"{page.url}",
-    "description":"{page.description}",
-    "isPartOf":{"@type":"WebSite","name":"{page.brandName}","url":"{page.brandRoot}"},
-    "primaryImageOfPage":"{page.ogImage}",
-    "dateModified":"{page.lastmod}",
-    "inLanguage":"en",
-    "keywords":"{page.keywords && page.keywords.join(', ')}"
-  }
-  </script>
-
-  <!-- JSON-LD: Breadcrumbs -->
-  <script type="application/ld+json" is:inline>
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"{page.brandRoot}"},
-      {"@type":"ListItem","position":2,"name":"AI Tools","item":"https://barndoor.ai/ai-tools/"},
-      {"@type":"ListItem","position":3,"name":"Clay","item":"{page.url}"}
-    ]
-  }
-  </script>
+  <!-- JSON-LD (safe stringify) -->
+  <script type="application/ld+json" is:inline>{JSON.stringify(webPageLd)}</script>
+  <script type="application/ld+json" is:inline>{JSON.stringify(breadcrumbLd)}</script>
 
   <style>
     :root { --maxw: 880px; --fg:#161617; --muted:#5a5a5f; --bg:#f8f9fb; --card:#ffffff; --border:#e6e7eb; }
@@ -99,7 +99,7 @@ const page = {
 <body>
   <header>
     <h1>Clay</h1>
-    <p class="meta">Cached copy of <a href={page.url}>{page.url}</a> for LLM-friendly indexing.</p>
+    <p class="meta">Cached copy of <a href={page.url}>{page.url}</a> for LLM indexing.</p>
     <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
   </header>
 
@@ -122,12 +122,13 @@ const page = {
       </div>
     </section>
 
-    <!-- If you want the full body, paste rendered HTML from source.md below -->
+    <!-- Optional: paste rendered content from source.md below -->
     <!-- {{ rendered_body_html }} -->
   </main>
 
   <footer>
-    <small>© {new Date().getFullYear()} {page.brandName} · Cached on everythingmachines.blog</small>
+    <small>© {yr} {page.brandName} · Cached on everythingmachines.blog</small>
   </footer>
 </body>
 </html>
+
