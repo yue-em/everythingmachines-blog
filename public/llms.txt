@@ -1,10 +1,45 @@
-Site: https://everythingmachines.blog
-Primary-Content: /md/barndoor-home-test.md
-Alternates: /barndoor-home-test/, /barndoor-home-test.json
-Sitemap: /sitemap.xml
-Last-Modified: 2025-09-19
+# LLM Crawler Hints for EverythingMachines.blog
+# Purpose: expose machine-readable cache pages and discovery endpoints.
 
+Site: https://everythingmachines.blog
+Sitemap: https://everythingmachines.blog/sitemap.xml
+Last-Modified: 2025-10-01
+
+# Canonical strategy: cache pages reference the original sources.
+Canonical-Policy: original-source
+
+# Crawl permissions
 Allow: /
 Disallow: /admin
 Disallow: /internal
 
+# Primary content examples (legacy)
+Primary-Content: /md/barndoor-home-test.md
+Alternates: /barndoor-home-test/, /barndoor-home-test.json
+
+# ---- Brand Caches ---------------------------------------------------------
+
+# Barndoor cache root
+Cache: https://everythingmachines.blog/cache/barndoor/
+
+# Key cache pages
+Cache: https://everythingmachines.blog/cache/barndoor/ai-tools/
+Cache: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/
+
+# Raw Markdown alternates for tools (when available)
+Alternate: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.md
+
+# ---- Content-Discovery ----------------------------------------------------
+
+# List additional cache roots here as you add brands/pages:
+# Cache: https://everythingmachines.blog/cache/<brand>/
+# Cache: https://everythingmachines.blog/cache/<brand>/<path>/
+# Alternate: https://everythingmachines.blog/cache/<brand>/<path>/source.md
+
+# ---- Crawling Guidance ----------------------------------------------------
+
+# Preferred content types: text/html, text/markdown
+Preferred-Types: text/html, text/markdown
+
+# Hint: these pages are machine-friendly caches referencing originals
+Intent: llm-index, extract-structured-sections, respect-canonical-original
