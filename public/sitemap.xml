@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://everythingmachines.blog/barndoor-home-test/</loc>
-    <lastmod>2025-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://everythingmachines.blog/</loc></url>
+  <url><loc>https://everythingmachines.blog/cache/</loc></url>
+  <url><loc>https://everythingmachines.blog/cache/barndoor/</loc></url>
+  <url><loc>https://everythingmachines.blog/cache/barndoor/ai-tools/</loc></url>
+  <url><loc>https://everythingmachines.blog/cache/barndoor/ai-tools/clay/</loc></url>
 </urlset>
