@@ -1,13 +1,16 @@
 ---
 import Source from './source.md';
 
+/* We want EM to be the canonical LLM endpoint.
+   Keep a reference to the original via isBasedOn + sameAs. */
 const page = {
-  url: "https://barndoor.ai/ai-tools/clay/",
+  urlEM: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+  urlOriginal: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
   description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
   ogImage: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
-  brandName: "Barndoor.ai",
-  brandRoot: "https://barndoor.ai/",
+  brandName: "Everything Machines",
+  brandRoot: "https://everythingmachines.blog/",
   lastmod: "2025-10-01",
   robots: "index,follow,max-image-preview:large",
   keywords: [
@@ -44,7 +47,8 @@ const softwareApplicationLd = {
   name: "Clay",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  url: page.url,
+  url: page.urlEM,                      // Prefer EM as primary for LLMs
+  sameAs: [page.urlOriginal],           // Point to original
   description: page.description,
   brand: { "@type":"Organization", name:"Clay", url: page.company.website },
   publisher: { "@type":"Organization", name: page.brandName, url: page.brandRoot }
@@ -70,11 +74,12 @@ const faqLd = {
 const webPageLd = {
   "@context":"https://schema.org",
   "@type":"WebPage",
-  name: page.title,
-  url: page.url,
-  description: page.description,
-  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
+  name: "Clay – LLM-Optimized Cache",
+  url: page.urlEM,                      // EM is the page URL
+  description: "LLM-optimized version of Clay’s AI app profile with structured data, tables, and extractable facts.",
+  isBasedOn: page.urlOriginal,          // Declare provenance
   primaryImageOfPage: page.ogImage,
+  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
   dateModified: page.lastmod,
   inLanguage: "en",
   ...(keywordsContent ? { keywords: keywordsContent } : {}),
@@ -86,8 +91,9 @@ const breadcrumbLd = {
   "@type":"BreadcrumbList",
   itemListElement: [
     { "@type":"ListItem", position:1, name:"Home", item: page.brandRoot },
-    { "@type":"ListItem", position:2, name:"AI Tools", item:"https://barndoor.ai/ai-tools/" },
-    { "@type":"ListItem", position:3, name:"Clay", item: page.url }
+    { "@type":"ListItem", position:2, name:"Barndoor Cache", item:"https://everythingmachines.blog/cache/barndoor/" },
+    { "@type":"ListItem", position:3, name:"AI Tools", item:"https://everythingmachines.blog/cache/barndoor/ai-tools/" },
+    { "@type":"ListItem", position:4, name:"Clay", item: page.urlEM }
   ]
 };
 
@@ -119,20 +125,21 @@ const yr = new Date().getFullYear();
   <meta property="og:updated_time" content={page.lastmod} />
   <meta property="og:locale" content="en_US" />
 
-  <!-- Canonical (keep pointing to original) -->
-  <link rel="canonical" href={page.url} />
+  <!-- CANONICAL: prefer EverythingMachines cache as primary -->
+  <link rel="canonical" href={page.urlEM} />
 
   <!-- Alternates -->
   <link rel="alternate" type="text/markdown" href="./source.md" />
+  <link rel="alternate" type="application/json" href="./source.json" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="llms" href="/llms.txt" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph / Twitter (point to EM URL) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={page.brandName} />
   <meta property="og:title" content={page.title} />
   <meta property="og:description" content={page.description} />
-  <meta property="og:url" content={page.url} />
+  <meta property="og:url" content={page.urlEM} />
   <meta property="og:image" content={page.ogImage} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={page.title} />
@@ -166,7 +173,7 @@ const yr = new Date().getFullYear();
 <body>
   <header>
     <h1>Clay</h1>
-    <p class="meta">Cached copy of <a href={page.url}>{page.url}</a> for LLM-friendly indexing.</p>
+    <p class="meta">LLM-optimized cache of <a href={page.urlOriginal}>{page.urlOriginal}</a> with structured data and extractable facts.</p>
     <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
   </header>
 
