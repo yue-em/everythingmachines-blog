@@ -1,0 +1,21 @@
+{
+  "page_url": "https://everythingmachines.blog/cache/nextipedia/podcast/",
+  "is_based_on": "https://www.nextipedia.com/podcast",
+  "title": "Middlemen — Podcast Series",
+  "description": "Middlemen is Nextipedia’s podcast covering retail, commerce, and the platforms and partners in between.",
+  "lastmod": "2025-10-02",
+  "og_image": "https://www.nextipedia.com/social-card.png",
+  "keywords": ["Middlemen podcast","Nextipedia","retail media","commerce platforms","shopper marketing"],
+  "podcast": {
+    "show_name": "Middlemen",
+    "publisher_name": "Nextipedia",
+    "publisher_url": "https://www.nextipedia.com/",
+    "rss_feed": "https://www.nextipedia.com/podcast.xml"
+  },
+  "episodes": [
+    { "name":"Who’s Buying? A Sell-Side View with Shay Brog of Burt", "url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/" },
+    { "name":"Retail Fluency — Claudia Johnson — Flywheel Commerce Network", "url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/" },
+    { "name":"Parking Lots, AI Recipes, Shopper Marketing’s Future — with Josh Ginsberg", "url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/" }
+  ],
+  "sections": ["overview","publisher","episodes","resources","structured-data"]
+}
