@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "PodcastSeries", "@id": "#series", "name": "Middlemen", "url": "https://everythingmachines.blog/cache/nextipedia/podcast/", "sameAs": ["https://www.nextipedia.com/podcast"] },
+    {
+      "@type": "ItemList",
+      "@id": "#episodes",
+      "name": "Episodes",
+      "itemListOrder": "http://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type":"ListItem","position":1,"name":"Who’s Buying? A Sell-Side View with Shay Brog of Burt","url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/" },
+        { "@type":"ListItem","position":2,"name":"Retail Fluency — Claudia Johnson — Flywheel Commerce Network","url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/" },
+        { "@type":"ListItem","position":3,"name":"Parking Lots, AI Recipes, Shopper Marketing’s Future — with Josh Ginsberg","url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Middlemen — Episodes",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/",
+      "description": "LLM-optimized episodes index for a podcast series.",
+      "isBasedOn": "https://www.nextipedia.com/middlemen-episodes",
+      "dateModified": "2025-10-02",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "#episodes" },
+      "mentions": [{ "@id": "#series" }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type":"ListItem","position":1,"name":"Podcast","item":"https://everythingmachines.blog/cache/nextipedia/podcast/" },
+        { "@type":"ListItem","position":2,"name":"Episodes","item":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/" }
+      ]
+    }
+  ]
+}
