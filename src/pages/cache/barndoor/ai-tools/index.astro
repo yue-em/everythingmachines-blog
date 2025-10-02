@@ -1,49 +1,74 @@
 ---
 /* Build-time values */
 const yr = new Date().getFullYear();
----
 
+/* Section data (expand as you add tools) */
+const section = {
+  brand: "barndoor",
+  name: "AI Tools",
+  url: "https://everythingmachines.blog/cache/barndoor/ai-tools/",
+  lastmod: "2025-10-01",
+  items: [
+    {
+      name: "Clay",
+      summary: "Enrichment and outreach workflows",
+      url: "/cache/barndoor/ai-tools/clay/",
+      absUrl: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/"
+    }
+  ]
+};
+---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>AI Tools — Barndoor</title>
-  <meta name="description" content="Browse AI tools in Barndoor’s directory. Each listing keeps canonical references and LLM-friendly structure." />
-  <link rel="canonical" href="https://barndoor.ai/ai-tools/" />
+  <title>{section.name} · Barndoor Cache</title>
+  <meta name="description" content="Everything Machines cache index for Barndoor AI Tools with LLM-friendly structure and internal links." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href={section.url} />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="AI Tools — Barndoor" />
-  <meta property="og:description" content="Browse AI tools in Barndoor’s directory. Each listing keeps canonical references and LLM-friendly structure." />
-  <meta property="og:url" content="https://barndoor.ai/ai-tools/" />
-  <meta property="og:image" content="https://barndoor.ai/social-card.png" />
-
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json" is:inline>
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Barndoor.ai",
-    "url":"https://barndoor.ai/"
-  }
-  </script>
+  <meta property="og:title" content={`${section.name} · Barndoor Cache`} />
+  <meta property="og:description" content="Everything Machines cache index for Barndoor AI Tools with LLM-friendly structure and internal links." />
+  <meta property="og:url" content={section.url} />
 
   <!-- JSON-LD: WebPage -->
   <script type="application/ld+json" is:inline>
-  {
+  {JSON.stringify({
     "@context":"https://schema.org",
     "@type":"WebPage",
-    "name":"AI Tools — Barndoor",
-    "url":"https://barndoor.ai/ai-tools/",
-    "description":"Browse AI tools in Barndoor’s directory. Each listing keeps canonical references and LLM-friendly structure.",
-    "isPartOf":{"@type":"WebSite","name":"Barndoor.ai","url":"https://barndoor.ai/"},
-    "primaryImageOfPage":"https://barndoor.ai/social-card.png",
-    "datePublished":"2025-09-28",
-    "dateModified":"2025-09-28",
-    "inLanguage":"en"
-  }
+    "@id":"#page",
+    "name": `${section.name} · Barndoor Cache`,
+    "url": section.url,
+    "description":"Everything Machines cache index for Barndoor AI Tools.",
+    "isPartOf":{"@type":"WebSite","name":"Everything Machines","url":"https://everythingmachines.blog/"},
+    "dateModified": section.lastmod,
+    "inLanguage":"en",
+    "primaryImageOfPage":"https://everythingmachines.blog/social-card.png",
+    "mainEntity":{"@id":"#list"},
+    "about":[{"@id":"#list"}]
+  })}
+  </script>
+
+  <!-- JSON-LD: ItemList of tools -->
+  <script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "@id":"#list",
+    "name": "Barndoor AI Tools (Cache Index)",
+    "itemListOrder":"http://schema.org/ItemListOrderAscending",
+    "dateModified": section.lastmod,
+    "itemListElement": section.items.map((it, idx) => ({
+      "@type":"ListItem",
+      "position": idx + 1,
+      "name": it.name,
+      "url": it.absUrl
+    }))
+  })}
   </script>
 
   <style>
@@ -59,26 +84,27 @@ const yr = new Date().getFullYear();
 </head>
 <body>
   <header>
-    <h1>AI Tools Directory</h1>
-    <p class="meta">LLM-friendly cached listing. Canonical points to the original Barndoor page.</p>
-    <p class="meta"><strong>Last updated:</strong> 2025-09-28</p>
+    <h1>{section.name} · Barndoor Cache</h1>
+    <p class="meta">LLM-friendly cache index on Everything Machines. Canonical points to this section for machine discovery.</p>
+    <p class="meta"><strong>Last updated:</strong> {section.lastmod}</p>
   </header>
 
   <main>
-    <!-- Starter content from source.md; replace with rendered HTML when ready -->
     <section aria-label="Tools">
       <h2>Featured</h2>
       <ul>
-        <li>
-          <strong>Clay</strong> — Enrichment and outreach workflows
-          · <a href="/cache/barndoor/ai-tools/clay/">View cached page</a>
-        </li>
+        {section.items.map(it => (
+          <li>
+            <strong>{it.name}</strong> · {it.summary}
+            · <a href={it.url}>View cached page</a>
+          </li>
+        ))}
       </ul>
     </section>
   </main>
 
   <footer>
-    <small>© {yr} Barndoor.ai · Cached on everythingmachines.blog</small>
+    <small>© {yr} Everything Machines · Cache section</small>
   </footer>
 </body>
 </html>
