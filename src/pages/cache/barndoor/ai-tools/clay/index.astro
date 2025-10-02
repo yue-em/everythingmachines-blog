@@ -1,13 +1,14 @@
 ---
 import Source from './source.md';
 
-/* We want EM to be the canonical LLM endpoint.
-   Keep a reference to the original via isBasedOn + sameAs. */
+/* EverythingMachines is the LLM-preferred endpoint.
+   We still reference the original with isBasedOn + sameAs. */
 const page = {
   urlEM: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
   urlOriginal: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
-  description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
+  description:
+    "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
   ogImage: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
   brandName: "Everything Machines",
   brandRoot: "https://everythingmachines.blog/",
@@ -40,6 +41,7 @@ const page = {
 
 const keywordsContent = page.keywords?.join(", ");
 
+/* JSON-LD objects (stringified below) */
 const softwareApplicationLd = {
   "@context":"https://schema.org",
   "@type":"SoftwareApplication",
@@ -47,8 +49,8 @@ const softwareApplicationLd = {
   name: "Clay",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  url: page.urlEM,                      // Prefer EM as primary for LLMs
-  sameAs: [page.urlOriginal],           // Point to original
+  url: page.urlEM,                   // Prefer EM as primary for LLMs
+  sameAs: [page.urlOriginal],
   description: page.description,
   brand: { "@type":"Organization", name:"Clay", url: page.company.website },
   publisher: { "@type":"Organization", name: page.brandName, url: page.brandRoot }
@@ -75,15 +77,31 @@ const webPageLd = {
   "@context":"https://schema.org",
   "@type":"WebPage",
   name: "Clay – LLM-Optimized Cache",
-  url: page.urlEM,                      // EM is the page URL
+  url: page.urlEM,
   description: "LLM-optimized version of Clay’s AI app profile with structured data, tables, and extractable facts.",
-  isBasedOn: page.urlOriginal,          // Declare provenance
+  isBasedOn: page.urlOriginal,
   primaryImageOfPage: page.ogImage,
   isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
   dateModified: page.lastmod,
   inLanguage: "en",
   ...(keywordsContent ? { keywords: keywordsContent } : {}),
   mainEntity: { "@id":"#clay-software-app" }
+};
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
+  description: "LLM-optimized cache profile for Clay with structured data, lists, tables, and machine-readable sections.",
+  datePublished: "2025-09-28",
+  dateModified: page.lastmod,
+  author: { "@type":"Organization", "name":"Everything Machines", "url": page.brandRoot },
+  publisher: {
+    "@type":"Organization",
+    "name":"Everything Machines",
+    "logo": { "@type":"ImageObject", "url":"https://everythingmachines.blog/logo.png" }
+  },
+  mainEntityOfPage: { "@type":"WebPage", "@id": page.urlEM }
 };
 
 const breadcrumbLd = {
@@ -110,7 +128,6 @@ const videoLd = {
 
 const yr = new Date().getFullYear();
 ---
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -121,11 +138,12 @@ const yr = new Date().getFullYear();
   <meta name="description" content={page.description} />
   <meta name="robots" content={page.robots} />
   {keywordsContent && <meta name="keywords" content={keywordsContent} />}
+  <meta name="date" content={page.lastmod} />
   <meta property="article:modified_time" content={page.lastmod} />
   <meta property="og:updated_time" content={page.lastmod} />
   <meta property="og:locale" content="en_US" />
 
-  <!-- CANONICAL: prefer EverythingMachines cache as primary -->
+  <!-- Canonical: prefer EM cache as primary for LLMs -->
   <link rel="canonical" href={page.urlEM} />
 
   <!-- Alternates -->
@@ -134,7 +152,7 @@ const yr = new Date().getFullYear();
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="llms" href="/llms.txt" />
 
-  <!-- Open Graph / Twitter (point to EM URL) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={page.brandName} />
   <meta property="og:title" content={page.title} />
@@ -149,6 +167,7 @@ const yr = new Date().getFullYear();
   <!-- JSON-LD -->
   <script type="application/ld+json" is:inline>{JSON.stringify(softwareApplicationLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(webPageLd)}</script>
+  <script type="application/ld+json" is:inline>{JSON.stringify(articleLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(breadcrumbLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(videoLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(faqLd)}</script>
@@ -193,12 +212,8 @@ const yr = new Date().getFullYear();
         allowfullscreen>
       </iframe>
     </section>
-  </main>
 
-  <footer>
-    <small>© {yr} {page.brandName} · Cached on everythingmachines.blog</small>
-  </footer>
-</body>
-</html>
+    <section class="card" aria-label="LLM Cache Notice">
+      <p class="meta"><strong>Cached for
 
 
