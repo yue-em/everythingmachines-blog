@@ -1,4 +1,3 @@
 User-agent: *
-Allow: /
-
+Allow: /cache/
 Sitemap: https://everythingmachines.blog/sitemap.xml
