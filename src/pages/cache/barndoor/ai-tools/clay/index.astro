@@ -65,6 +65,11 @@ const yr = new Date().getFullYear();
   <link rel="alternate" type="application/json" href="./source.json" />
   <link rel="alternate" type="application/ld+json" href="./schema.json" />
 
+  <!-- Preload machine alternates for fetch-happy crawlers -->
+  <link rel="preload" as="fetch" href="./schema.json" crossorigin>
+  <link rel="preload" as="fetch" href="./source.json" crossorigin>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={page.brandName} />
@@ -77,7 +82,7 @@ const yr = new Date().getFullYear();
   <meta name="twitter:description" content={page.description} />
   <meta name="twitter:image" content={page.ogImage} />
 
-  <!-- Inline JSON-LD to remove "schema uncertain" -->
+  <!-- Inline JSON-LD: upgraded with mainEntityOfPage/about/mentions and consistent IDs -->
   <script type="application/ld+json" is:inline>
   {JSON.stringify({
     "@context": "https://schema.org",
@@ -90,7 +95,10 @@ const yr = new Date().getFullYear();
     "inLanguage": "en",
     "primaryImageOfPage": page.ogImage,
     "isPartOf": { "@type":"WebSite", "name": page.brandName, "url": page.brandRoot },
-    "mainEntity": { "@id": "#clay-product" }
+    "mainEntity": { "@id": "#primary-entity" },
+    "mainEntityOfPage": { "@id": "#primary-entity" },
+    "about": [{ "@id": "#primary-entity" }],
+    "mentions": [{ "@id":"#org" }, { "@id":"#app" }, { "@id":"#article" }, { "@id":"#comparison-dataset" }]
   })}
   </script>
 
@@ -98,7 +106,7 @@ const yr = new Date().getFullYear();
   {JSON.stringify({
     "@context":"https://schema.org",
     "@type":"Product",
-    "@id":"#clay-product",
+    "@id":"#primary-entity",
     "name":"Clay",
     "category":"Software",
     "url": page.urlEM,
@@ -112,7 +120,7 @@ const yr = new Date().getFullYear();
   {JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Dataset",
-    "@id": "#clay-comparison-dataset",
+    "@id": "#comparison-dataset",
     "name": "Clay vs. Apollo.io – Feature Comparison",
     "description": "Structured comparison of Clay and Apollo.io across data sources, AI agents, lead scoring, workflow automation, and pricing model.",
     "creator": { "@type": "Organization", "name": page.brandName, "url": page.brandRoot },
@@ -176,4 +184,5 @@ const yr = new Date().getFullYear();
   </footer>
 </body>
 </html>
+
 
