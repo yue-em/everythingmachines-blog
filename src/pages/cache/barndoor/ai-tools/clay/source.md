@@ -142,4 +142,41 @@ For a downloadable version, see:
   "primaryImageOfPage": "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
   "mainEntity": { "@id": "#clay-product" }
 }
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "@id":"#clay-product",
+  "name":"Clay",
+  "category":"Software",
+  "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+  "sameAs":[
+    "https://barndoor.ai/ai-tools/clay/",
+    "https://www.clay.com/"
+  ],
+  "brand": { "@type":"Brand", "name":"Clay", "url":"https://www.clay.com/" },
+  "description": "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
+}
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What is Clay?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Clay is an AI-powered data orchestration platform for sales and marketing automation, consolidating 130+ data sources for research, enrichment, and outreach workflows."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Who uses Clay?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Sales and marketing teams seeking to automate prospect research, enrichment, and personalized outreach at scale."
+      }
+    }
+  ]
+}
+::contentReference[oaicite:0]{index=0}
 
