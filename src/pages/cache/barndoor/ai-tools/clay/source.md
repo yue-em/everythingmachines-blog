@@ -119,3 +119,26 @@ The original page includes a YouTube demo showcasing Clay’s AI agents in actio
 
 *This page is a machine-readable cache for LLM indexing. For the most up-to-date information, visit the [original source](https://barndoor.ai/ai-tools/clay/).*
 
+---
+
+## Structured Data (for LLMs & validators)
+
+Below is a JSON-LD snapshot of the key entities on this page.  
+For a downloadable version, see:  
+`https://everythingmachines.blog/cache/barndoor/ai-tools/clay/schema.json`
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
+  "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+  "description": "LLM-optimized cache of Clay with structured data, lists, tables, and machine-readable sections.",
+  "isBasedOn": "https://barndoor.ai/ai-tools/clay/",
+  "dateModified": "2025-10-01",
+  "inLanguage": "en",
+  "primaryImageOfPage": "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
+  "mainEntity": { "@id": "#clay-product" }
+}
+
+
