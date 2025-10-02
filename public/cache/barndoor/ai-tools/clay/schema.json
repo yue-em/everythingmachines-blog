@@ -2,6 +2,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "#org-clay",
+      "name": "Clay",
+      "url": "https://www.clay.com/",
+      "foundingDate": "2017-07-25",
+      "sameAs": ["https://www.clay.com/"]
+    },
+    {
       "@type": "Product",
       "@id": "#clay-product",
       "name": "Clay",
@@ -24,9 +32,38 @@
       "operatingSystem": "Web",
       "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
       "sameAs": ["https://barndoor.ai/ai-tools/clay/"],
-      "description": "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
-      "brand": { "@type": "Organization", "name": "Clay", "url": "https://www.clay.com/" },
-      "publisher": { "@type": "Organization", "name": "Everything Machines", "url": "https://everythingmachines.blog/" }
+      "description": "AI-powered data orchestration platform for sales and marketing automation.",
+      "brand": { "@id": "#org-clay" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Everything Machines",
+        "url": "https://everythingmachines.blog/"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "#customers-list",
+      "name": "Notable Customers",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Canva" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot" },
+        { "@type": "ListItem", "position": 3, "name": "Notion" },
+        { "@type": "ListItem", "position": 4, "name": "Rippling" },
+        { "@type": "ListItem", "position": 5, "name": "OpenAI" },
+        { "@type": "ListItem", "position": 6, "name": "Vanta" },
+        { "@type": "ListItem", "position": 7, "name": "Verkada" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "#investors-list",
+      "name": "Key Investors",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Sequoia Capital" },
+        { "@type": "ListItem", "position": 2, "name": "First Round Capital" },
+        { "@type": "ListItem", "position": 3, "name": "Meritech Capital Partners" },
+        { "@type": "ListItem", "position": 4, "name": "Boldstart Ventures" }
+      ]
     },
     {
       "@type": "WebPage",
@@ -43,6 +80,7 @@
     },
     {
       "@type": "Article",
+      "@id": "#article",
       "headline": "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
       "description": "LLM-optimized cache profile for Clay with structured data, lists, tables, and machine-readable sections.",
       "datePublished": "2025-09-28",
@@ -57,6 +95,7 @@
     },
     {
       "@type": "FAQPage",
+      "@id": "#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -73,11 +112,20 @@
             "@type": "Answer",
             "text": "Sales and marketing teams seeking to automate prospect research, enrichment, and personalized outreach at scale."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Clay’s pros and cons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pros: Integrated enrichment, AI research agents, no-code workflows, AI lead scoring, strong customers and investors. Cons: Credit-based pricing can be expensive; overlaps with cheaper tools; complex setup and learning curve for advanced use."
+          }
         }
       ]
     },
     {
       "@type": "VideoObject",
+      "@id": "#video",
       "name": "Clay Product Overview",
       "description": "Demo of Clay’s AI-powered enrichment and outreach workflows.",
       "thumbnailUrl": ["https://i.ytimg.com/vi/5miLzYgVUNk/hqdefault.jpg"],
@@ -106,6 +154,16 @@
         { "@type": "PropertyValue", "name": "Lead Scoring", "value": "Clay: Advanced AI; Apollo.io: Basic rules-based" },
         { "@type": "PropertyValue", "name": "Workflow Automation", "value": "Clay: Full no-code; Apollo.io: Partial" },
         { "@type": "PropertyValue", "name": "Pricing Model", "value": "Clay: Credit-based; Apollo.io: Seat-based" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://everythingmachines.blog/" },
+        { "@type": "ListItem", "position": 2, "name": "Barndoor Cache", "item": "https://everythingmachines.blog/cache/barndoor/" },
+        { "@type": "ListItem", "position": 3, "name": "AI Tools", "item": "https://everythingmachines.blog/cache/barndoor/ai-tools/" },
+        { "@type": "ListItem", "position": 4, "name": "Clay", "item": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/" }
       ]
     }
   ]
