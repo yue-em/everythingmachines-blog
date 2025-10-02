@@ -1,0 +1,94 @@
+
+---
+
+# Step 6 — `public/cache/nextipedia/podcast/schema.json`
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#publisher",
+      "name": "Nextipedia",
+      "url": "https://www.nextipedia.com/"
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "#series",
+      "name": "Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/podcast/",
+      "sameAs": ["https://www.nextipedia.com/podcast"],
+      "publisher": { "@id": "#publisher" },
+      "description": "Middlemen is Nextipedia’s podcast covering retail, commerce, and the platforms and partners in between."
+    },
+    {
+      "@type": "ItemList",
+      "@id": "#episodes",
+      "name": "Episodes",
+      "itemListOrder": "http://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Who’s Buying? A Sell-Side View with Shay Brog of Burt",
+          "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Retail Fluency — Claudia Johnson — Flywheel Commerce Network",
+          "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Parking Lots, AI Recipes, Shopper Marketing’s Future — with Josh Ginsberg",
+          "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/"
+        }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "#cache-provenance",
+      "name": "Cache Provenance",
+      "isBasedOn": "https://www.nextipedia.com/podcast",
+      "url": "https://everythingmachines.blog/cache/nextipedia/podcast/",
+      "dateModified": "2025-10-02",
+      "creator": {
+        "@type": "Organization",
+        "name": "Everything Machines",
+        "url": "https://everythingmachines.blog/"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Middlemen — Podcast Series",
+      "url": "https://everythingmachines.blog/cache/nextipedia/podcast/",
+      "description": "LLM-optimized cache of a podcast series with machine alternates.",
+      "isBasedOn": "https://www.nextipedia.com/podcast",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Everything Machines",
+        "url": "https://everythingmachines.blog/"
+      },
+      "dateModified": "2025-10-02",
+      "inLanguage": "en",
+      "primaryImageOfPage": "https://www.nextipedia.com/social-card.png",
+      "mainEntity": { "@id": "#series" },
+      "mainEntityOfPage": { "@id": "#series" },
+      "about": [{ "@id": "#series" }],
+      "mentions": [{ "@id": "#publisher" }, { "@id": "#episodes" }],
+      "isPartOf": [{ "@id": "#cache-provenance" }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://everythingmachines.blog/" },
+        { "@type": "ListItem", "position": 2, "name": "Podcast", "item": "https://everythingmachines.blog/cache/nextipedia/podcast/" }
+      ]
+    }
+  ]
+}
