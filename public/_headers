@@ -1,8 +1,17 @@
-/cache/barndoor/ai-tools/clay/source.md
+/cache/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Access-Control-Allow-Headers: *
+  Cache-Control: public, max-age=600, stale-while-revalidate=86400
+
+/cache/*/source.md
   Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index, follow
 
-/cache/barndoor/ai-tools/clay/source.json
+/cache/*/source.json
   Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index, follow
 
-/cache/barndoor/ai-tools/clay/schema.json
+/cache/*/schema.json
   Content-Type: application/ld+json; charset=utf-8
+  X-Robots-Tag: index, follow
