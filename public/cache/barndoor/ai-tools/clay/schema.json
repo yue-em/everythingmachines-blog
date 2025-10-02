@@ -1,0 +1,183 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#org",
+      "name": "Clay",
+      "url": "https://www.clay.com/",
+      "foundingDate": "2017-07-25",
+      "sameAs": ["https://www.clay.com/"]
+    },
+    {
+      "@type": "Product",
+      "@id": "#primary-entity",
+      "name": "Clay",
+      "category": "Software",
+      "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+      "sameAs": [
+        "https://barndoor.ai/ai-tools/clay/",
+        "https://www.clay.com/"
+      ],
+      "brand": { "@type": "Brand", "name": "Clay", "url": "https://www.clay.com/" },
+      "description": "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "#app",
+      "name": "Clay",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+      "sameAs": ["https://barndoor.ai/ai-tools/clay/"],
+      "description": "AI-powered data orchestration platform for sales and marketing automation.",
+      "brand": { "@id": "#org" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Everything Machines",
+        "url": "https://everythingmachines.blog/"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "#cache-provenance",
+      "name": "Cache Provenance",
+      "isBasedOn": "https://barndoor.ai/ai-tools/clay/",
+      "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+      "dateModified": "2025-10-01",
+      "creator": { "@type": "Organization", "name": "Everything Machines", "url": "https://everythingmachines.blog/" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "#customers-list",
+      "name": "Notable Customers",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Canva" },
+        { "@type": "ListItem", "position": 2, "name": "HubSpot" },
+        { "@type": "ListItem", "position": 3, "name": "Notion" },
+        { "@type": "ListItem", "position": 4, "name": "Rippling" },
+        { "@type": "ListItem", "position": 5, "name": "OpenAI" },
+        { "@type": "ListItem", "position": 6, "name": "Vanta" },
+        { "@type": "ListItem", "position": 7, "name": "Verkada" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "#investors-list",
+      "name": "Key Investors",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Sequoia Capital" },
+        { "@type": "ListItem", "position": 2, "name": "First Round Capital" },
+        { "@type": "ListItem", "position": 3, "name": "Meritech Capital Partners" },
+        { "@type": "ListItem", "position": 4, "name": "Boldstart Ventures" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Clay – LLM-Optimized Cache",
+      "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+      "description": "LLM-optimized version of Clay’s AI app profile with structured data, lists, tables, and machine-readable sections.",
+      "isBasedOn": "https://barndoor.ai/ai-tools/clay/",
+      "primaryImageOfPage": "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
+      "isPartOf": { "@type": "WebSite", "name": "Everything Machines", "url": "https://everythingmachines.blog/" },
+      "dateModified": "2025-10-01",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "#primary-entity" },
+      "mainEntityOfPage": { "@id": "#primary-entity" },
+      "about": [{ "@id": "#primary-entity" }],
+      "mentions": [
+        { "@id": "#org" },
+        { "@id": "#app" },
+        { "@id": "#article" },
+        { "@id": "#comparison-dataset" },
+        { "@id": "#customers-list" },
+        { "@id": "#investors-list" },
+        { "@id": "#video" }
+      ],
+      "isPartOf": [{ "@id": "#cache-provenance" }]
+    },
+    {
+      "@type": "Article",
+      "@id": "#article",
+      "headline": "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
+      "description": "LLM-optimized cache profile for Clay with structured data, lists, tables, and machine-readable sections.",
+      "datePublished": "2025-09-28",
+      "dateModified": "2025-10-01",
+      "author": { "@type": "Organization", "name": "Everything Machines", "url": "https://everythingmachines.blog/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Everything Machines",
+        "logo": { "@type": "ImageObject", "url": "https://everythingmachines.blog/logo.png" }
+      },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Clay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Clay is an AI-powered data orchestration platform for sales and marketing automation, consolidating 130+ data sources for research, enrichment, and outreach workflows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who uses Clay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sales and marketing teams seeking to automate prospect research, enrichment, and personalized outreach at scale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Clay’s pros and cons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pros: Integrated enrichment, AI research agents, no-code workflows, AI lead scoring, strong customers and investors. Cons: Credit-based pricing can be expensive; overlaps with cheaper tools; complex setup and learning curve for advanced use."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "#video",
+      "name": "Clay Product Overview",
+      "description": "Demo of Clay’s AI-powered enrichment and outreach workflows.",
+      "thumbnailUrl": ["https://i.ytimg.com/vi/5miLzYgVUNk/hqdefault.jpg"],
+      "uploadDate": "2025-08-01",
+      "contentUrl": "https://www.youtube.com/watch?v=5miLzYgVUNk",
+      "embedUrl": "https://www.youtube.com/embed/5miLzYgVUNk"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "#comparison-dataset",
+      "name": "Clay vs. Apollo.io – Feature Comparison",
+      "description": "Structured comparison of Clay and Apollo.io across data sources, AI agents, lead scoring, workflow automation, and pricing model.",
+      "creator": { "@type": "Organization", "name": "Everything Machines", "url": "https://everythingmachines.blog/" },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+      "isBasedOn": "https://barndoor.ai/ai-tools/clay/",
+      "dateModified": "2025-10-01",
+      "distribution": [
+        { "@type": "DataDownload", "encodingFormat": "text/html", "contentUrl": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/" },
+        { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.json" },
+        { "@type": "DataDownload", "encodingFormat": "text/markdown", "contentUrl": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.md" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://everythingmachines.blog/" },
+        { "@type": "ListItem", "position": 2, "name": "Barndoor Cache", "item": "https://everythingmachines.blog/cache/barndoor/" },
+        { "@type": "ListItem", "position": 3, "name": "AI Tools", "item": "https://everythingmachines.blog/cache/barndoor/ai-tools/" },
+        { "@type": "ListItem", "position": 4, "name": "Clay", "item": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/" }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,17 @@
+{
+  "brand": "barndoor",
+  "section": "AI Tools",
+  "items": [
+    {
+      "name": "Clay",
+      "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+      "alternates": {
+        "md": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.md",
+        "json": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.json",
+        "ldjson": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/schema.json"
+      },
+      "lastmod": "2025-10-01"
+    }
+  ],
+  "lastmod": "2025-10-01"
+}

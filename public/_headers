@@ -45,3 +45,4 @@
 /cache/*/*/*/schema.json
   Content-Type: application/ld+json; charset=utf-8
   X-Robots-Tag: index,follow
+

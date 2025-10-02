@@ -1,15 +1,34 @@
-# Core metadata used by index.astro
-page_url: "https://barndoor.ai/ai-tools/clay/"
+# ===============================
+# Everything Machines Cache Page
+# Single source of truth for Clay
+# ===============================
+
+# Brand/site context (EM cache)
+brand_name: "Everything Machines"
+brand_root: "https://everythingmachines.blog/"
+brand: "barndoor"
+rel_path: "ai-tools/clay"
+
+# URLs
+url_em: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/"
+url_original: "https://barndoor.ai/ai-tools/clay/"
+
+# Page identity/content
 title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI"
+title_suffix: "AI App Profile · Features, Pros & Cons"
 description: "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
 og_image: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png"
-lastmod: "2025-10-01"
-brand_name: "Barndoor.ai"
-brand_root: "https://barndoor.ai/"
 
-# Schema / SEO controls
-page_type: "webpage"   # options: webpage | article | product | dataset | faqpage | itemlist
-robots_directive: "index,follow,max-image-preview:large"
+# Dates
+lastmod: "2025-10-01"
+published: "2025-09-28"
+lastmod_human: "October 1, 2025"
+
+# Robots / canonical
+robots: "index,follow,max-image-preview:large"
+canonical: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/"
+
+# Keywords
 keywords:
   - "Clay AI"
   - "AI data orchestration"
@@ -19,15 +38,15 @@ keywords:
   - "data enrichment"
   - "prospect research"
 
-# Company Information (kept from your current file)
-company:
-  name: "Clay"
-  type: "Startup"
-  founded: "2017-07-25"
-  website: "https://www.clay.com/"
-  totalFinancing: "$102M"
-  valuation: "$3.1B"
-  lastFundingRound: "Series C"
+# Company / product
+product_name: "Clay"
+product_site: "https://www.clay.com/"
+company_type: "Startup"
+founded: "2017-07-25"
+founded_human: "July 25, 2017"
+total_financing: "$102M"
+valuation: "$3.1B"
+last_funding_round: "Series C"
 
 # Specializations
 specializations:
@@ -53,16 +72,83 @@ investors:
   - "Meritech Capital Partners"
   - "Boldstart Ventures"
 
-# Content Structure (optional hints for agents)
-sections:
-  - "company-overview"
-  - "problem-solution"
-  - "features"
-  - "pros-cons"
-  - "recent-news"
-  - "customers-investors"
+# Problem statement
+problem_paragraph: "Clay helps revenue teams eliminate manual research and fragmented enrichment workflows."
+problem_points:
+  - "Consolidates 130+ data sources"
+  - "Automates prospect research"
+  - "Enables AI-powered personalization"
+  - "Streamlines enrichment and outreach"
 
-# Cache/Provenance
+# Features
+features:
+  - name: "AI Research Agents"
+    desc: "Automate deep prospect and company research."
+  - name: "Lead Scoring"
+    desc: "AI-based scoring and prioritization of leads."
+  - name: "Data Enrichment"
+    desc: "Pull from 130+ APIs to enrich CRM records."
+  - name: "Workflow Automation"
+    desc: "Drag-and-drop builder for outreach workflows."
+
+# Pros / Cons
+pros:
+  - "Integrated enrichment with AI research agents"
+  - "No-code workflow automation"
+  - "Advanced AI lead scoring"
+  - "Strong customer base"
+  - "Well-funded by top VCs"
+
+cons:
+  - "Credit-based pricing can be expensive"
+  - "Overlaps with cheaper alternatives"
+  - "Learning curve for advanced use"
+  - "Complex setup for large teams"
+  - "Dependent on external APIs"
+
+# Comparison block
+competitor_name: "Apollo.io"
+comparison:
+  data_sources: "130+ APIs"
+  data_sources_alt: "~60 APIs"
+  ai_agents: "Yes"
+  ai_agents_alt: "Limited"
+  lead_scoring: "Advanced AI"
+  lead_scoring_alt: "Basic rules-based"
+  automation: "Full no-code"
+  automation_alt: "Partial"
+  pricing: "Credit-based"
+  pricing_alt: "Seat-based"
+
+# News
+news_month_year: "September 2025"
+news_sentence: "Clay raised a $46M Series C led by Meritech Capital to expand its AI enrichment and automation platform."
+
+# FAQ
+faq:
+  - q: "What is Clay?"
+    a: "Clay is an AI-powered data orchestration platform for sales and marketing automation, consolidating 130+ data sources for research, enrichment, and outreach workflows."
+  - q: "Who uses Clay?"
+    a: "Sales and marketing teams seeking to automate prospect research, enrichment, and personalized outreach at scale."
+
+# Links
+related_blog_url: ""
+sameas_extras: []
+
+# Optional video
+video:
+  name: "Clay Product Overview"
+  description: "Demo of Clay’s AI-powered enrichment and outreach workflows."
+  url: "https://www.youtube.com/watch?v=5miLzYgVUNk"
+  thumbnailUrl: "https://i.ytimg.com/vi/5miLzYgVUNk/hqdefault.jpg"
+  uploadDate: "2025-08-01"
+
+# Section meta
+section_name: "AI Tools"
+section_slug: "ai-tools"
+one_line_summary: "Enrichment and outreach workflows"
+
+# Cache provenance
 cache:
   sourceUrl: "https://barndoor.ai/ai-tools/clay/"
   scrapedDate: "2025-10-01"

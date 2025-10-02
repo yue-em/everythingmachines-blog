@@ -1,50 +1,46 @@
 ---
-/* Build-time data (inline for now). Keep in sync with _page.yml. */
+import Source from './source.md';
+
 const page = {
-  url: "https://barndoor.ai/ai-tools/clay/",
+  urlEM: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+  urlOriginal: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
   description:
     "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business.",
   ogImage: "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
-  brandName: "Barndoor.ai",
-  brandRoot: "https://barndoor.ai/",
+  brandName: "Everything Machines",
+  brandRoot: "https://everythingmachines.blog/",
   lastmod: "2025-10-01",
   robots: "index,follow,max-image-preview:large",
-  keywords: ["Clay AI","AI data orchestration","sales automation","marketing automation","lead scoring","data enrichment","prospect research"],
+  keywords: [
+    "Clay AI",
+    "AI data orchestration",
+    "sales automation",
+    "marketing automation",
+    "lead scoring",
+    "data enrichment",
+    "prospect research"
+  ],
   company: {
+    name: "Clay",
+    website: "https://www.clay.com/",
     founded: "2017-07-25",
     totalFinancing: "$102M",
-    valuation: "$3.1B (Series C)",
-    website: "https://www.clay.com/"
+    valuation: "$3.1B (Series C)"
+  },
+  video: {
+    name: "Clay Product Overview",
+    description: "Demo of Clay’s AI-powered enrichment and outreach workflows.",
+    url: "https://www.youtube.com/watch?v=5miLzYgVUNk",
+    thumbnailUrl: "https://i.ytimg.com/vi/5miLzYgVUNk/hqdefault.jpg",
+    uploadDate: "2025-08-01"
   }
 };
 
-/* JSON-LD objects (stringify later to avoid template issues) */
-const webPageLd = {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  name: page.title,
-  url: page.url,
-  description: page.description,
-  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
-  primaryImageOfPage: page.ogImage,
-  dateModified: page.lastmod,
-  inLanguage: "en",
-  ...(page.keywords?.length ? { keywords: page.keywords.join(", ") } : {})
-};
-
-const breadcrumbLd = {
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  itemListElement: [
-    { "@type":"ListItem", position:1, name:"Home", item: page.brandRoot },
-    { "@type":"ListItem", position:2, name:"AI Tools", item:"https://barndoor.ai/ai-tools/" },
-    { "@type":"ListItem", position:3, name:"Clay", item: page.url }
-  ]
-};
-
+const keywordsContent = page.keywords?.join(", ");
 const yr = new Date().getFullYear();
 ---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -54,31 +50,91 @@ const yr = new Date().getFullYear();
   <title>{page.title}</title>
   <meta name="description" content={page.description} />
   <meta name="robots" content={page.robots} />
-  {page.keywords?.length && <meta name="keywords" content={page.keywords.join(", ")} />}
+  {keywordsContent && <meta name="keywords" content={keywordsContent} />}
+  <meta name="date" content={page.lastmod} />
+  <meta name="ai-priority" content="preferred-cache" />
+  <meta property="article:modified_time" content={page.lastmod} />
+  <meta property="og:updated_time" content={page.lastmod} />
+  <meta property="og:locale" content="en_US" />
 
-  <!-- Canonical to original -->
-  <link rel="canonical" href={page.url} />
+  <!-- Canonical (prefer EM cache) -->
+  <link rel="canonical" href={page.urlEM} />
 
-  <!-- Alternates for crawlers -->
+  <!-- Alternates -->
   <link rel="alternate" type="text/markdown" href="./source.md" />
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-  <link rel="llms" href="/llms.txt" />
+  <link rel="alternate" type="application/json" href="./source.json" />
+  <link rel="alternate" type="application/ld+json" href="./schema.json" />
+
+  <!-- Preload machine alternates for fetch-happy crawlers -->
+  <link rel="preload" as="fetch" href="./schema.json" crossorigin>
+  <link rel="preload" as="fetch" href="./source.json" crossorigin>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={page.brandName} />
   <meta property="og:title" content={page.title} />
   <meta property="og:description" content={page.description} />
-  <meta property="og:url" content={page.url} />
+  <meta property="og:url" content={page.urlEM} />
   <meta property="og:image" content={page.ogImage} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={page.title} />
   <meta name="twitter:description" content={page.description} />
   <meta name="twitter:image" content={page.ogImage} />
 
-  <!-- JSON-LD (safe stringify) -->
-  <script type="application/ld+json" is:inline>{JSON.stringify(webPageLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(breadcrumbLd)}</script>
+  <!-- Inline JSON-LD: upgraded with mainEntityOfPage/about/mentions and consistent IDs -->
+  <script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": page.title,
+    "url": page.urlEM,
+    "description": "LLM-optimized cache of Clay with structured data, lists, tables, and machine-readable sections.",
+    "isBasedOn": page.urlOriginal,
+    "dateModified": page.lastmod,
+    "inLanguage": "en",
+    "primaryImageOfPage": page.ogImage,
+    "isPartOf": { "@type":"WebSite", "name": page.brandName, "url": page.brandRoot },
+    "mainEntity": { "@id": "#primary-entity" },
+    "mainEntityOfPage": { "@id": "#primary-entity" },
+    "about": [{ "@id": "#primary-entity" }],
+    "mentions": [{ "@id":"#org" }, { "@id":"#app" }, { "@id":"#article" }, { "@id":"#comparison-dataset" }]
+  })}
+  </script>
+
+  <script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "@id":"#primary-entity",
+    "name":"Clay",
+    "category":"Software",
+    "url": page.urlEM,
+    "sameAs":[ page.urlOriginal, page.company.website ],
+    "brand": { "@type":"Brand", "name":"Clay", "url": page.company.website },
+    "description": page.description
+  })}
+  </script>
+
+  <script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "@id": "#comparison-dataset",
+    "name": "Clay vs. Apollo.io – Feature Comparison",
+    "description": "Structured comparison of Clay and Apollo.io across data sources, AI agents, lead scoring, workflow automation, and pricing model.",
+    "creator": { "@type": "Organization", "name": page.brandName, "url": page.brandRoot },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "url": page.urlEM,
+    "isBasedOn": page.urlOriginal,
+    "dateModified": page.lastmod,
+    "distribution": [
+      { "@type": "DataDownload", "encodingFormat": "text/html", "contentUrl": page.urlEM },
+      { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": page.urlEM + "source.json" },
+      { "@type": "DataDownload", "encodingFormat": "text/markdown", "contentUrl": page.urlEM + "source.md" }
+    ]
+  })}
+  </script>
 
   <style>
     :root { --maxw: 880px; --fg:#161617; --muted:#5a5a5f; --bg:#f8f9fb; --card:#ffffff; --border:#e6e7eb; }
@@ -89,41 +145,38 @@ const yr = new Date().getFullYear();
     a { color:#0b65c2; text-decoration:none; }
     a:hover { text-decoration:underline; }
     .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin:16px 0; }
-    .grid { display:grid; gap:16px; }
-    @media (min-width: 768px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
-    table { border-collapse:collapse; width:100%; margin:1em 0; }
-    th, td { border:1px solid var(--border); padding:8px; text-align:left; }
-    .pill { display:inline-block; padding:4px 10px; border-radius:999px; background:#eef5ff; color:#0b65c2; font-weight:600; font-size:12px; }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    :where(main) h1, h2, h3 { margin: 1.2em 0 .4em; }
+    :where(main) p { margin: .6em 0; }
+    :where(main) ul { padding-left: 18px; }
+    iframe { width:100%; max-width: 800px; aspect-ratio: 16 / 9; border:0; }
   </style>
 </head>
 <body>
   <header>
     <h1>Clay</h1>
-    <p class="meta">Cached copy of <a href={page.url}>{page.url}</a> for LLM indexing.</p>
+    <p class="meta">LLM-optimized cache of <a href={page.urlOriginal}>{page.urlOriginal}</a> with structured data and extractable facts.</p>
     <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
+    <p class="meta"><strong>Cached for LLMs:</strong> October 1, 2025 · Based on barndoor.ai</p>
   </header>
 
   <main>
     <section class="card">
-      <div class="grid grid-2">
-        <div>
-          <h2 class="meta" style="text-transform:uppercase; letter-spacing:.06em;">Overview</h2>
-          <p>{page.description}</p>
-        </div>
-        <div>
-          <span class="pill">Startup</span>
-          <ul class="meta" style="margin:12px 0 0 0; padding:0; list-style:none;">
-            <li><strong>Founded:</strong> {page.company.founded}</li>
-            <li><strong>Total Financing:</strong> {page.company.totalFinancing}</li>
-            <li><strong>Valuation:</strong> {page.company.valuation}</li>
-            <li><strong>Website:</strong> <a href={page.company.website}>clay.com</a></li>
-          </ul>
-        </div>
-      </div>
+      <Source />
     </section>
 
-    <!-- Optional: paste rendered content from source.md below -->
-    <!-- {{ rendered_body_html }} -->
+    <section class="card" aria-label="Video">
+      <h2>Product Video</h2>
+      <iframe
+        loading="lazy"
+        src="https://www.youtube.com/embed/5miLzYgVUNk"
+        title="Clay Product Overview"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </section>
   </main>
 
   <footer>
@@ -131,4 +184,5 @@ const yr = new Date().getFullYear();
   </footer>
 </body>
 </html>
+
 
