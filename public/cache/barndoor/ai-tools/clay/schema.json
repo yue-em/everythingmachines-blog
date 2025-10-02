@@ -3,7 +3,7 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "#org-clay",
+      "@id": "#org",
       "name": "Clay",
       "url": "https://www.clay.com/",
       "foundingDate": "2017-07-25",
@@ -11,34 +11,41 @@
     },
     {
       "@type": "Product",
-      "@id": "#clay-product",
+      "@id": "#primary-entity",
       "name": "Clay",
       "category": "Software",
-      "productGroupID": "clay",
       "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
       "sameAs": [
         "https://barndoor.ai/ai-tools/clay/",
         "https://www.clay.com/"
       ],
       "brand": { "@type": "Brand", "name": "Clay", "url": "https://www.clay.com/" },
-      "isRelatedTo": { "@id": "#clay-software-app" },
       "description": "Discover Clay's AI application. Get detailed information about features, specializations, reviews, and how this AI tool can benefit your business."
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "#clay-software-app",
+      "@id": "#app",
       "name": "Clay",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
       "sameAs": ["https://barndoor.ai/ai-tools/clay/"],
       "description": "AI-powered data orchestration platform for sales and marketing automation.",
-      "brand": { "@id": "#org-clay" },
+      "brand": { "@id": "#org" },
       "publisher": {
         "@type": "Organization",
         "name": "Everything Machines",
         "url": "https://everythingmachines.blog/"
       }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "#cache-provenance",
+      "name": "Cache Provenance",
+      "isBasedOn": "https://barndoor.ai/ai-tools/clay/",
+      "url": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
+      "dateModified": "2025-10-01",
+      "creator": { "@type": "Organization", "name": "Everything Machines", "url": "https://everythingmachines.blog/" }
     },
     {
       "@type": "ItemList",
@@ -76,7 +83,19 @@
       "isPartOf": { "@type": "WebSite", "name": "Everything Machines", "url": "https://everythingmachines.blog/" },
       "dateModified": "2025-10-01",
       "inLanguage": "en",
-      "mainEntity": { "@id": "#clay-product" }
+      "mainEntity": { "@id": "#primary-entity" },
+      "mainEntityOfPage": { "@id": "#primary-entity" },
+      "about": [{ "@id": "#primary-entity" }],
+      "mentions": [
+        { "@id": "#org" },
+        { "@id": "#app" },
+        { "@id": "#article" },
+        { "@id": "#comparison-dataset" },
+        { "@id": "#customers-list" },
+        { "@id": "#investors-list" },
+        { "@id": "#video" }
+      ],
+      "isPartOf": [{ "@id": "#cache-provenance" }]
     },
     {
       "@type": "Article",
@@ -131,11 +150,11 @@
       "thumbnailUrl": ["https://i.ytimg.com/vi/5miLzYgVUNk/hqdefault.jpg"],
       "uploadDate": "2025-08-01",
       "contentUrl": "https://www.youtube.com/watch?v=5miLzYgVUNk",
-      "embedUrl": "https://www.youtube.com/watch?v=5miLzYgVUNk"
+      "embedUrl": "https://www.youtube.com/embed/5miLzYgVUNk"
     },
     {
       "@type": "Dataset",
-      "@id": "#clay-comparison-dataset",
+      "@id": "#comparison-dataset",
       "name": "Clay vs. Apollo.io – Feature Comparison",
       "description": "Structured comparison of Clay and Apollo.io across data sources, AI agents, lead scoring, workflow automation, and pricing model.",
       "creator": { "@type": "Organization", "name": "Everything Machines", "url": "https://everythingmachines.blog/" },
@@ -147,13 +166,6 @@
         { "@type": "DataDownload", "encodingFormat": "text/html", "contentUrl": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/" },
         { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.json" },
         { "@type": "DataDownload", "encodingFormat": "text/markdown", "contentUrl": "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.md" }
-      ],
-      "variableMeasured": [
-        { "@type": "PropertyValue", "name": "Data Sources", "value": "Clay: 130+ APIs; Apollo.io: ~60 APIs" },
-        { "@type": "PropertyValue", "name": "AI Research Agents", "value": "Clay: Yes; Apollo.io: Limited" },
-        { "@type": "PropertyValue", "name": "Lead Scoring", "value": "Clay: Advanced AI; Apollo.io: Basic rules-based" },
-        { "@type": "PropertyValue", "name": "Workflow Automation", "value": "Clay: Full no-code; Apollo.io: Partial" },
-        { "@type": "PropertyValue", "name": "Pricing Model", "value": "Clay: Credit-based; Apollo.io: Seat-based" }
       ]
     },
     {
@@ -168,3 +180,4 @@
     }
   ]
 }
+
