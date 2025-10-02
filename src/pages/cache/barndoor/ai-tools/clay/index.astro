@@ -2,7 +2,6 @@
 import Source from './source.md';
 
 const page = {
-  // Prefer EM as canonical for LLMs; keep provenance to original
   urlEM: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
   urlOriginal: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
@@ -39,149 +38,6 @@ const page = {
 };
 
 const keywordsContent = page.keywords?.join(", ");
-
-/* ----------------------------- JSON-LD Objects ----------------------------- */
-
-// SOFTWARE APPLICATION (software entity)
-const softwareApplicationLd = {
-  "@context":"https://schema.org",
-  "@type":"SoftwareApplication",
-  "@id":"#clay-software-app",
-  name: "Clay",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Web",
-  url: page.urlEM,
-  sameAs: [page.urlOriginal],
-  description: page.description,
-  brand: { "@type":"Organization", name:"Clay", url: page.company.website },
-  publisher: { "@type":"Organization", name: page.brandName, url: page.brandRoot }
-};
-
-// PRODUCT (product view of the same software)
-const productLd = {
-  "@context":"https://schema.org",
-  "@type":"Product",
-  "@id":"#clay-product",
-  name: "Clay",
-  category: "Software",
-  productGroupID: "clay",
-  url: page.urlEM,
-  sameAs: [page.urlOriginal, page.company.website],
-  brand: { "@type":"Brand", name:"Clay", url: page.company.website },
-  isRelatedTo: { "@id":"#clay-software-app" },
-  description: page.description
-  // Add offers/price/aggregateRating later if you have verified data
-};
-
-// WEBPAGE (tie mainEntity to the Product)
-const webPageLd = {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  name: "Clay – LLM-Optimized Cache",
-  url: page.urlEM,
-  description:
-    "LLM-optimized version of Clay’s AI app profile with structured data, lists, tables, and machine-readable sections.",
-  isBasedOn: page.urlOriginal,
-  primaryImageOfPage: page.ogImage,
-  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
-  dateModified: page.lastmod,
-  inLanguage: "en",
-  ...(keywordsContent ? { keywords: keywordsContent } : {}),
-  mainEntity: { "@id":"#clay-product" }
-};
-
-// ARTICLE (publisher wrapper)
-const articleLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
-  "description": "LLM-optimized cache profile for Clay with structured data, lists, tables, and machine-readable sections.",
-  "datePublished": "2025-09-28",
-  "dateModified": page.lastmod,
-  "author": {
-    "@type": "Organization",
-    "name": page.brandName,
-    "url": page.brandRoot
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": page.brandName,
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://everythingmachines.blog/logo.png"
-    }
-  },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": page.urlEM }
-};
-
-// FAQ
-const faqLd = {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  mainEntity: [
-    {
-      "@type":"Question",
-      name:"What is Clay?",
-      acceptedAnswer:{ "@type":"Answer", text:"Clay is an AI-powered data orchestration platform for sales and marketing automation, consolidating 130+ data sources for research, enrichment, and outreach workflows." }
-    },
-    {
-      "@type":"Question",
-      name:"Who uses Clay?",
-      acceptedAnswer:{ "@type":"Answer", text:"Sales and marketing teams seeking to automate prospect research, enrichment, and personalized outreach at scale." }
-    }
-  ]
-};
-
-// BREADCRUMBS (use EM paths)
-const breadcrumbLd = {
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  itemListElement: [
-    { "@type":"ListItem", position:1, name:"Home", item: page.brandRoot },
-    { "@type":"ListItem", position:2, name:"Barndoor Cache", item:"https://everythingmachines.blog/cache/barndoor/" },
-    { "@type":"ListItem", position:3, name:"AI Tools", item:"https://everythingmachines.blog/cache/barndoor/ai-tools/" },
-    { "@type":"ListItem", position:4, name:"Clay", item: page.urlEM }
-  ]
-};
-
-// VIDEO
-const videoLd = {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  name: page.video.name,
-  description: page.video.description,
-  thumbnailUrl: [page.video.thumbnailUrl],
-  uploadDate: page.video.uploadDate,
-  contentUrl: page.video.url,
-  embedUrl: page.video.url
-};
-
-// DATASET (for the comparison table in source.md)
-const datasetLd = {
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "@id": "#clay-comparison-dataset",
-  "name": "Clay vs. Apollo.io – Feature Comparison",
-  "description": "Structured comparison of Clay and Apollo.io across data sources, AI agents, lead scoring, workflow automation, and pricing model.",
-  "creator": { "@type": "Organization", "name": page.brandName, "url": page.brandRoot },
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "url": page.urlEM,
-  "isBasedOn": page.urlOriginal,
-  "dateModified": page.lastmod,
-  "distribution": [
-    { "@type": "DataDownload", "encodingFormat": "text/html", "contentUrl": page.urlEM },
-    { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": page.urlEM + "source.json" },
-    { "@type": "DataDownload", "encodingFormat": "text/markdown", "contentUrl": page.urlEM + "source.md" }
-  ],
-  "variableMeasured": [
-    { "@type":"PropertyValue","name":"Data Sources","value":"Clay: 130+ APIs; Apollo.io: ~60 APIs" },
-    { "@type":"PropertyValue","name":"AI Research Agents","value":"Clay: Yes; Apollo.io: Limited" },
-    { "@type":"PropertyValue","name":"Lead Scoring","value":"Clay: Advanced AI; Apollo.io: Basic rules-based" },
-    { "@type":"PropertyValue","name":"Workflow Automation","value":"Clay: Full no-code; Apollo.io: Partial" },
-    { "@type":"PropertyValue","name":"Pricing Model","value":"Clay: Credit-based; Apollo.io: Seat-based" }
-  ]
-};
-
 const yr = new Date().getFullYear();
 ---
 
@@ -200,16 +56,15 @@ const yr = new Date().getFullYear();
   <meta property="og:updated_time" content={page.lastmod} />
   <meta property="og:locale" content="en_US" />
 
-  <!-- Canonical: prefer EM cache for LLMs -->
+  <!-- Canonical -->
   <link rel="canonical" href={page.urlEM} />
 
   <!-- Alternates -->
   <link rel="alternate" type="text/markdown" href="./source.md" />
   <link rel="alternate" type="application/json" href="./source.json" />
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-  <link rel="llms" href="/llms.txt" />
+  <link rel="alternate" type="application/ld+json" href="./schema.json" />
 
-  <!-- Open Graph / Twitter (point to EM URL) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={page.brandName} />
   <meta property="og:title" content={page.title} />
@@ -220,16 +75,6 @@ const yr = new Date().getFullYear();
   <meta name="twitter:title" content={page.title} />
   <meta name="twitter:description" content={page.description} />
   <meta name="twitter:image" content={page.ogImage} />
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json" is:inline>{JSON.stringify(productLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(softwareApplicationLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(webPageLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(articleLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(breadcrumbLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(videoLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(faqLd)}</script>
-  <script type="application/ld+json" is:inline>{JSON.stringify(datasetLd)}</script>
 
   <style>
     :root { --maxw: 880px; --fg:#161617; --muted:#5a5a5f; --bg:#f8f9fb; --card:#ffffff; --border:#e6e7eb; }
@@ -279,5 +124,4 @@ const yr = new Date().getFullYear();
   </footer>
 </body>
 </html>
-
 
