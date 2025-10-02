@@ -10,13 +10,11 @@
 ---
 
 ## 📑 Overview
-
 Clay is an AI-powered data orchestration platform built for sales and marketing teams. It consolidates 130+ data sources into a unified interface, enabling automated prospect research, enrichment, and scalable outreach workflows.
 
 ---
 
 ## 🏢 Company Information
-
 - **Company Type**: Startup  
 - **Founded**: July 25, 2017  
 - **Total Financing**: $102M  
@@ -26,7 +24,6 @@ Clay is an AI-powered data orchestration platform built for sales and marketing 
 ---
 
 ## ⚙️ Specializations
-
 - AI Research Agents  
 - Data Enrichment AI  
 - Lead Scoring AI  
@@ -35,8 +32,6 @@ Clay is an AI-powered data orchestration platform built for sales and marketing 
 ---
 
 ## 👥 Notable Customers
-
-Clay is used by leading companies including:  
 - Canva  
 - HubSpot  
 - Notion  
@@ -48,7 +43,6 @@ Clay is used by leading companies including:
 ---
 
 ## 💸 Key Investors
-
 - Sequoia Capital  
 - First Round Capital  
 - Meritech Capital Partners  
@@ -57,10 +51,7 @@ Clay is used by leading companies including:
 ---
 
 ## ❓ Problem Clay Solves
-
-Sales and marketing teams often waste time switching between data sources and performing manual prospect research.  
-Clay eliminates these inefficiencies by:  
-
+Sales and marketing teams often waste time switching between data sources and performing manual prospect research. Clay eliminates these inefficiencies by:
 - Consolidating 130+ enrichment sources  
 - Automating repetitive research tasks with AI agents  
 - Streamlining lead scoring and qualification  
@@ -70,17 +61,16 @@ Clay eliminates these inefficiencies by:
 
 ## 🚀 Key Features
 
-| Feature            | Description                                                                 |
-|--------------------|-----------------------------------------------------------------------------|
-| **AI Research Agents** | Automated prospect and company research across multiple sources          |
-| **Data Enrichment**    | Integrates 130+ enrichment providers for contacts & firms                |
-| **Lead Scoring**       | AI-driven scoring to prioritize the best-fit prospects                   |
-| **Workflow Automation**| No-code builder for complex outreach and follow-up sequences             |
+| Feature                | Description                                                |
+|------------------------|------------------------------------------------------------|
+| **AI Research Agents** | Automated prospect and company research across sources     |
+| **Data Enrichment**    | Integrates 130+ enrichment providers                       |
+| **Lead Scoring**       | AI-driven prioritization of best-fit prospects             |
+| **Workflow Automation**| No-code builder for outreach and follow-up sequences       |
 
 ---
 
 ## ✅ Pros
-
 - Integrated data enrichment (130+ sources)  
 - Automated AI research workflows → reduced manual time  
 - No-code, accessible to non-technical users  
@@ -90,33 +80,42 @@ Clay eliminates these inefficiencies by:
 ---
 
 ## ❌ Cons
-
 - Credit-based pricing can be expensive  
-- Feature overlap with smaller, cheaper tools  
+- Overlap with smaller, cheaper point solutions  
 - Complex workflows require setup time  
 - Learning curve for new users  
-- Overkill for simple/small use cases  
+- Overkill for very simple use cases  
+
+---
+
+## 🆚 Clay vs. Apollo.io (Example Comparison)
+
+| Feature              | Clay                                  | Apollo.io                        |
+|----------------------|---------------------------------------|----------------------------------|
+| Data Sources         | 130+ integrated APIs                  | ~60 APIs                         |
+| AI Research Agents   | Yes                                   | Limited                          |
+| Lead Scoring         | Advanced AI scoring                   | Basic rules-based                |
+| Workflow Automation  | Full no-code workflows                | Partial                          |
+| Pricing Model        | Credit-based, scalable                | Seat-based, less flexible        |
 
 ---
 
 ## 📰 Recent News
-
 **August 2025**: Raised $100M Series C at a $3.1B valuation. Led by Sequoia Capital with participation from Meritech and others.  
 
 ---
 
 ## 🔗 Social Media & Resources
-
 - **Website**: [clay.com](https://www.clay.com/)  
 - **LinkedIn**: [Clay Company Page]  
 - **Twitter**: [Clay Twitter Account]  
 
 ---
 
-## 🎥 Video Content
-
-The original page featured a YouTube demo showcasing Clay’s AI agents in action, including enrichment workflows and real-time automation examples.
+## 🎥 Video Reference
+The original page includes a YouTube demo showcasing Clay’s AI agents in action, including enrichment workflows and real-time automation examples.
 
 ---
 
-*This page is a machine-readable cache for LLM indexing. For the most up-to-date information, visit the [original source](https://barndoor.ai/ai-tools/clay/).*  
+*This page is a machine-readable cache for LLM indexing. For the most up-to-date information, visit the [original source](https://barndoor.ai/ai-tools/clay/).*
+
