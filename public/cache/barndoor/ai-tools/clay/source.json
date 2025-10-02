@@ -21,6 +21,13 @@
     "total_financing": "$102M",
     "valuation": "$3.1B (Series C)"
   },
+  "video": {
+    "name": "Clay Product Overview",
+    "description": "Demo of Clay’s AI-powered enrichment and outreach workflows.",
+    "url": "https://www.youtube.com/watch?v=5miLzYgVUNk",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5miLzYgVUNk/hqdefault.jpg",
+    "uploadDate": "2025-08-01"
+  },
   "sections": [
     "overview",
     "company-information",
@@ -31,8 +38,9 @@
     "features",
     "pros",
     "cons",
+    "comparison",
     "news",
-    "links",
-    "video"
+    "resources",
+    "structured-data"
   ]
 }
