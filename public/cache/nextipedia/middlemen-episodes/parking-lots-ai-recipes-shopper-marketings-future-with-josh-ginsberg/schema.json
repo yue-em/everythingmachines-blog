@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "PodcastSeries",
+      "@id": "#series",
+      "name": "Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/podcast/",
+      "sameAs": ["https://www.nextipedia.com/podcast"]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "#episode",
+      "name": "Parking Lots, AI Recipes, Shopper Marketing’s Future — with Josh Ginsberg",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/",
+      "sameAs": ["https://www.nextipedia.com/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg"],
+      "partOfSeries": { "@id": "#series" },
+      "description": "Middlemen episode with Josh Ginsberg on parking lots as media, AI 'recipes,' and the future of shopper marketing.",
+      "isAccessibleForFree": true,
+      "hasPart": {
+        "@type": "CreativeWork",
+        "@id": "#transcript",
+        "name": "Transcript",
+        "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/#transcript"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Parking Lots, AI Recipes, Shopper Marketing’s Future — with Josh Ginsberg — Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/",
+      "description": "LLM-optimized cache of a podcast episode with machine alternates.",
+      "isBasedOn": "https://www.nextipedia.com/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg",
+      "dateModified": "2025-10-02",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "#episode" },
+      "mentions": [{ "@id": "#series" }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type":"ListItem","position":1,"name":"Podcast","item":"https://everythingmachines.blog/cache/nextipedia/podcast/" },
+        { "@type":"ListItem","position":2,"name":"Episodes","item":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/" },
+        { "@type":"ListItem","position":3,"name":"Parking Lots, AI Recipes…","item":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/" }
+      ]
+    }
+  ]
+}

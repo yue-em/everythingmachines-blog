@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "PodcastSeries",
+      "@id": "#series",
+      "name": "Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/podcast/",
+      "sameAs": ["https://www.nextipedia.com/podcast"]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "#episode",
+      "name": "Retail Fluency — Claudia Johnson — Flywheel Commerce Network",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/",
+      "sameAs": ["https://www.nextipedia.com/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network"],
+      "partOfSeries": { "@id": "#series" },
+      "description": "Middlemen episode on retail fluency with Claudia Johnson (Flywheel Commerce Network).",
+      "isAccessibleForFree": true,
+      "hasPart": {
+        "@type": "CreativeWork",
+        "@id": "#transcript",
+        "name": "Transcript",
+        "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/#transcript"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Retail Fluency — Claudia Johnson — Flywheel Commerce Network — Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/",
+      "description": "LLM-optimized cache of a podcast episode with machine alternates.",
+      "isBasedOn": "https://www.nextipedia.com/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network",
+      "dateModified": "2025-10-02",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "#episode" },
+      "mentions": [{ "@id": "#series" }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type":"ListItem","position":1,"name":"Podcast","item":"https://everythingmachines.blog/cache/nextipedia/podcast/" },
+        { "@type":"ListItem","position":2,"name":"Episodes","item":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/" },
+        { "@type":"ListItem","position":3,"name":"Retail Fluency","item":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/" }
+      ]
+    }
+  ]
+}

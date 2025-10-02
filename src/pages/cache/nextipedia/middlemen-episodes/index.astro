@@ -1,0 +1,80 @@
+---
+import Source from './source.md';
+
+const page = {
+  urlEM: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/",
+  urlOriginal: "https://www.nextipedia.com/middlemen-episodes",
+  title: "Middlemen — Episodes",
+  description: "Episodes index for Nextipedia’s Middlemen podcast.",
+  ogImage: "https://www.nextipedia.com/social-card.png",
+  brandName: "Everything Machines",
+  brandRoot: "https://everythingmachines.blog/",
+  lastmod: "2025-10-02",
+  robots: "index,follow,max-image-preview:large",
+  keywords: ["Middlemen podcast","Nextipedia","episodes index","retail media"]
+};
+const yr = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{page.title}</title>
+  <meta name="description" content={page.description}>
+  <link rel="canonical" href={page.urlEM}>
+  <link rel="alternate" type="text/markdown" href="./source.md">
+  <link rel="alternate" type="application/json" href="./source.json">
+  <link rel="alternate" type="application/ld+json" href="./schema.json">
+
+  <script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name": page.title,
+    "url": page.urlEM,
+    "description":"Episodes index for a podcast series with machine alternates.",
+    "isBasedOn": page.urlOriginal,
+    "dateModified": page.lastmod,
+    "inLanguage":"en",
+    "mainEntity": { "@id":"#episodes" }
+  })}
+  </script>
+
+  <script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "@id":"#episodes",
+    "name":"Episodes",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/" },
+      { "@type":"ListItem","position":2,"url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/" },
+      { "@type":"ListItem","position":3,"url":"https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/" }
+    ]
+  })}
+  </script>
+
+  <style>
+    :root{--maxw:880px;--fg:#161617;--muted:#5a5a5f;--bg:#f8f9fb;--card:#fff;--border:#e6e7eb}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui}
+    header,main,footer{max-width:var(--maxw);margin:0 auto;padding:24px}
+    .meta{color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:16px 0}
+    ul{padding-left:18px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Middlemen — Episodes</h1>
+    <p class="meta">LLM-optimized index for the Middlemen podcast. Original: <a href={page.urlOriginal}>{page.urlOriginal}</a></p>
+    <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
+  </header>
+  <main>
+    <section class="card">
+      <Source />
+    </section>
+  </main>
+  <footer><small>© {yr} {page.brandName}</small></footer>
+</body>
+</html>

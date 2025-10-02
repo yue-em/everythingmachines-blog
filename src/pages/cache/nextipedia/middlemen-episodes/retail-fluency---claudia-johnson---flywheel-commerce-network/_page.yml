@@ -1,0 +1,44 @@
+brand_name: "Everything Machines"
+brand_root: "https://everythingmachines.blog/"
+brand: "nextipedia"
+rel_path: "middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network"
+
+url_em: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/"
+url_original: "https://www.nextipedia.com/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network"
+
+title: "Retail Fluency — Claudia Johnson — Flywheel Commerce Network — Middlemen"
+title_suffix: "Podcast Episode"
+description: "Middlemen episode on retail fluency with Claudia Johnson (Flywheel Commerce Network)."
+og_image: "https://www.nextipedia.com/social-card.png"
+
+lastmod: "2025-10-02"
+published: "2025-10-02"
+lastmod_human: "October 2, 2025"
+
+robots: "index,follow,max-image-preview:large"
+canonical: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/"
+
+keywords:
+  - "Middlemen podcast"
+  - "Nextipedia"
+  - "Claudia Johnson"
+  - "Flywheel Commerce Network"
+  - "retail media"
+
+series:
+  name: "Middlemen"
+  url: "https://everythingmachines.blog/cache/nextipedia/podcast/"
+
+guests:
+  - "Claudia Johnson (Flywheel Commerce Network)"
+
+topics:
+  - "Retail fluency"
+  - "Shopper marketing and retail media"
+  - "Execution with partners/platforms"
+
+cache:
+  sourceUrl: "https://www.nextipedia.com/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network"
+  scrapedDate: "2025-10-02"
+  contentHash: "nextipedia-episode-claudia-johnson-20251002"
+  version: "1.0"

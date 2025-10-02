@@ -1,6 +1,7 @@
-/* 
-  Cache static assets by default
-*/
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
   Cache-Control: public, max-age=600, stale-while-revalidate=86400
 
 /cache/*
@@ -11,12 +12,37 @@
 
 /cache/*/source.md
   Content-Type: text/markdown; charset=utf-8
-  X-Robots-Tag: index, follow
+  X-Robots-Tag: index,follow
 
 /cache/*/source.json
   Content-Type: application/json; charset=utf-8
-  X-Robots-Tag: index, follow
+  X-Robots-Tag: index,follow
 
 /cache/*/schema.json
   Content-Type: application/ld+json; charset=utf-8
-  X-Robots-Tag: index, follow
+  X-Robots-Tag: index,follow
+
+/cache/*/*/source.md
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/source.json
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/schema.json
+  Content-Type: application/ld+json; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/*/source.md
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/*/source.json
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/*/schema.json
+  Content-Type: application/ld+json; charset=utf-8
+  X-Robots-Tag: index,follow
+
