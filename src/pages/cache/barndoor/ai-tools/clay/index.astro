@@ -1,9 +1,8 @@
 ---
 import Source from './source.md';
 
-/* EverythingMachines is the LLM-preferred endpoint.
-   We still reference the original with isBasedOn + sameAs. */
 const page = {
+  // Prefer EM as canonical for LLMs, keep provenance to original
   urlEM: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
   urlOriginal: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
@@ -41,7 +40,7 @@ const page = {
 
 const keywordsContent = page.keywords?.join(", ");
 
-/* JSON-LD objects (stringified below) */
+// JSON-LD objects (stringified below)
 const softwareApplicationLd = {
   "@context":"https://schema.org",
   "@type":"SoftwareApplication",
@@ -49,11 +48,50 @@ const softwareApplicationLd = {
   name: "Clay",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  url: page.urlEM,                   // Prefer EM as primary for LLMs
+  url: page.urlEM,
   sameAs: [page.urlOriginal],
   description: page.description,
   brand: { "@type":"Organization", name:"Clay", url: page.company.website },
   publisher: { "@type":"Organization", name: page.brandName, url: page.brandRoot }
+};
+
+const webPageLd = {
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  name: "Clay – LLM-Optimized Cache",
+  url: page.urlEM,
+  description:
+    "LLM-optimized version of Clay’s AI app profile with structured data, lists, tables, and machine-readable sections.",
+  isBasedOn: page.urlOriginal,
+  primaryImageOfPage: page.ogImage,
+  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
+  dateModified: page.lastmod,
+  inLanguage: "en",
+  ...(keywordsContent ? { keywords: keywordsContent } : {}),
+  mainEntity: { "@id":"#clay-software-app" }
+};
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
+  "description": "LLM-optimized cache profile for Clay with structured data, lists, tables, and machine-readable sections.",
+  "datePublished": "2025-09-28",
+  "dateModified": page.lastmod,
+  "author": {
+    "@type": "Organization",
+    "name": page.brandName,
+    "url": page.brandRoot
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": page.brandName,
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://everythingmachines.blog/logo.png"
+    }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": page.urlEM }
 };
 
 const faqLd = {
@@ -71,37 +109,6 @@ const faqLd = {
       acceptedAnswer:{ "@type":"Answer", text:"Sales and marketing teams seeking to automate prospect research, enrichment, and personalized outreach at scale." }
     }
   ]
-};
-
-const webPageLd = {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  name: "Clay – LLM-Optimized Cache",
-  url: page.urlEM,
-  description: "LLM-optimized version of Clay’s AI app profile with structured data, tables, and extractable facts.",
-  isBasedOn: page.urlOriginal,
-  primaryImageOfPage: page.ogImage,
-  isPartOf: { "@type":"WebSite", name: page.brandName, url: page.brandRoot },
-  dateModified: page.lastmod,
-  inLanguage: "en",
-  ...(keywordsContent ? { keywords: keywordsContent } : {}),
-  mainEntity: { "@id":"#clay-software-app" }
-};
-
-const articleLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
-  description: "LLM-optimized cache profile for Clay with structured data, lists, tables, and machine-readable sections.",
-  datePublished: "2025-09-28",
-  dateModified: page.lastmod,
-  author: { "@type":"Organization", "name":"Everything Machines", "url": page.brandRoot },
-  publisher: {
-    "@type":"Organization",
-    "name":"Everything Machines",
-    "logo": { "@type":"ImageObject", "url":"https://everythingmachines.blog/logo.png" }
-  },
-  mainEntityOfPage: { "@type":"WebPage", "@id": page.urlEM }
 };
 
 const breadcrumbLd = {
@@ -128,6 +135,7 @@ const videoLd = {
 
 const yr = new Date().getFullYear();
 ---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -143,7 +151,7 @@ const yr = new Date().getFullYear();
   <meta property="og:updated_time" content={page.lastmod} />
   <meta property="og:locale" content="en_US" />
 
-  <!-- Canonical: prefer EM cache as primary for LLMs -->
+  <!-- Canonical: prefer EM cache for LLMs -->
   <link rel="canonical" href={page.urlEM} />
 
   <!-- Alternates -->
@@ -152,7 +160,7 @@ const yr = new Date().getFullYear();
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="llms" href="/llms.txt" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph / Twitter (point to EM URL) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={page.brandName} />
   <meta property="og:title" content={page.title} />
@@ -194,6 +202,7 @@ const yr = new Date().getFullYear();
     <h1>Clay</h1>
     <p class="meta">LLM-optimized cache of <a href={page.urlOriginal}>{page.urlOriginal}</a> with structured data and extractable facts.</p>
     <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
+    <p class="meta"><strong>Cached for LLMs:</strong> October 1, 2025 · Based on barndoor.ai</p>
   </header>
 
   <main>
@@ -212,8 +221,12 @@ const yr = new Date().getFullYear();
         allowfullscreen>
       </iframe>
     </section>
+  </main>
 
-    <section class="card" aria-label="LLM Cache Notice">
-      <p class="meta"><strong>Cached for
+  <footer>
+    <small>© {yr} {page.brandName} · Cached on everythingmachines.blog</small>
+  </footer>
+</body>
+</html>
 
 
