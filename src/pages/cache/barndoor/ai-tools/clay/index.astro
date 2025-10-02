@@ -2,7 +2,7 @@
 import Source from './source.md';
 
 const page = {
-  // Prefer EM as canonical for LLMs, keep provenance to original
+  // Prefer EM as canonical for LLMs; keep provenance to original
   urlEM: "https://everythingmachines.blog/cache/barndoor/ai-tools/clay/",
   urlOriginal: "https://barndoor.ai/ai-tools/clay/",
   title: "Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI",
@@ -40,7 +40,9 @@ const page = {
 
 const keywordsContent = page.keywords?.join(", ");
 
-// JSON-LD objects (stringified below)
+/* ----------------------------- JSON-LD Objects ----------------------------- */
+
+// SOFTWARE APPLICATION (software entity)
 const softwareApplicationLd = {
   "@context":"https://schema.org",
   "@type":"SoftwareApplication",
@@ -55,6 +57,23 @@ const softwareApplicationLd = {
   publisher: { "@type":"Organization", name: page.brandName, url: page.brandRoot }
 };
 
+// PRODUCT (product view of the same software)
+const productLd = {
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "@id":"#clay-product",
+  name: "Clay",
+  category: "Software",
+  productGroupID: "clay",
+  url: page.urlEM,
+  sameAs: [page.urlOriginal, page.company.website],
+  brand: { "@type":"Brand", name:"Clay", url: page.company.website },
+  isRelatedTo: { "@id":"#clay-software-app" },
+  description: page.description
+  // Add offers/price/aggregateRating later if you have verified data
+};
+
+// WEBPAGE (tie mainEntity to the Product)
 const webPageLd = {
   "@context":"https://schema.org",
   "@type":"WebPage",
@@ -68,9 +87,10 @@ const webPageLd = {
   dateModified: page.lastmod,
   inLanguage: "en",
   ...(keywordsContent ? { keywords: keywordsContent } : {}),
-  mainEntity: { "@id":"#clay-software-app" }
+  mainEntity: { "@id":"#clay-product" }
 };
 
+// ARTICLE (publisher wrapper)
 const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -94,6 +114,7 @@ const articleLd = {
   "mainEntityOfPage": { "@type": "WebPage", "@id": page.urlEM }
 };
 
+// FAQ
 const faqLd = {
   "@context":"https://schema.org",
   "@type":"FAQPage",
@@ -111,6 +132,7 @@ const faqLd = {
   ]
 };
 
+// BREADCRUMBS (use EM paths)
 const breadcrumbLd = {
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
@@ -122,6 +144,7 @@ const breadcrumbLd = {
   ]
 };
 
+// VIDEO
 const videoLd = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
@@ -131,6 +154,32 @@ const videoLd = {
   uploadDate: page.video.uploadDate,
   contentUrl: page.video.url,
   embedUrl: page.video.url
+};
+
+// DATASET (for the comparison table in source.md)
+const datasetLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "#clay-comparison-dataset",
+  "name": "Clay vs. Apollo.io – Feature Comparison",
+  "description": "Structured comparison of Clay and Apollo.io across data sources, AI agents, lead scoring, workflow automation, and pricing model.",
+  "creator": { "@type": "Organization", "name": page.brandName, "url": page.brandRoot },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": page.urlEM,
+  "isBasedOn": page.urlOriginal,
+  "dateModified": page.lastmod,
+  "distribution": [
+    { "@type": "DataDownload", "encodingFormat": "text/html", "contentUrl": page.urlEM },
+    { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": page.urlEM + "source.json" },
+    { "@type": "DataDownload", "encodingFormat": "text/markdown", "contentUrl": page.urlEM + "source.md" }
+  ],
+  "variableMeasured": [
+    { "@type":"PropertyValue","name":"Data Sources","value":"Clay: 130+ APIs; Apollo.io: ~60 APIs" },
+    { "@type":"PropertyValue","name":"AI Research Agents","value":"Clay: Yes; Apollo.io: Limited" },
+    { "@type":"PropertyValue","name":"Lead Scoring","value":"Clay: Advanced AI; Apollo.io: Basic rules-based" },
+    { "@type":"PropertyValue","name":"Workflow Automation","value":"Clay: Full no-code; Apollo.io: Partial" },
+    { "@type":"PropertyValue","name":"Pricing Model","value":"Clay: Credit-based; Apollo.io: Seat-based" }
+  ]
 };
 
 const yr = new Date().getFullYear();
@@ -173,12 +222,14 @@ const yr = new Date().getFullYear();
   <meta name="twitter:image" content={page.ogImage} />
 
   <!-- JSON-LD -->
+  <script type="application/ld+json" is:inline>{JSON.stringify(productLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(softwareApplicationLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(webPageLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(articleLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(breadcrumbLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(videoLd)}</script>
   <script type="application/ld+json" is:inline>{JSON.stringify(faqLd)}</script>
+  <script type="application/ld+json" is:inline>{JSON.stringify(datasetLd)}</script>
 
   <style>
     :root { --maxw: 880px; --fg:#161617; --muted:#5a5a5f; --bg:#f8f9fb; --card:#ffffff; --border:#e6e7eb; }
