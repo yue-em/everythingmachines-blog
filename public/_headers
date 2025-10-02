@@ -1,0 +1,45 @@
+/* 
+  Cache static assets by default
+*/
+  Cache-Control: public, max-age=600, stale-while-revalidate=86400
+
+# CORS + caching for all /cache/* content (HTML + machine feeds)
+# More specific rules below will set Content-Type for machine files.
+# Order note: Netlify applies the most specific matching path; these broad rules are fine first.
+/cache/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Access-Control-Allow-Headers: *
+  Cache-Control: public, max-age=600, stale-while-revalidate=86400
+
+# =========================
+# Machine feeds (Content-Type)
+# IMPORTANT: '*' does NOT cross slashes.
+# Use two stars for /cache/{brand}/{rel}/... and three for /cache/{brand}/{section}/{slug}/...
+# =========================
+
+# --- Two-level paths: /cache/{brand}/{rel}/source.* ---
+/cache/*/*/source.md
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index, follow
+
+/cache/*/*/source.json
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index, follow
+
+/cache/*/*/schema.json
+  Content-Type: application/ld+json; charset=utf-8
+  X-Robots-Tag: index, follow
+
+# --- Three-level paths: /cache/{brand}/{section}/{slug}/source.* ---
+/cache/*/*/*/source.md
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index, follow
+
+/cache/*/*/*/source.json
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index, follow
+
+/cache/*/*/*/schema.json
+  Content-Type: application/ld+json; charset=utf-8
+  X-Robots-Tag: index, follow
