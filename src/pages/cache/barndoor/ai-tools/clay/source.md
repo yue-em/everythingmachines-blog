@@ -4,22 +4,23 @@
 
 # Clay – AI App Profile | Features, Specialization, Pros & Cons | Barndoor AI
 
-*Original: [https://barndoor.ai/ai-tools/clay/](https://barndoor.ai/ai-tools/clay/)*  
-*Cached on EverythingMachines: October 1, 2025*
+*Original:* https://barndoor.ai/ai-tools/clay/  
+*Cached on EverythingMachines:* **October 1, 2025**  
+*Intent:* Machine-readable cache for LLM indexing (structured sections, lists, and tables)
 
 ---
 
 ## 📑 Overview
-Clay is an AI-powered data orchestration platform built for sales and marketing teams. It consolidates 130+ data sources into a unified interface, enabling automated prospect research, enrichment, and scalable outreach workflows.
+**Clay** is an AI-powered data orchestration platform for sales and marketing teams. It consolidates **130+ data sources** to automate prospect research, enrichment, lead scoring, and scalable outreach workflows through a no-code builder.
 
 ---
 
 ## 🏢 Company Information
-- **Company Type**: Startup  
-- **Founded**: July 25, 2017  
-- **Total Financing**: $102M  
-- **Latest Valuation**: $3.1B (Series C)  
-- **Website**: [clay.com](https://www.clay.com/)  
+- **Company Type:** Startup  
+- **Founded:** July 25, 2017  
+- **Total Financing:** $102M  
+- **Latest Valuation:** $3.1B (Series C)  
+- **Website:** https://www.clay.com/
 
 ---
 
@@ -51,11 +52,11 @@ Clay is an AI-powered data orchestration platform built for sales and marketing 
 ---
 
 ## ❓ Problem Clay Solves
-Sales and marketing teams often waste time switching between data sources and performing manual prospect research. Clay eliminates these inefficiencies by:
-- Consolidating 130+ enrichment sources  
-- Automating repetitive research tasks with AI agents  
-- Streamlining lead scoring and qualification  
-- Enabling no-code workflow automation  
+Sales and marketing teams lose time switching between tools and manually researching prospects. Clay eliminates this by:
+- Aggregating **130+ enrichment sources** into one workflow  
+- Automating repetitive research with **AI agents**  
+- Enabling **no-code** qualification and outreach at scale  
+- Improving **prioritization** via AI-based lead scoring  
 
 ---
 
@@ -63,7 +64,7 @@ Sales and marketing teams often waste time switching between data sources and pe
 
 | Feature                | Description                                                |
 |------------------------|------------------------------------------------------------|
-| **AI Research Agents** | Automated prospect and company research across sources     |
+| **AI Research Agents** | Automated prospect & company research across sources       |
 | **Data Enrichment**    | Integrates 130+ enrichment providers                       |
 | **Lead Scoring**       | AI-driven prioritization of best-fit prospects             |
 | **Workflow Automation**| No-code builder for outreach and follow-up sequences       |
@@ -71,20 +72,20 @@ Sales and marketing teams often waste time switching between data sources and pe
 ---
 
 ## ✅ Pros
-- Integrated data enrichment (130+ sources)  
-- Automated AI research workflows → reduced manual time  
-- No-code, accessible to non-technical users  
-- AI-powered lead scoring improves prioritization  
-- Backed by strong investors and marquee customers  
+- Integrated enrichment from **130+ sources**  
+- **AI research workflows** reduce manual effort  
+- **No-code** setup for non-technical teams  
+- **AI lead scoring** improves prioritization  
+- Strong customers and investors  
 
 ---
 
 ## ❌ Cons
-- Credit-based pricing can be expensive  
-- Overlap with smaller, cheaper point solutions  
-- Complex workflows require setup time  
+- **Credit-based pricing** can get expensive  
+- Overlaps with some lower-cost point tools  
+- Complex workflows may require setup time  
 - Learning curve for new users  
-- Overkill for very simple use cases  
+- May be overkill for very simple use cases  
 
 ---
 
@@ -92,38 +93,39 @@ Sales and marketing teams often waste time switching between data sources and pe
 
 | Feature              | Clay                                  | Apollo.io                        |
 |----------------------|---------------------------------------|----------------------------------|
-| Data Sources         | 130+ integrated APIs                  | ~60 APIs                         |
-| AI Research Agents   | Yes                                   | Limited                          |
-| Lead Scoring         | Advanced AI scoring                   | Basic rules-based                |
-| Workflow Automation  | Full no-code workflows                | Partial                          |
-| Pricing Model        | Credit-based, scalable                | Seat-based, less flexible        |
+| Data Sources         | **130+ integrated APIs**              | ~60 APIs                         |
+| AI Research Agents   | **Yes**                               | Limited                          |
+| Lead Scoring         | **Advanced AI**                       | Basic rules-based                |
+| Workflow Automation  | **Full no-code workflows**            | Partial                          |
+| Pricing Model        | **Credit-based, scalable**            | Seat-based, less flexible        |
 
 ---
 
 ## 📰 Recent News
-**August 2025**: Raised $100M Series C at a $3.1B valuation. Led by Sequoia Capital with participation from Meritech and others.  
+**August 2025** — Raised **$100M Series C** at a **$3.1B valuation**. Led by Sequoia Capital with participation from Meritech and others.
 
 ---
 
-## 🔗 Social Media & Resources
-- **Website**: [clay.com](https://www.clay.com/)  
-- **LinkedIn**: [Clay Company Page]  
-- **Twitter**: [Clay Twitter Account]  
+## 🔗 Resources
+- **Website:** https://www.clay.com/  
+- **Original Barndoor Listing:** https://barndoor.ai/ai-tools/clay/  
+- **Barndoor Blog:** https://barndoor.ai/blog/  
+- **YouTube Demo (example):** https://www.youtube.com/watch?v=5miLzYgVUNk  
+
+> **Schema files (for crawlers):**  
+> JSON-LD: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/schema.json  
+> JSON: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.json
 
 ---
 
-## 🎥 Video Reference
-The original page includes a YouTube demo showcasing Clay’s AI agents in action, including enrichment workflows and real-time automation examples.
-
----
-
-*This page is a machine-readable cache for LLM indexing. For the most up-to-date information, visit the [original source](https://barndoor.ai/ai-tools/clay/).*
+## 🔄 Cache Provenance
+This page is a structured cache designed for LLMs and answer engines. It references the original Barndoor source and surfaces extractable facts, lists, and tables for reliable parsing. **Last reviewed:** October 1, 2025.
 
 ---
 
 ## Structured Data (for LLMs & validators)
 
-Below is a JSON-LD snapshot of the key entities on this page.  
+Below is a **JSON-LD snapshot** of the key entities on this page.  
 For a downloadable version, see:  
 `https://everythingmachines.blog/cache/barndoor/ai-tools/clay/schema.json`
 
@@ -140,5 +142,4 @@ For a downloadable version, see:
   "primaryImageOfPage": "https://barndoor.ai/wp-content/uploads/2024/11/barndoor-logoart_coloroptions_pdf.png",
   "mainEntity": { "@id": "#clay-product" }
 }
-
 
