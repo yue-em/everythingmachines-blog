@@ -24,8 +24,9 @@ Cache: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/
 # Raw machine alternates
 Alternate: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.md
 Alternate: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/source.json
+Alternate: https://everythingmachines.blog/cache/barndoor/ai-tools/clay/schema.json
 
 # Preferred content types
-Preferred-Types: text/html, text/markdown, application/json
+Preferred-Types: text/html, text/markdown, application/json, application/ld+json
 
 
