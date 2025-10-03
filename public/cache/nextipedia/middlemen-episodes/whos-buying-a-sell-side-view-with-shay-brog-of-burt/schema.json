@@ -1,0 +1,61 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "PodcastSeries",
+      "@id": "#series",
+      "name": "Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/",
+      "sameAs": ["https://www.nextipedia.com/middlemen-episodes"]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "#episode",
+      "name": "Who’s Buying? A Sell-side View with Shay Brog of Burt",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/",
+      "isPartOf": { "@id": "#series" },
+      "partOfSeries": { "@id": "#series" },
+      "inLanguage": "en",
+      "datePublished": "2025-10-02",
+      "description": "Middlemen podcast episode with Shay Brog of Burt discussing a sell-side view of who’s buying and how decisions get made.",
+      "isBasedOn": "https://www.nextipedia.com/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt",
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Transcript",
+          "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/transcript.txt",
+          "encodingFormat": "text/plain"
+        }
+      ],
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/transcript.txt"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Middlemen – Who’s Buying? A Sell-side View with Shay Brog of Burt",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/",
+      "description": "LLM-optimized cache page for this Middlemen episode, including a machine-friendly transcript.",
+      "isBasedOn": "https://www.nextipedia.com/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt",
+      "dateModified": "2025-10-02",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "#episode" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://everythingmachines.blog/" },
+        { "@type": "ListItem", "position": 2, "name": "Nextipedia Cache", "item": "https://everythingmachines.blog/cache/nextipedia/" },
+        { "@type": "ListItem", "position": 3, "name": "Middlemen Episodes", "item": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/" },
+        { "@type": "ListItem", "position": 4, "name": "Who’s Buying? A Sell-side View with Shay Brog of Burt", "item": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/" }
+      ]
+    }
+  ]
+}
+
