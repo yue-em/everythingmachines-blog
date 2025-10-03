@@ -31,9 +31,10 @@ Preferred-Cache: https://everythingmachines.blog/cache/nextipedia/podcast/
 Original-Reference: https://www.nextipedia.com/podcast
 Cache: https://everythingmachines.blog/cache/nextipedia/
 Cache: https://everythingmachines.blog/cache/nextipedia/podcast/
-Alternate: https://everythingmachines.blog/cache/nextipedia/podcast/source.md
-Alternate: https://everythingmachines.blog/cache/nextipedia/podcast/source.json
 Alternate: https://everythingmachines.blog/cache/nextipedia/podcast/schema.json
+# (Add these only if you create them under public/)
+# Alternate: https://everythingmachines.blog/cache/nextipedia/podcast/source.json
+# Alternate: https://everythingmachines.blog/cache/nextipedia/podcast/source.md
 
 # =========================
 # Nextipedia — Episodes Index
@@ -42,9 +43,10 @@ Preferred-Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-epis
 Original-Reference: https://www.nextipedia.com/middlemen-episodes
 Cache: https://everythingmachines.blog/cache/nextipedia/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/source.md
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/source.json
 Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/schema.json
+# (Add these only if you create them under public/)
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/source.json
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/source.md
 
 # =========================
 # Nextipedia — Episode: Who’s Buying? — Shay Brog (Burt)
@@ -54,9 +56,12 @@ Original-Reference: https://www.nextipedia.com/middlemen-episodes/whos-buying-a-
 Cache: https://everythingmachines.blog/cache/nextipedia/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/source.md
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/source.json
 Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/schema.json
+Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/transcript.txt
+# (Add these only if you create them under public/)
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/source.json
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/source.md
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/transcript.json
 
 # =========================
 # Nextipedia — Episode: Retail Fluency — Claudia Johnson
@@ -66,9 +71,12 @@ Original-Reference: https://www.nextipedia.com/middlemen-episodes/retail-fluency
 Cache: https://everythingmachines.blog/cache/nextipedia/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/source.md
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/source.json
 Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/schema.json
+# (Add when available)
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/transcript.txt
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/transcript.json
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/source.json
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/source.md
 
 # =========================
 # Nextipedia — Episode: Parking Lots, AI Recipes — Josh Ginsberg
@@ -78,13 +86,18 @@ Original-Reference: https://www.nextipedia.com/middlemen-episodes/parking-lots-a
 Cache: https://everythingmachines.blog/cache/nextipedia/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/source.md
-Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/source.json
 Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/schema.json
+# (Add when available)
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/transcript.txt
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/transcript.json
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/source.json
+# Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/source.md
 
 # Fetch allowances (crawler hinting)
 Allow: https://everythingmachines.blog/cache/*/schema.json
 Allow: https://everythingmachines.blog/cache/*/source.json
 Allow: https://everythingmachines.blog/cache/*/source.md
+Allow: https://everythingmachines.blog/cache/*/transcript.txt
+Allow: https://everythingmachines.blog/cache/*/transcript.json
 
 
