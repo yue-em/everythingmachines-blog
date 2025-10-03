@@ -22,7 +22,427 @@ Sell-side perspective on who’s buying, measurement, and the commerce media eco
 ---
 
 ## 🎧 Transcript
-> (Add transcript here later, or link to a downloadable file.)
+**S2 E22 T43 \- Shay Brog \- Burt** 
+
+\[00:00:00\]  
+
+**Introduction and Guest Overview** 
+
+**Tom:** Welcome to the Middleman Podcast. I'm here with Scott Messer, and, uh, today we are gonna be talking to Shay Brog of Burt Intelligence.  
+
+**Scott's Insights on Burt Intelligence** 
+
+**Tom:** Scott, you know, shy better than I do, so tell us about what's 
+
+**Scott:** I do know shy and shy, and I go way back to the Aol five min days, uh, which is a, feels like an eternity ago. And it, it was in some respects of the internet. Uh, and it's great to see his work across the industry and sort of his transition, sort of always on the, the vendor side providing great solutions to publishers. 
+
+**Scott:** Uh, and now he is the c uh, the CEO of Burt. Uh, and he's really, I think, made some incredible strides for that company. Uh, for \[00:01:00\] those of you who don't know what Burt is, it's an advanced analytics platform that helps aggregate publisher or seller reporting to generate deep insights in a comprehensive view of your revenue. 
+
+**Scott:** Um. It's, it's got some really neat bells and whistles, and we'll talk about some of those. They've also used their position, uh, with publishers and sellers to develop some neat tools like competitive benchmarking and a new leads tool that Shay is gonna tell us about. Tom, what did you, what did you, what were sort of some of your highlights from the conversation? 
+
+**Challenges in Ad Forecasting** 
+
+**Tom:** So the big highlight for me was, you know, and this is something that, you know, like my old company Crisp, used Burt way back in the day, and I knew about the problem with discrepancy in third party ad tags, and the difference between using a third party ad server and, your publisher ad server. 
+
+**Tom:** I sort of knew that, but I didn't realize the implication. When it came to thinking about forecasting and the fact that retailers want to be able to forecast to their editorial calendar, uh, or even publishers do when Black Friday comes around, or you know, \[00:02:00\] just generally they, they may not want to just look 30 days in advance. 
+
+**Tom:** And that was a huge thing for me where I was like, oh, the ad server, although it, it is the, the closest source of truth. It may not be the best because of the potential for a system like Burt to bring in more data sources. 
+
+**Scott:** That's right. For those who don't live inside of an ad server, because ad servers typically forecast only on 
+
+**Tom:** We live inside, 
+
+**Scott:** We do live as we're in the middle of ad servers, literally and metaphorically, most often they, um, they only forecast using the last 30 days of data. So if you have a flat and stable business that's sort of repeatable month over month with some small variations, your ad server is gonna do a perfectly good job for you. 
+
+**Scott:** But if you have large seasonal swings like sports, uh, when football starts, or perhaps things like the Super Bowl or major holidays and, and swings that you wanna. Orchestrate around the ad servers. Just simply don't remember that stuff. And that's where you get, uh, old companies like meta \[00:03:00\] markets, if you remember way back. 
+
+**Scott:** And then companies like Burt, who have, uh, built a better forecasting tool into theirs by retaining more historical information for you. And that's a really neat function. Some of the other things that I saw outside of there, just generally is one that.  
+
+**The Complexity of Programmatic Advertising** 
+
+**Scott:** Burt, like many other analytics companies, but is an incredibly important function, is handling all of the third party data connections out towards, the other SSPs and other revenue platforms. 
+
+**Scott:** That's an enormous lift inside of a publisher to do, and it's great to just hand over some credentials and have somebody else making sure that all your ETLs and pipelines are working the way they should be. 
+
+**Tom:** See that that's a, the sort of thing where, you kind of look at programmatic from afar and you're like, oh, it all just sort of works. Uh, you know, is, is what is it about these systems? Why aren't they all sort of contained in a single dashboard? 
+
+**Scott:** Because the, they're, they all come from different companies. Uh, and this is what makes Rev rec really hard At the end of the month, if you have, I think \[00:04:00\] publishers have an average of like 29 SSPs in their stack, or maybe 20, something like that, which means there's 29 individual consoles that you have to log into at the end of every month to pull the actuals out of them. 
+
+**Scott:** Um. 
+
+**Tom:** shouldn't smile about that. I'm laughing 'cause I don't know the pain that, that, you know. 
+
+**Scott:** It is unreal pain and like do not mention Rev to anyone on the sell side, particularly the accounting department. Um, and ands. 
+
+**Scott:** So you can, you get some of that revenue like it through pre-bid and these pieces, into your ad server, but it's never exactly precise. , So you have to do this reconciliation and if you want the most realtime, up-to-date, accurate information, you should pull it from these other platforms. And of course, everything's spelled differently. 
+
+**Scott:** Revenue, revenues, daily revenue. Uh. Profit, they're all like, got these different labels and so there's a tremendous amount of cleaning the data in order to join it first. Uh, and companies that do this on a repeated basis \[00:05:00\] have that advantage of, we know how everything's mapped. We already have the mappings for you. 
+
+**Scott:** We'll just put 'em together. And that's something that a company like Burt does really easily out of the box. And there's a few others that do them as well. Switchboard being one of them. Um. But they all have different flavors.  
+
+**Advanced Reporting and Benchmarking** 
+
+**Scott:** Uh, the neat thing inside Burt, right, I was really impressed with some of the advanced reporting that comes out of the box within the ui, they have really a setup team that helps you craft those reports and gets you using into them. Uh, we already talked about the, the forecasting models that come out of that. Um, and the latest piece, he's got two, which is the aggregated benchmarking and the leads tool. Aggregated benchmarking is really interesting, um, and it's something that's coming more to publishers. And sellers of inventory is like, how much are you getting for certain sizes, certain formats like video and display, mobile versus desktop versus app, um, and giving this transparency to publishers. 
+
+**Scott:** Shay has a really good line in there \[00:06:00\] about, what people are doing with it. And it's the down detector of programmatic. Is it down? 
+
+**Tom:** When he first said that, I thought he was talking about like, you know, it is like Web 2.0 stuff, like is the site down? And I was like, what is he talking about? 
+
+**Scott:** No, it is our revenue down. 
+
+**Tom:** Yeah. 
+
+**Scott:** Of, of the open internet, you can feel the tides go up and down as, as spend comes in and out of the market. And sometimes you wanna know, is it me or is it the market? Um, certainly it's a great answer to your CEO or your boss when they say like, why is revenue down? And you say, well, did you read the news? 
+
+**Scott:** Tariffs are here or something like that. Um, and so it is the market, uh, 'cause if it isn't the market, then you gotta go into your system and figure out where it was. So the, the benchmarking tool's really interesting. Uh, I really enjoyed our conversation that we had about whether retailers use benchmarking in a similar way. 
+
+**Scott:** And I think your answer was no. 
+
+**Tom:** Yeah, the, the thing with \[00:07:00\] retailers is that they've had syndicated data capabilities, you know, like, so the retailers themselves know exactly what's happening in their store. From a transaction perspective. The brands that are coming into the retailer are kind of blind, and so they buy syndicated research from Circana, from Nielsen iq. 
+
+**Tom:** But that type of research doesn't include media and it obviously will soon. Um, but that's a real, , blind spot when it comes to this. And so yeah, like seeing the tides of like, what are the other brand spending at other retailers that ahoy matey there is no, they're not even on the boat . And I think that was a very good, intro of what Shay's gonna be talking about because, these analytics tools can be a little impenetrable if you don't understand , what the inspiration was behind them. So thank you for that. Um. Why don't we get into it? 
+
+**Tom:** It's been a few minutes here, so let's, let's get into the discussion. 
+
+**Scott:** You got it. See you in there. 
+
+  
+
+**Introduction to Shay Brog** 
+
+**Tom:** Today we have Shay Brog from Burt Intelligence. I remember using Burt in my previous company in the Rich Media mobile space a long time \[00:08:00\] ago, but I'll be honest, I didn't know exactly what we were using it for back then. So I'm excited to, uh, talk to you here today. Um, we met at Marketecture Live at the beginning of the year, and it took us a while, but, uh, finally found time to to do a recording. 
+
+**Tom:** So Shay welcome. Tell us about your background. 
+
+**Shay:** Thank you. Really happy to be here.  
+
+**Shay's Career Journey** 
+
+**Shay:** I've been, I've been around the block, mostly working publisher facing, roles. I started my career. As a sales engineer at, a online video company called Five Minutes Media. We then got acquired by Aol was at Aol video for a good chunk of change. Kind of publisher facing, publisher development. I moved to GumGum. Also again, sort of publisher facing role moved on from there to a DSP called Eyeview, started learning a little bit of. Shopper marketing and all of the terminology that you guys tend to use on this \[00:09:00\] podcast. 
+
+**Shay:** Um, very performance oriented DSP, but again, kind of back to my roots in video. I guess in December, 2022, joined. Burt, uh, first is head of revenue, and then since August 23 as CEO. 
+
+**Tom:** So you're someone who you want to go to Burt? What was the, the sort of driving factor for you? 
+
+**Shay:** Yeah, that's a great question. I was in business side and tech side and supply side and demand side, and small startups and large corp. So I, I have kind of done a lot of different things when a recruiter reached out, actually looking to bring me on to Burt, I frankly had never heard of Burt before. Uh, but what I told the recruiter honestly \[00:10:00\] was that, you know, one is I wanted something that was sort of on the supply side, publisher facing. Um, a lot of my career, I'd been like the one supply side pub guy in the room when. Sort of everyone else is very, very focused on, uh, the demand side. 
+
+**Shay:** And I, I think that's very typical for ad tech companies in our industry is, you know, they're typically kind of either oriented around the advertiser success or oriented around publisher success. And so I wanted to be on the publisher success side, and I wanted to be in a company that, that was its focus. 
+
+**Shay:** And then the other piece, and I'm gonna use my favorite euphemism here. Uh, I wanted something that wasn't smoke and mirrors. And, uh, there's a lot of that in our industry as well. Scott is nodding. Um, and so while I hadn't heard of Burt, said, I, \[00:11:00\] I've got name dropped a bunch of Burt's customers. 
+
+**Shay:** At the time, I think it was like. New York Times and Paramount and whatever, and I was just like, oh wait, how have I not heard of these guys? They're incredible. What is that? Um, we must be doing something right. Um, 'cause like, you know, we're a SaaS company, we're charging, you know, fair, fair deal of money and I know that publishers are generally pretty tight on money. 
+
+**Shay:** And so we must be doing something that's really, really valuable. Uh, so that got me really, really interested. And so I kind of. So dived in and learned more. And the more I learned, the more I was like, wow, this, this role is perfect for me. Like, I really, really wanna work at this company actually. 
+
+**Tom:** I think to try to make sure that the audience understands, you know, neither of us knew Whipper was before. Tell us what Bird does and like, what are, what is it known for in terms of products that it offers to publishers? 
+
+**Shay:** Sure. Yeah. 
+
+**Scott:** I, I knew what, I knew what Burt did. 
+
+**Tom:** See, I, I, yeah, I, 
+
+**Scott:** does. 
+
+**Shay:** Yeah. 
+
+**Tom:** trying to go, I'm trying to go slow here \[00:12:00\] because Yeah. I think at some point Scott's gonna have the better questions. 
+
+**Scott:** I think it's still important for us to have this discussion, but, uh, don't lump me in with you in that one. I. 
+
+**Shay:** Fair enough. No, I mean, I, I, I admit, and I think that was part of the opportunity that I saw is like, well, if I don't know who they are. But they're driving this much value. I know I can do a better job at kind of selling, which is what I was, you know, doing as publisher sales. I think Scott, that's probably where we met when you're at Demand Media, uh, and I was at GumGum probably, or maybe 
+
+**Scott:** think it might have been five. I think it goes back to five 
+
+**Shay:** It might have gone even farther back actually, now that, now that I think of it. Right. Demand Media, that's a name I haven't expressed. Been a while. Uh, anyway, so Burt's been around for a while too. Actually. Burt's been around Yeah, since like 2009 or something. But, uh, it's gone through a \[00:13:00\] lot of pivots and changes over the years. 
+
+**Shay:** It was founded in Sweden. Uh, it's still, uh, we still have a very large office in Gothenburg. It's still a big part of our DNA, um, that we're a Swedish company.  
+
+**Burt Intelligence: Products and Services** 
+
+**Shay:** Um, but we've been doing what we're doing now since about 2017, which is that we help digital media companies aggregate and normalize their ad revenue and campaign data into a single source of truth. 
+
+**Shay:** So we will plug in. On our customer's behalf to all of these different vendors in our ecosystem. First party ad servers, third party ad servers, SSPs, DSPs, OMSC, M-S-C-R-M, social. We do love our three letter acronyms. 
+
+**Tom:** I was gonna say he dropped a whole bunch of 'em 
+
+**Shay:** I know, right? Um, it doesn't matter. A whole lot of vendors in our ecosystem. We normalize the data, and like I said to you earlier, that that verb is doing a lot of work that we can just put in a box for a \[00:14:00\] second, but there's a lot of smarts behind that. 
+
+**Shay:** And then we address a lot of different use cases. Um, so we have a reporting solution with a bun, with basically it's a suite of different solutions addressing end of month billing and reconciliation and discrepancies, programmatic pacing, client facing, reporting, automation, all sorts of use cases like that. 
+
+**Shay:** We have an alerting platform. We have a forecasting solution, which is a product that we actually acquired and have brought to market since, and because we work with. You know, the kind of customers that we work with, we end up also having a really powerful aggregate data network. And that data network product, um, has been productized, I guess I should say, in a benchmarking product. 
+
+**Shay:** And our most recent product, uh, a sales intelligence product called leads. 
+
+**Scott:** Let me dig into the first part of that, that on the reporting side, how different is like \[00:15:00\] what. What Burt does versus what anybody can do by just putting Looker or a visualization tool on top of a database. How's it different? 
+
+**Shay:** We get that a lot and you know, we're not really trying to compete with Looker. I don't think that would do us much good. We're really custom built for the digital media business, so we understand this space and we understand how to represent data in this space. And we come right out of the box with, a solution suite that understands that. 
+
+**Shay:** What this vendor calls a paid impression, that vendor calls an ad impression and all of that type of stuff just comes out of the box so you don't have to worry about it and think about it and, you know, train a data engineer and ad tech, uh, parlance. So  
+
+**Scott:** I've done that before and it is not easy 
+
+**Scott:** training. training. Data engineers, 
+
+**Shay:** We also come with a service layer, which I think is really important. So while \[00:16:00\] we are sort of commercial off the shelf SaaS, um, we sell our solution with the Premier Success plan, and we think that's a really important and key part of it. But I think a lot of the publishers really love and appreciate with working publishers, and I should say retail media, commerce media networks really love working with us because it comes with a. 
+
+**Shay:** Solutions engineer, success manager, handholding, customized solution that really addresses your need, that connects you to the last mile so you don't end up with a solution where it's, you know, 95% of the way there. But for this and this and this, you still need to go to some other system, right? We tried to get you back 100%. 
+
+**Scott:** How long does it usually take, like once the data's ingested for the a, a team inside publishers to actually like, use it and leverage it and push on it? Like what's sort of that elu? I, it, it's not how \[00:17:00\] long, it's like what's the evolution that a publisher goes through or, or a retailer goes through using this platform. 
+
+**Shay:** Yeah.  
+
+**Onboarding and Implementation** 
+
+**Shay:** Um, so actually the onboarding, it's funny that you mentioned probably the longest thing that takes in onboarding is actually collecting all of the credentials. Uh, and I know, but yeah, it's a big piece of it. But once we're, once we're all plugged in and we're set up, you know, we try to make sure that folks are seeing value right away. 
+
+**Shay:** So we're actually setting. Our customers up with kind of their first dashboards and use cases and trying to address the need, just kind of based on best practices or maybe what they asked us to provide. Maybe they gave us a sample, Hey, I need a report like this that I'm today making manually, and we're just sort of starting to address that. 
+
+**Shay:** So immediately they're getting something that's, oh, this is already valuable and is saving me time. And then you're right, there is a. Growing evolution of, Hey, what are other folks doing? And kind of trying to \[00:18:00\] discover more that you can do with the data. And now that it's in a tool that's sort of easy to use, you know, you don't need to know sql, right? 
+
+**Shay:** Like you can actually play around with the data in a way that's, we're empowering our customers, like the ad ops, rev ops folks to actually deal with the data directly. And then they start like diving in and really, uh, getting excited with some of that stuff. 
+
+**Scott:** You mentioned you have, aggregated reporting and benchmarking.  
+
+**Benchmarking and Retail Media** 
+
+**Scott:** How does like having benchmarks at, at the fingertips for publishers sort of help them and what sort of decisions or thought processes are they going through while looking at your data? 
+
+**Shay:** Yeah, I mean, we've actually, I think, chatted about this once before, but you know, I, I think it's one of those perennial programmatic questions, right? Am I down or is everyone down? You know?  
+
+**Scott:** This should be a programmatic down detector. 
+
+**Shay:** I, I think especially publishers, you know, we operate in an environment, um, with a lot \[00:19:00\] of information asymmetry, um, and ambiguity. And there's a lot of like trying to read in the tea leaves and trying to understand, what's out there. Maybe you are. Down by 10%, but actually benchmark is down by 15%. So actually you're doing better than market, right? So it's one of those things that's really hard to measure what we do when everything in the space changes based on, you know, tariffs and, and, media budgets it's really hard to own all of that and try and assess even am I doing a good job? 
+
+**Shay:** Even for your own personal understanding, like, am I doing a good job? Is my team doing a good job? And trying to get some sense of what's out there. Um, I've been really trying to push for this. I mean, I can hop on a little, um, soapbox here for a second. 'cause 
+
+**Scott:** No. Well, well hold on. I wanna, I wanna ask Tom a question. 
+
+**Shay:** Yeah, yeah,  
+
+**Scott:** Hold, hold yourself back for a second. When we get into \[00:20:00\] benchmarking, you know, shy brings up a really interesting point of like, are we down? Is it the market down? And this is sort of unique to publishers because we live in such like a, a vast sea of the open market. 
+
+**Scott:** You can actually, you can feel the tide, right? I'm actually near a beach. I got a beach in my background here. So I got tides on my brain right now and you can feel the tide and. You know, it's like, am I swimming with the current against the current? Are we higher in the water? Lower in the water? And benchmarks really help you do that. 
+
+**Scott:** And on the retail side, do you think there's like a, is, is it possible for retailers to really benchmark against themselves? Is there a way to like aggregate their data that makes it interesting? Or is it all just apples and 
+
+**Tom:** I mean it seems like Shay that you're working with retailers and I had a a question just sort of like, when does a retailer even need to do this? Because generally the retailers are going off their own numbers. Right. Like they're, they're, they don't need an understanding of third party numbers, so they're not into your sort of system. 
+
+**Tom:** And \[00:21:00\] if they're not in the system, they may not see the tide. Now, I would imagine that on the trade side of things, they're hearing, um, they're talking to their vendors and the vendors are telling them what's happening and what the tide is. But that's very qualitative. And so it would be interesting to know, um, you know, it, the first question is just when does a retailer decide to work with someone like you? 
+
+**Shay:** So we do address some use cases and we do have, um. You know, starting to have more and more actually recently, which is why we've been chatting, um, retail and commerce media, um, customers. So some of the use cases I mentioned forecasting. That's a piece that's getting a lot of traction. Retailers have seasonality, um, in a way that, you know, kind of similar vein as maybe like a sports league or, you know, other folks like that. 
+
+**Commerce Media and Inventory Forecasting** 
+
+**Shay:** Um, we have some commerce media customers who have annual upfronts. Against their inventory. And so \[00:22:00\] being able to forecast inventory in a more sort of sophisticated manner than what you can do built in with the ad server, uh, is something that's come up a lot. Another use case is, uh, around offsite, 
+
+**Shay:** basically audience extension is a big part of how retailer commerce, uh, media networks are, um, are working today. And so immediately you have to sort of start aggregating that data to try and like, okay, but how is the campaign performing holistically? And maybe I need to deliver, you know, a client facing QBR or, and, wrap deck for the campaign. 
+
+**Shay:** Um. You know, now I need to plug into a bunch of different systems and they don't always speak the same language. And so that, that's where time zones, I mean, you, you kind of know currencies, like the more complex, the more overwhelming the problem is, the more fit Burt is \[00:23:00\] for that type of, uh, problem space. 
+
+**Shay:** So that comes up. That's coming up more and more.  
+
+**Challenges with Non-Endemic Billing** 
+
+**Shay:** But as some, uh, retail and commerce media networks start toying with the idea of non-endemic, um, non-endemic gets billed on third party numbers. So this is the problem that publishers are very familiar with, that I think a lot of retailers may not be familiar with or as familiar with, but you know, in North America. 
+
+**Shay:** Um, most publishers get billed on third party numbers on DCM, on Innovid, on flashtalking, on extreme reach. And so immediately there's a discrepancy reporting issue and you need to reconcile that at the end of the month and keep track of it. And that's something that, you know, as retailers start tiptoeing into, the world of non-endemic, they're gonna see more and more of that. 
+
+**Scott:** Yeah, and it's not even just non-endemic. Um, some of the. Some, some media, some, some \[00:24:00\] verticals like auto actually are like heavily controlled by agency spend.  
+
+**Ad Server Discrepancies and Solutions** 
+
+**Scott:** And so I had a client where, uh, we were installing an ad server for them. We put in a, in one of these, API driven AD servers. And they were like receiving media tags from agencies. 
+
+**Scott:** And this was like a really foreign concept to them because they were just used to, uh, images and click URLs. But now you're getting these like wildly wrapped things. And in 2024, I had to do something that I. Didn't think people still did, which was like, uh, get new macros installed, uh, on your website. 
+
+**Scott:** These were things that digital web publishers did in like 2008, 2012, and like have never ever had to do again because they just live in your site. But now we're talking about all these macros and cache busters things that like didn't exist before, um, and getting like verified for third party media from like very common vendors. 
+
+**Scott:** So that was \[00:25:00\] a, a sort of a big. Uh, speed bump, I would say in their journey to running, uh, media on their websites, but that it caused a challenge for them. And like there, the discrepancy reporting was real. And you know, you have these highly accurate ad servers on your own side, and then you're dealing with a third party ad server who's doing the counting and the billing. 
+
+**Scott:** And then of course you're coordinating with your trafficking team of like, okay, let's pull pacing, let's look at it against the left side and the right side. Um. 
+
+**Tom:** Yeah, and I, I, I think when we were talking earlier, Shay, you work with cars.com and a different problem came up, which was.  
+
+**Seasonal Forecasting in Automotive** 
+
+**Tom:** My thinking was just, oh, okay, you use the ad server for forecasting. Um, but you're saying, you know, if you are looking at something in a longer time horizon, uh, that may not be, you know, sort of the right tool for the job. 
+
+**Shay:** Yeah, this is, um, a lot of automotive folks have this kind of, as Scott mentioned, you know, if you're running annual \[00:26:00\] upfronts, um. Yeah, you're, you're kind of stuck with, if what you need to do is, is forecast what the tools that you have built into the ad server, you're really not gonna get something that you can use there. 
+
+**Shay:** So we end up kind of solving for that problem across a lot of folks. 
+
+**Scott:** Right. So, so most ad servers forecast on like they take the last 30 days and they just sort of regurgitate that back to you as if that was it. But if you have any sort of seasonality in your business, especially things that get really spiky, like auto might be, um, holiday sales, the Super Bowl, you know, all these sort of one off events ad servers can't plan for those. 
+
+**Scott:** I know publishers have done a tremendous amount of work to. Build the tribal knowledge that exists in them. And what was it, meta markets like way back in the day that 
+
+**Tom:** Oh yeah. 
+
+**Shay:** Yeah. 
+
+**Scott:** God, I think my old company was paying like a couple million dollars a year to maintain like seasonal forecasting \[00:27:00\] models. Um, that was bananas. 
+
+**Scott:** But so that, so does that key off of like traffic and impressions and you sort of goes back and it reruns the model. 
+
+**Shay:** yeah, yeah. So we, 
+
+**Scott:** true, then you'll have that forecast. 
+
+**Building Robust Forecasting Tools** 
+
+**Shay:** yeah, so we have , math, olympiads, uh, looking at this problem and, we kind of built a, a robust solution that I guess is more fit for enterprise with all of these different needs around, yeah, a larger look back window where we can take more into account, where we can address, we have a concept of events, um, where you can, Hey, I'm launching a new site. 
+
+**Shay:** I don't have any history for it, but here's my best guess. Or, you know, the seasonality associated with Yeah. I mentioned like sports leagues or, or a lot of publishers and, and retailers have seasonality. It's kind of a common thread. 
+
+**Tom:** Black Friday. Yeah. 
+
+**Shay:** Yeah, yeah. Yeah. I mean, uh, uh, we, we have a customer that Black Friday is a very big \[00:28:00\] deal for them. 
+
+**Shay:** Uh, it's a property that really only sees traffic like. A week and a year. And so yeah, 28 day lookback window really doesn't do anything for them. Yeah, we have a more robust tool I guess that takes into account. We're pulling in log level data from the ad server. Both on the request side and impression side and simulating the users on your site. 
+
+**Shay:** Really. We're kind of building a user strata and then modeling on top of that, and then it's reinforced and learning and improving. 
+
+**Introduction to Product** 
+
+**Tom:** So when you have that system set up and now you're going across many publishers and some retailers and things like that, um, is that where sort of the leads product that you're gonna show us comes from? It's an aggregate look at what's happening across the industry. 
+
+**Shay:** Yeah. Yeah. So it, it started with the benchmarking product where. You know, we have this because we work with the folks that we work with, we end up having a really powerful aggregate data network, I should say. It's all anonymized. Uh, something \[00:29:00\] needs to show up with multiple of our customers before it shows up in the network. 
+
+**Shay:** So no exclusive relationships or exposed through this. Um, and so that's where it kind of started, you know, the, am I down or is everyone down? But then. It became sort of obvious that there's additional questions being asked around, you know, the market as a whole, not just, how I'm doing compared to the market, but like, who's not spending with me, um, and could be spending with me, right? 
+
+**Shay:** And so we kind of dived into it and tried to figure out, all right, what's, what's the right approach here? And it's a real problem. Um. Scott and I probably are old enough to remember that part of the pitch of programmatic to begin with was that it was signal, um, you know, if you start using RTB, you're gonna get signal on who's interested in your properties, on who's interested in your audience.\[00:30:00\]  
+
+**Shay:** Um, I don't think publishers have been very good at actually executing on that and really taking that signal and doing something with it. Uh, it ends up being, here's a list of a thousand advertisers who bought us an open market in the last month. And you send that list into the ether to the sales team and, you know, if even if I, if I were them, I don't know what I would do with it either, you know? 
+
+**Shay:** So we tried to really, you nail it down to like, here's specific opportunities that we think really make sense. So that, that's where leads came from.  
+
+**Sales Intelligence and Opportunities** 
+
+**Shay:** So sales intelligence product where we're taking your data and we're taking the aggregate data and we're laying it on top of each other and we're trying to sift through and find those hidden gems, right? 
+
+**Shay:** Trying to unlock that. Um. Those sort of tailored opportunities to what you are looking for, to what makes sense for you as a publisher or you \[00:31:00\] know, as a media network?  
+
+**Demo of Leads Product** 
+
+**Shay:** Um, I can demo it to you guys. I don't know if everyone's, 
+
+**Tom:** That would be cool. 
+
+**Shay:** yeah, let's 
+
+**Tom:** Yeah, I mean, I think when we were talking about this before, you're like, this is not seller crowd. This is, this is real data. And so I think anybody who's, you know, tried to figure out how to, how to better manage their pipelines on this, I think would, would be interested in having a look. 
+
+**Shay:** Yeah, I mean, seller crowd's great too, by the way. I mean, uh, no, not knocking off there, but it's, it's, these are different, I'd say complimentary solutions. Um, so this is just loading it up here. Can you guys see my screen? I don't really, yeah. 
+
+**Scott:** We can, but remember that we have some listeners who aren't 
+
+**Shay:** Okay. I'll try and describe. 
+
+**Scott:** let's describe this for them. But this is a great opportunity to tune into our video feed here on the middlemen if you so 
+
+**Tom:** Yeah, YouTube or Spotify, you know, apple users, you're just gonna have to use some imagination as we. Do some verbal play by play, so take it away. 
+
+**Shay:** There we go. All right. 
+
+**Shay:** So we're basically looking at a list \[00:32:00\] that is, uh, dynamically, uh, filterable, if that's a word. Um, we have, you know, different leads. They have, you know, different advertisers, different industries, different ad types, audio display, native, um, different opportunities that we recognize and we have like a little, um. 
+
+**Shay:** Tool tip that will describe what the different opportunity types are. So for example, upsell opportunity, we define as an advertiser who's spending an open auction, but who could be converted to some kind of deal id, um, because we're seeing them spending that way elsewhere. Um, you know, we have, um, you know, different. 
+
+**Tom:** So there's real, a real understanding of how they're transacting across other customers. 
+
+**Shay:** Exactly like where are they spending content categories, right? So maybe I only wanna see, uh, advertisers who are spending on news, which \[00:33:00\] as we, unfortunately, as we know, not all of them do. And so you can kind of filter that. Uh, a lot of these filters, again, are dynamic, so the CPM adjusts accordingly and you can kind of see that, um, maybe I. 
+
+**Scott:** go back to the, the opportunity type, right? So we can, we can filter to sort of specific formats, advertisers and these things. But I think what's unique here is the, the opportunity type. What are the opportunity types that you list here and, and what are the different classifications for them? 
+
+**Shay:** Yeah, so I mentioned upsell. Uh, we have a few others. I'm not sure all of them are in the demo account, but we'll see what we get here. Uh, planning is advertisers with seasonal spending patterns. So I mean, the best example, we're recording this in uh, kind of September. Um, apple is gonna come out with a new iPhone as it does pretty much every September. 
+
+**Shay:** And it Yeah, exactly. Um. 
+
+**Scott:** iPhone 14 is, is ready for their announcement tomorrow. 
+
+**Shay:** \[00:34:00\] Exactly. Uh, I'm, I'm with a 13 mini. My hopes are lost. Um, but, um, you know, but if you, so there's  
+
+**Scott:** they're planning, okay, so they're planning. We have upsell. 
+
+**Shay:** yeah. So anyway, if you wanted to be on that, buy you, you needed to reach out in advance. Right. You know, if you reach out when it's already live, that's too late. So. 
+
+**Tom:** How do you know Strategic fit? I just saw that one for Vuori come up. 
+
+**Shay:** Yeah, so strategic fit is what we call advertisers, whose audience and content alignments suggest a strong potential. So we see them basically spending on folks like you, um, which is somewhat similar to Target Opportunity, where it's a top advertiser that invest in inventory similar to yours, but aren't working with you. 
+
+**Shay:** There's. They're coming from different sources, is what I'd say to explain the difference there. There's recapture, there's growing deal. Um, yeah, growing deal is \[00:35:00\] advertisers who have recently shown a drastic increase in spending but are not scaling with you necessarily. So we're kind of trying to identify different opportunities. 
+
+**Shay:** And kind of carve them out. And then each one of these leads, and I'll try and describe what we see here for, uh, for the audio folks, but you can actually kind of open up a little window and you can see the information around the buyer seat. So I just opened up at and t and you can see, you know, hearts and science they're buying through. 
+
+**Shay:** You know, Google Ad Manager through index, through Mite, you can kind of see their CPMs, revenue impressions. This is all deterministic data. You can see them buying direct and open auction and preferred deals and sponsorship and who knows who knew there was still first look deals out there? Um. And then there's a bunch of information about the spend, right? 
+
+**Shay:** They're buying in different sizes of publishers. They're spending across different content categories. You \[00:36:00\] know, in this case they're buying a bunch of display, video, text native, all sorts. And then, I'm not gonna click this just 'cause it's actually gonna show folks' emails, but we actually do have sort of folks at Hearts and Science who, uh, are the people to contact for this opportunity. 
+
+**Shay:** So we do have like a. AI generated sales pitch that you could then just push a button and email, and that's the idea. This is still in the demo environment, but we're launching live pretty 
+
+**Tom:** great. I mean, this really will allow an SDR to go to town and, and know a lot. Um, 
+
+**Tom:** you know,  
+
+**Shay:** Exactly. 
+
+**Tom:** seeing the top buyer by partner I think sounds like a very interesting thing. Um, especially as, you know, in the retail media world. I don't know, um, if you can offer that type of pie chart, but I, I, I think that, you know, just understand like that's, that's where seeing the tide and, and where things are going or whatever. 
+
+**Tom:** I, I think, I think the \[00:37:00\] retail media space is probably not ready for this yet, but 
+
+**Shay:** Yeah.  
+
+**Retail Media Networks and Data Sharing** 
+
+**Shay:** And, and that's, um, that's a good call out that, you know, we're starting to see more folks. Kind of reaching out to Burt and trying to do stuff with us now, because I think there's, um, there's a maturation, is that a word, um, happening. You know, obviously there's folks who are earlier at this game, but we're kind of seeing the, a big cohort, I guess, of retail media networks now maturing to that space. 
+
+**Shay:** Were like, oh. Yeah, we're starting to see these problems. They're starting to be more challenging. We thought we could handle it manually, but we're kind of hitting a brick wall and, you know, outsourcing it and trying 
+
+**Tom:** And you're, you're obviously for those on the video, you're on the other side of that brick wall, so that's That's great. 
+
+**Shay:** yes, authentic New York City Brick Wall, not a Zoom background. Um. Anyway, so yeah, so that's leads. Um, that's Burt and that's kind of \[00:38:00\] where, where the idea came from. 
+
+**Scott:** That's a, that's a great thing there, Shay. It's an interesting component where, um, you know, as you look at retail media, where are the retailers spending their money across different retailers? 
+
+**Shay:** Hmm. 
+
+**Scott:** Um, because if you're a, if you're a CPG, you're in, like how many retail media networks are your products in? 
+
+**Tom:** Yeah, I mean, yeah, I mean, yeah, depending on which one you are. If you have the Unilever's and p and g, you might be in, in all of the grocery and some of the specialty, but you're not in Home Depot, you know, like that. That's what you sort of, you know, you're wired to know sort of where they should be, but it doesn't mean, you know everything. 
+
+**Shay:** Yeah. 
+
+**Scott:** And then it, it becomes a, yeah, it's a network world. When, you know, these retailers are just gonna start wondering whether budgets are going and shifting. I think as the. The retail media network grasp on budgets starts to loosen up right where you can no longer demand that they spend money on you to keep placement like this is gonna start unraveling. 
+
+**Scott:** \[00:39:00\] We've seen this, you know, the publisher direct sales business was the same. Um, it will be really important to understand where these people spending money, how are they spending it? How is it getting through the networks? Um. Tom, we just had this conversation last week with Kiri Masters . 
+
+**Scott:** Understanding how to compete against the walled gardens, which in this case would be like the door dashes and instacarts, the aggregators right? To know how you are doing against the aggregators and how your individual retail medias are doing against those aggregators is gonna be incredibly important. 
+
+**Scott:** And so I don't know if anyone's thinking about that visibility problem yet inside retail and Shay. I think you're right. They're not ready for it because like. These people really don't like sharing data. And it took you a long time to get Yeah. 
+
+**Tom:** you're saying that the publisher world already has the ability to play fantasy football and the retailers can't. not gonna like that. 
+
+**Scott:** Yeah, I think so. But you gotta understand the pain that we went through to get here. \[00:40:00\] I mean, you know, Shay How long did it take to get like. Really good aggregated benchmarking, not from a technical perspective, but from like a publisher's willing to share and realizing like, we don't compete against each other, we compete against other platforms. 
+
+**Shay:** yeah. That, that's my soapbox. 'cause I, I think, you know that me and, uh, Rob Beeler tried to do. Something where basically just, plug in your GAM. I'll give you guys benchmarks, basic for free. You know, we'll figure out the commercials later, but just try and get folks a little bit of data out there. 
+
+**Shay:** And you're right that there. There was this resistance of like, yeah, but I don't want other publishers to know what I'm doing. And even though, you know, I don't play in media, so I'm, I'm the this neutral party in this, I'm not involved and I'm guaranteeing that it's anonymized. I'm not exposing any exclusive relationships or anything like that. 
+
+**Shay:** And there was still hesitation. So before I was in Ad Tech, I spent a little bit of \[00:41:00\] time, uh, in market research. Uh, my dad had a market research firm in pollster, um, firm. And, , one of the things that was very apparent is like, mature industries do this, right? Like, if you buy a washing machine at Costco, that gets reported to like a GFK or something, and then GFK reports, back ranking data to Costco, right? 
+
+**Shay:** That's electrical appliances and that's pharma, and that's, you know, that's, that's everybody. But with media, it's like, there's still this sense that like the other publisher is my competitor. Meanwhile, frankly, you've all shared all of the data with Google who are the real competitor, right? Like they know everything. 
+
+**Shay:** Uh, they're just not sharing. So my sense was like, it feels to me like. The apple and the banana in the grocery store thinking that they compete with \[00:42:00\] each other instead of being like, no, no, no. The grocery store competes with a convenience store down the block. Right. Um, so trying to get folks along that has been, 
+
+**Tom:** Yeah. It's interesting you say that, like the consumer intelligence, uh, business has been. Mature like that for quite some time. But yeah, the media hasn't been plugged in yet and that's why you're seeing companies like Circana and others are doing a lot of soul searching right now and, and adjusting their business accordingly. 
+
+**Tom:** So yeah, really great stuff.  
+
+**Conclusion and Future Updates** 
+
+**Tom:** Um, what we wanted to thank you for this conversation, Shay, and we want to keep up with how leads and the other products are doing over time. So check back in with us. 
+
+**Shay:** Thank you. Thank you so much, Tom. Thank you so much, Scott. Appreciate it. Cheers. Take care. 
 
 ---
 
