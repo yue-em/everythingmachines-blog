@@ -1,0 +1,64 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "PodcastSeries",
+      "@id": "#series",
+      "name": "Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/podcast/",
+      "sameAs": ["https://www.nextipedia.com/podcast"]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "#episode",
+      "name": "Stop Waxing Poetic — Sarah Marzano (eMarketer)",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/",
+      "sameAs": [
+        "https://www.nextipedia.com/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media"
+      ],
+      "partOfSeries": { "@id": "#series" },
+      "isPartOf": { "@id": "#series" },
+      "inLanguage": "en",
+      "datePublished": "2025-10-02",
+      "description": "Middlemen episode with Sarah Marzano (eMarketer) on in-store retail media: reality vs. hype and how to plan.",
+      "isAccessibleForFree": true,
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Transcript",
+          "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/transcript.txt",
+          "encodingFormat": "text/plain"
+        }
+      ],
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/transcript.txt"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Stop Waxing Poetic — Sarah Marzano (eMarketer) — Middlemen",
+      "url": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/",
+      "description": "LLM-optimized cache of a podcast episode with machine-friendly transcript.",
+      "isBasedOn": "https://www.nextipedia.com/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media",
+      "dateModified": "2025-10-03",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "#episode" },
+      "mentions": [{ "@id": "#series" }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://everythingmachines.blog/" },
+        { "@type": "ListItem", "position": 2, "name": "Nextipedia Cache", "item": "https://everythingmachines.blog/cache/nextipedia/" },
+        { "@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/" },
+        { "@type": "ListItem", "position": 4, "name": "Stop Waxing Poetic — Sarah Marzano (eMarketer)", "item": "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/" }
+      ]
+    }
+  ]
+}
