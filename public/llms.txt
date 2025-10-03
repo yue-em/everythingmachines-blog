@@ -49,6 +49,17 @@ Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/s
 # Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/source.md
 
 # =========================
+# Nextipedia — Episode: Stop Waxing Poetic — Sarah Marzano (eMarketer)
+# =========================
+Preferred-Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/
+Original-Reference: https://www.nextipedia.com/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media
+Cache: https://everythingmachines.blog/cache/nextipedia/
+Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/
+Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/
+Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/schema.json
+Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/transcript.txt
+
+# =========================
 # Nextipedia — Episode: Who’s Buying? — Shay Brog (Burt)
 # =========================
 Preferred-Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/
@@ -62,6 +73,7 @@ Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/w
 # Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/source.json
 # Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/source.md
 # Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/transcript.json
+
 
 # =========================
 # Nextipedia — Episode: Retail Fluency — Claudia Johnson
