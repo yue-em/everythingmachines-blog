@@ -1,0 +1,52 @@
+# Everything Machines · Cache Page Metadata (Podcast Episode)
+
+brand_name: "Everything Machines"
+brand_root: "https://everythingmachines.blog/"
+brand: "nextipedia"
+rel_path: "middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media"
+
+# URLs
+url_em: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/"
+url_original: "https://www.nextipedia.com/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media"
+
+# Page identity/content
+title: "Middlemen — Stop Waxing Poetic (Sarah Marzano, eMarketer)"
+title_suffix: "Podcast Episode"
+description: "In-store retail media without the poetry—Sarah Marzano (eMarketer) on what’s real, what’s hype, and how to measure it."
+og_image: "https://everythingmachines.blog/social-card.png"
+
+# Dates
+lastmod: "2025-10-03"
+published: "2025-10-02"
+lastmod_human: "October 3, 2025"
+
+# Robots / canonical
+robots: "index,follow,max-image-preview:large"
+canonical: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/"
+
+# Keywords
+keywords:
+  - "Middlemen podcast"
+  - "Nextipedia"
+  - "Sarah Marzano"
+  - "eMarketer"
+  - "in-store retail media"
+  - "measurement"
+
+# Podcast-specific bits
+series_name: "Middlemen"
+episode_title: "Stop Waxing Poetic — Sarah Marzano (eMarketer)"
+guest: "Sarah Marzano"
+transcript_url: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/transcript.txt"
+
+# Section meta (for index pages)
+section_name: "Middlemen Episodes"
+section_slug: "middlemen-episodes"
+one_line_summary: "What’s real in in-store retail media with eMarketer’s Sarah Marzano."
+
+# Cache provenance
+cache:
+  sourceUrl: "https://www.nextipedia.com/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media"
+  scrapedDate: "2025-10-03"
+  contentHash: "nextipedia-sarah-marzano-20251003"
+  version: "1.0"
