@@ -1,0 +1,47 @@
+---
+const { ai = {}, page = {} } = Astro.props;
+const has = (v) => Array.isArray(v) ? v.length > 0 : v && typeof v === 'object' && Object.keys(v).length > 0;
+---
+
+<section class="card" aria-labelledby="tldr"><h2 id="tldr">TL;DR</h2>
+  {has(ai.tldr) ? <ul>{ai.tldr.map((x) => <li>{x}</li>)}</ul> : <p class="meta">We’ll populate these bullets as transcripts are processed.</p>}
+</section>
+
+<section class="card" aria-labelledby="learn"><h2 id="learn">What you will learn</h2>
+  {has(ai.learn) ? <ul>{ai.learn.map((x) => <li>{x}</li>)}</ul> : null}
+</section>
+
+<section class="card" aria-labelledby="takeaways"><h2 id="takeaways">Key takeaways</h2>
+  {has(ai.takeaways) ? <ul>{ai.takeaways.map((x) => <li set:html={x} />)}</ul> : null}
+</section>
+
+<section class="card" aria-labelledby="numbers"><h2 id="numbers">By the numbers</h2>
+  {has(ai.numbers) ? <ul>{ai.numbers.map((x) => <li>{x}</li>)}</ul> : null}
+</section>
+
+<section class="card" aria-labelledby="quotes"><h2 id="quotes">Quotes</h2>
+  {has(ai.quotes)
+    ? ai.quotes.map((q) => (
+        <figure>
+          <blockquote>“{q.text}”</blockquote>
+          <figcaption>— {q.speaker} {q.time && <time datetime={q.time}>{q.time}</time>}</figcaption>
+        </figure>
+      ))
+    : <p class="meta">Quotes will be added once an official transcript is uploaded.</p>}
+</section>
+
+<section class="card" aria-labelledby="faq"><h2 id="faq">FAQ</h2>
+  {has(ai.faq)
+    ? <dl>
+        {ai.faq.map((f) => (<>
+          <dt>{f.q}</dt><dd>{f.a}</dd>
+        </>))}
+      </dl>
+    : null}
+</section>
+
+<section class="card" aria-labelledby="entities"><h2 id="entities">Entities mentioned</h2>
+  {has(ai.entities)
+    ? <ul>{ai.entities.map((e) => <li>{e.url ? <a href={e.url} rel="noopener">{e.name}</a> : e.name}</li>)}</ul>
+    : null}
+</section>

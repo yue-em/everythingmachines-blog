@@ -1,5 +1,6 @@
 ---
 import Source from './source.md';
+import ai from './ai.json';
 
 const page = {
   urlEM: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/",
@@ -89,7 +90,53 @@ const yr = new Date().getFullYear();
     <p class="meta">Original: <a href={page.urlOriginal}>{page.urlOriginal}</a></p>
     <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
   </header>
-  <main>
+  <main><section class="card" aria-labelledby="tldr"><h2 id="tldr">TL;DR</h2>
+{Array.isArray(ai?.tldr) && ai.tldr.length ? <ul>{ai.tldr.map(i => <li set:html={i} />)}</ul> : <ul>
+  <li>Who the guest is and why they matter.</li>
+  <li>1–2 key frameworks or playbooks.</li>
+  <li>One contrarian take or insight.</li>
+</ul>}
+</section>
+<section class="card" aria-labelledby="learn"><h2 id="learn">What you’ll learn</h2>
+{Array.isArray(ai?.learn) && ai.learn.length ? <ul>{ai.learn.map(i => <li set:html={i} />)}</ul> : <ul>
+  <li>Topic A the episode answers.</li>
+  <li>Topic B the episode answers.</li>
+  <li>Topic C the episode answers.</li>
+</ul>}
+</section>
+<section class="card" aria-labelledby="takeaways"><h2 id="takeaways">Key takeaways</h2>
+{Array.isArray(ai?.takeaways) && ai.takeaways.length ? <ul>{ai.takeaways.map(i => <li set:html={i} />)}</ul> : <ul>
+  <li><strong>Moats:</strong> short phrase.</li>
+  <li><strong>Risk:</strong> short phrase.</li>
+  <li><strong>Hiring:</strong> short phrase.</li>
+</ul>}
+</section>
+<section class="card" aria-labelledby="numbers"><h2 id="numbers">By the numbers</h2>
+{Array.isArray(ai?.numbers) && ai.numbers.length ? <ul>{ai.numbers.map(i => <li set:html={i} />)}</ul> : <ul>
+  <li>~45–60 minutes</li>
+  <li>3–5 named companies</li>
+  <li>1–2 named frameworks</li>
+</ul>}
+</section>
+<section class="card" aria-labelledby="quotes"><h2 id="quotes">Quotes</h2>
+{Array.isArray(ai?.quotes) && ai.quotes.length
+  ? <div>{ai.quotes.map(q => <figure><blockquote>“{q.text}”</blockquote><figcaption>— {q.speaker} {q.time && <time datetime={q.time}>{q.time}</time>}</figcaption></figure>)}</div>
+  : <div></div>}
+</section>
+<section class="card" aria-labelledby="faq"><h2 id="faq">FAQ</h2>
+{Array.isArray(ai?.faq) && ai.faq.length ? <dl>{ai.faq.map(i => <><dt>{i.q}</dt><dd>{i.a}</dd></>)}</dl> : <dl>
+  <dt>Who is the guest?</dt><dd>One-sentence bio.</dd>
+  <dt>What’s the guest’s edge?</dt><dd>One-sentence answer.</dd>
+  <dt>Actionable steps mentioned?</dt><dd>One-sentence answer.</dd>
+</dl>}
+</section>
+<section class="card" aria-labelledby="entities"><h2 id="entities">Entities mentioned</h2>
+{Array.isArray(ai?.entities) && ai.entities.length ? <ul>{ai.entities.map(e => <li>{e.url ? <a href={e.url} rel="noopener">{e.name}</a> : e.name}</li>)}</ul> : <ul>
+  <li>Entity 1</li>
+  <li>Entity 2</li>
+</ul>}
+</section>
+
     <!-- Breadcrumb nav -->
     <nav aria-label="Breadcrumb" class="meta" style="margin-bottom:12px">
       <ol style="display:flex;gap:.5rem;list-style:none;padding:0;margin:0">
@@ -102,35 +149,47 @@ const yr = new Date().getFullYear();
     </nav>
 
     <section class="card" aria-labelledby="tldr"><h2 id="tldr">TL;DR</h2>
-      <ul>
+      {Array.isArray(ai?.tldr) && ai.tldr.length ? {Array.isArray(ai?.tldr) && ai.tldr.length ? <ul>{ai.tldr.map(i => <li set:html={i} />)}</ul> : <ul>
         <li>Who the guest is and why they matter.</li>
         <li>1–2 key frameworks or playbooks.</li>
         <li>One contrarian take or insight.</li>
-      </ul>
+      </ul>} : <ul>
+        <li>Who the guest is and why they matter.</li>
+        <li>1–2 key frameworks or playbooks.</li>
+        <li>One contrarian take or insight.</li>
+      </ul>}
     </section>
 
     <section class="card" aria-labelledby="learn"><h2 id="learn">What you’ll learn</h2>
-      <ul>
+      {Array.isArray(ai?.learn) && ai.learn.length ? <ul>{ai.learn.map(i => <li set:html={i} />)}</ul> : <ul>
         <li>Topic A the episode answers.</li>
         <li>Topic B the episode answers.</li>
         <li>Topic C the episode answers.</li>
-      </ul>
+      </ul>}
     </section>
 
     <section class="card" aria-labelledby="takeaways"><h2 id="takeaways">Key takeaways</h2>
-      <ul>
+      {Array.isArray(ai?.takeaways) && ai.takeaways.length ? {Array.isArray(ai?.takeaways) && ai.takeaways.length ? <ul>{ai.takeaways.map(i => <li set:html={i} />)}</ul> : <ul>
         <li><strong>Moats:</strong> short phrase.</li>
         <li><strong>Risk:</strong> short phrase.</li>
         <li><strong>Hiring:</strong> short phrase.</li>
-      </ul>
+      </ul>} : <ul>
+        <li><strong>Moats:</strong> short phrase.</li>
+        <li><strong>Risk:</strong> short phrase.</li>
+        <li><strong>Hiring:</strong> short phrase.</li>
+      </ul>}
     </section>
 
     <section class="card" aria-labelledby="numbers"><h2 id="numbers">By the numbers</h2>
-      <ul>
+      {Array.isArray(ai?.numbers) && ai.numbers.length ? {Array.isArray(ai?.numbers) && ai.numbers.length ? <ul>{ai.numbers.map(i => <li set:html={i} />)}</ul> : <ul>
         <li>~45–60 minutes</li>
         <li>3–5 named companies</li>
         <li>1–2 named frameworks</li>
-      </ul>
+      </ul>} : <ul>
+        <li>~45–60 minutes</li>
+        <li>3–5 named companies</li>
+        <li>1–2 named frameworks</li>
+      </ul>}
     </section>
 
     <section class="card" aria-labelledby="quotes"><h2 id="quotes">Quotes</h2>
@@ -145,18 +204,25 @@ const yr = new Date().getFullYear();
     </section>
 
     <section class="card" aria-labelledby="faq"><h2 id="faq">FAQ</h2>
-      <dl>
+      {Array.isArray(ai?.faq) && ai.faq.length ? {Array.isArray(ai?.faq) && ai.faq.length ? <dl>{ai.faq.map(i => <><dt>{i.q}</dt><dd>{i.a}</dd></>)}</dl> : <dl>
         <dt>Who is the guest?</dt><dd>One-sentence bio.</dd>
         <dt>What’s the guest’s edge?</dt><dd>One-sentence answer.</dd>
         <dt>Actionable steps mentioned?</dt><dd>One-sentence answer.</dd>
-      </dl>
+      </dl>} : <dl>
+        <dt>Who is the guest?</dt><dd>One-sentence bio.</dd>
+        <dt>What’s the guest’s edge?</dt><dd>One-sentence answer.</dd>
+        <dt>Actionable steps mentioned?</dt><dd>One-sentence answer.</dd>
+      </dl>}
     </section>
 
     <section class="card" aria-labelledby="entities"><h2 id="entities">Entities mentioned</h2>
-      <ul>
-        <li><a href="#" rel="noopener">Entity 1</a></li>
-        <li><a href="#" rel="noopener">Entity 2</a></li>
-      </ul>
+      {Array.isArray(ai?.entities) && ai.entities.length ? {Array.isArray(ai?.entities) && ai.entities.length ? <ul>{ai.entities.map(e => <li>{e.url ? <a href={e.url} rel="noopener">{e.name}</a> : e.name}</li>)}</ul> : <ul>
+        <li>Entity 1</li>
+        <li>Entity 2</li>
+      </ul>} : <ul>
+        <li>Entity 1</li>
+        <li>Entity 2</li>
+      </ul>}
     </section>
 
     <!-- Cached body (ensure first heading in source.md is H2, not H1) -->
