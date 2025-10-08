@@ -1,5 +1,6 @@
 ---
 import Source from './source.md';
+import ai from './ai.json';
 const page = {
   urlEM: "https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
   urlOriginal: "https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
@@ -23,6 +24,7 @@ const keywordsContent = page.keywords?.join(", "); const yr = new Date().getFull
 <link rel="canonical" href={page.urlEM} />
 <link rel="alternate" type="application/json" href="./source.json" />
 <link rel="alternate" type="application/ld+json" href="./schema.json" />
+  <link rel="alternate" type="text/plain" href="./transcript.txt" />
 <link rel="preload" as="fetch" href="./schema.json" crossorigin>
 <link rel="preload" as="fetch" href="./source.json" crossorigin>
 <script type="application/ld+json" is:inline>
@@ -34,8 +36,19 @@ const keywordsContent = page.keywords?.join(", "); const yr = new Date().getFull
 <p class="meta">Original: <a href={page.urlOriginal}>{page.urlOriginal}</a></p>
 <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p></header>
 <main>
-<section class="card" aria-labelledby="overview"><h2 id="overview">Overview</h2><Source /></section>
-<section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2><p class="meta">Upload later as <code>public/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/transcript.txt</code>.</p></section>
-<section class="card" aria-labelledby="resources"><h2 id="resources">Resources</h2><ul><li><a href="./schema.json">schema.json</a></li><li><a href="./source.json">source.json</a></li></ul></section>
+    <!-- AI blocks (component) -->
+    <AIBlocks ai={ai} page={page} />
+
+<section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
+      <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>
+    </section>
+
+    <section class="card" aria-labelledby="resources"><h2 id="resources">Resources</h2>
+      <ul>
+        <li><a href={page.urlOriginal} rel="noopener">Original page</a></li>
+        <li><a href="./schema.json">schema.json</a> • <a href="./source.json">source.json</a></li>
+      </ul>
+    </section>
+
 </main><footer><small>© {yr} {page.brandName}</small></footer>
 </body></html>

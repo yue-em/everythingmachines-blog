@@ -1,5 +1,6 @@
 ---
 import Source from './source.md';
+import ai from './ai.json';
 
 const page = {
   urlEM: "https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/",
@@ -81,17 +82,21 @@ const yr = new Date().getFullYear();
     <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
   </header>
   <main>
-    <section class="card" aria-labelledby="overview"><h2 id="overview">Overview</h2><Source /></section>
-    <section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
-      <p class="meta">Add later by uploading <code>public/cache/somethingventured/episodes/frank-rotman.../transcript.txt</code> and uncomment the <code>link rel="alternate"</code> in &lt;head&gt;.</p>
+    <!-- AI blocks (component) -->
+    <AIBlocks ai={ai} page={page} />
+
+<section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
+      <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>
     </section>
+
     <section class="card" aria-labelledby="resources"><h2 id="resources">Resources</h2>
       <ul>
-        <li><a href="./schema.json">schema.json</a></li>
-        <li><a href="./source.json">source.json</a></li>
+        <li><a href={page.urlOriginal} rel="noopener">Original page</a></li>
+        <li><a href="./schema.json">schema.json</a> • <a href="./source.json">source.json</a></li>
       </ul>
     </section>
-  </main>
+
+</main>
   <footer><small>© {yr} {page.brandName}</small></footer>
 </body>
 </html>

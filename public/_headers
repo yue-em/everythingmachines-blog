@@ -10,10 +10,6 @@
   Access-Control-Allow-Headers: *
   Cache-Control: public, max-age=600, stale-while-revalidate=86400
 
-/cache/*/source.md
-  Content-Type: text/markdown; charset=utf-8
-  X-Robots-Tag: index,follow
-
 /cache/*/source.json
   Content-Type: application/json; charset=utf-8
   X-Robots-Tag: index,follow
@@ -22,7 +18,7 @@
   Content-Type: application/ld+json; charset=utf-8
   X-Robots-Tag: index,follow
 
-/cache/*/*/source.md
+/cache/*/source.md
   Content-Type: text/markdown; charset=utf-8
   X-Robots-Tag: index,follow
 
@@ -34,15 +30,10 @@
   Content-Type: application/ld+json; charset=utf-8
   X-Robots-Tag: index,follow
 
-/cache/*/*/*/source.md
+/cache/*/*/source.md
   Content-Type: text/markdown; charset=utf-8
   X-Robots-Tag: index,follow
 
-/cache/*/*/*/source.json
-  Content-Type: application/json; charset=utf-8
+/cache/*/*/transcript.txt
+  Content-Type: text/plain; charset=utf-8
   X-Robots-Tag: index,follow
-
-/cache/*/*/*/schema.json
-  Content-Type: application/ld+json; charset=utf-8
-  X-Robots-Tag: index,follow
-

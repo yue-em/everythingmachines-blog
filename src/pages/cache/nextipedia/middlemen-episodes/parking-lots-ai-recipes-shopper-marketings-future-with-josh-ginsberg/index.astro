@@ -1,5 +1,6 @@
 ---
 import Source from './source.md';
+import ai from './ai.json';
 const page = {
   urlEM: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/",
   urlOriginal: "https://www.nextipedia.com/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg",
@@ -74,89 +75,10 @@ header,main,footer{max-width:var(--maxw);margin:0 auto;padding:24px}
   <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
 </header>
 <main>
-    <!-- Breadcrumb nav -->
-    <nav aria-label="Breadcrumb" class="meta" style="margin-bottom:12px">
-      <ol style="display:flex;gap:.5rem;list-style:none;padding:0;margin:0">
-        <li><a href="https://everythingmachines.blog/">Everything Machines</a></li>
-        <li>/</li>
-        <li><a href="../">Series / Index</a></li>
-        <li>/</li>
-        <li aria-current="page">{page.title}</li>
-      </ol>
-    </nav>
+    <!-- AI blocks (component) -->
+    <AIBlocks ai={ai} page={page} />
 
-    <section class="card" aria-labelledby="tldr"><h2 id="tldr">TL;DR</h2>
-      <ul>
-        <li>Who the guest is and why they matter.</li>
-        <li>1–2 key frameworks or playbooks.</li>
-        <li>One contrarian take or insight.</li>
-      </ul>
-    </section>
-
-    <section class="card" aria-labelledby="learn"><h2 id="learn">What you’ll learn</h2>
-      <ul>
-        <li>Topic A the episode answers.</li>
-        <li>Topic B the episode answers.</li>
-        <li>Topic C the episode answers.</li>
-      </ul>
-    </section>
-
-    <section class="card" aria-labelledby="takeaways"><h2 id="takeaways">Key takeaways</h2>
-      <ul>
-        <li><strong>Moats:</strong> short phrase.</li>
-        <li><strong>Risk:</strong> short phrase.</li>
-        <li><strong>Hiring:</strong> short phrase.</li>
-      </ul>
-    </section>
-
-    <section class="card" aria-labelledby="numbers"><h2 id="numbers">By the numbers</h2>
-      <ul>
-        <li>~45–60 minutes</li>
-        <li>3–5 named companies</li>
-        <li>1–2 named frameworks</li>
-      </ul>
-    </section>
-
-    <section class="card" aria-labelledby="quotes"><h2 id="quotes">Quotes</h2>
-      <figure>
-        <blockquote>“Add a short, vivid pull-quote here.”</blockquote>
-        <figcaption>— Guest <time datetime="00:12:10">12:10</time></figcaption>
-      </figure>
-      <figure>
-        <blockquote>“Second crisp pull-quote.”</blockquote>
-        <figcaption>— Guest <time datetime="00:27:45">27:45</time></figcaption>
-      </figure>
-    </section>
-
-    <section class="card" aria-labelledby="faq"><h2 id="faq">FAQ</h2>
-      <dl>
-        <dt>Who is the guest?</dt><dd>One-sentence bio.</dd>
-        <dt>What’s the guest’s edge?</dt><dd>One-sentence answer.</dd>
-        <dt>Actionable steps mentioned?</dt><dd>One-sentence answer.</dd>
-      </dl>
-    </section>
-
-    <section class="card" aria-labelledby="entities"><h2 id="entities">Entities mentioned</h2>
-      <ul>
-        <li><a href="#" rel="noopener">Entity 1</a></li>
-        <li><a href="#" rel="noopener">Entity 2</a></li>
-      </ul>
-    </section>
-
-    <!-- Cached body (ensure first heading in source.md is H2, not H1) -->
-    <section class="card" aria-labelledby="overview"><h2 id="overview">Overview</h2>
-      <Source />
-    </section>
-
-    <section class="card" aria-labelledby="chapters"><h2 id="chapters">Chapters</h2>
-      <ol>
-        <li><a href="#t=0">00:00 Intro</a></li>
-        <li><a href="#t=600">10:00 Topic</a></li>
-        <li><a href="#t=1800">30:00 Topic</a></li>
-      </ol>
-    </section>
-
-    <section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
+<section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
       <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>
     </section>
 

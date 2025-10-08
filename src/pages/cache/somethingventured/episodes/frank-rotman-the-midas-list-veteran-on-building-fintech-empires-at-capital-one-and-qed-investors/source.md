@@ -1,7 +1,7 @@
 <!-- Source: https://somethingventured.us/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/ -->
 <!-- Cached on: October 7, 2025 -->
 
-# Frank Rotman — Building Fintech Empires (Capital One, QED)
+## Frank Rotman — Building Fintech Empires (Capital One, QED)
 
 *Original:* https://somethingventured.us/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/
 
