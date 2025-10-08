@@ -1,0 +1,41 @@
+{
+  "tldr": [
+    "Guest: Eric Ries on Lean Startup in an AI-native world.",
+    "Frameworks: build-measure-learn with model loops; hypothesis as prompts.",
+    "Contrarian: 'Ship the model' ≠ value unless it closes a real loop."
+  ],
+  "learn": [
+    "How to adapt MVPs when AI generates behavior.",
+    "Measuring learning when performance drifts.",
+    "Ethics and guardrails as part of product spec."
+  ],
+  "takeaways": [
+    "<strong>Moats:</strong> proprietary data + feedback channels.",
+    "<strong>Risk:</strong> model brittleness and evaluation theater.",
+    "<strong>Hiring:</strong> PMs who can frame testable model hypotheses."
+  ],
+  "numbers": [
+    "~45–60 minutes",
+    "3–5 named companies",
+    "1–2 named frameworks"
+  ],
+  "faq": [
+    {
+      "q": "Who is the guest?",
+      "a": "Eric Ries, author of The Lean Startup."
+    },
+    {
+      "q": "What’s the guest’s edge?",
+      "a": "Operational discipline for learning speed and capital efficiency."
+    },
+    {
+      "q": "Actionable steps mentioned?",
+      "a": "Define success metrics per loop; automate evaluation; retire flaky KPIs."
+    }
+  ],
+  "entities": [
+    {
+      "name": "The Lean Startup"
+    }
+  ]
+}
