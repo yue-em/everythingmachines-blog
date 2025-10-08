@@ -37,8 +37,7 @@ const yr = new Date().getFullYear();
   <!-- Alternates (public files exist) -->
   <link rel="alternate" type="application/json" href="./source.json" />
   <link rel="alternate" type="application/ld+json" href="./schema.json" />
-  <!-- Uncomment after you upload transcript.txt -->
-  <!-- <link rel="alternate" type="text/plain" href="./transcript.txt" /> -->
+  <link rel="alternate" type="text/plain" href="./transcript.txt" />
   <link rel="preload" as="fetch" href="./schema.json" crossorigin>
   <link rel="preload" as="fetch" href="./source.json" crossorigin>
 
@@ -88,6 +87,9 @@ const yr = new Date().getFullYear();
 
 <section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
       <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>
+      <div style="white-space: pre-wrap; max-height: 600px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-top: 12px; font-family: monospace; font-size: 14px; line-height: 1.4; background: #fafafa;">
+        {/* Transcript content will be added here when available */}
+      </div>
     </section>
 
     <section class="card" aria-labelledby="resources"><h2 id="resources">Resources</h2>
