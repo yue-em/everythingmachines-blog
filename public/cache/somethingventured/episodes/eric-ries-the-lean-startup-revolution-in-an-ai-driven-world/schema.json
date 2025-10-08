@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Eric Ries — The Lean Startup Revolution in an AI-Driven World — Something Ventured",
+      "url": "https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
+      "description": "LLM-optimized cache of a Something Ventured podcast episode.",
+      "isBasedOn": "https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
+      "dateModified": "2025-10-07",
+      "inLanguage": "en",
+      "breadcrumb": { "@id": "#breadcrumb" },
+      "mainEntity": { "@id": "#episode" },
+      "mainEntityOfPage": { "@id": "#episode" }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Series","item":"https://everythingmachines.blog/cache/somethingventured/podcast/"},
+        {"@type":"ListItem","position":2,"name":"Eric Ries","item":"https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/"}
+      ]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "#episode",
+      "name": "Eric Ries — The Lean Startup Revolution in an AI-Driven World",
+      "url": "https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
+      "sameAs": ["https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/"],
+      "partOfSeries": { "@type": "PodcastSeries", "name": "Something Ventured", "url": "https://everythingmachines.blog/cache/somethingventured/podcast/" },
+      "description": "Eric Ries on Lean Startup in the AI era.",
+      "isAccessibleForFree": true
+    }
+  ]
+}

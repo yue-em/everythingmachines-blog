@@ -1,0 +1,41 @@
+---
+import Source from './source.md';
+const page = {
+  urlEM: "https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
+  urlOriginal: "https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
+  title: "Eric Ries — The Lean Startup Revolution in an AI-Driven World — Something Ventured",
+  description: "Eric Ries discusses Lean Startup principles in the age of AI.",
+  ogImage: "https://everythingmachines.blog/social-card.png",
+  brandName: "Everything Machines",
+  brandRoot: "https://everythingmachines.blog/",
+  lastmod: "2025-10-07",
+  published: "2025-10-07",
+  robots: "index,follow,max-image-preview:large",
+  keywords: [ "Something Ventured","Eric Ries","Lean Startup","AI" ]
+};
+const keywordsContent = page.keywords?.join(", "); const yr = new Date().getFullYear();
+---
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>{page.title}</title>
+<meta name="description" content={page.description} /><meta name="robots" content={page.robots} />
+{keywordsContent && <meta name="keywords" content={keywordsContent} /> }
+<link rel="canonical" href={page.urlEM} />
+<link rel="alternate" type="application/json" href="./source.json" />
+<link rel="alternate" type="application/ld+json" href="./schema.json" />
+<link rel="preload" as="fetch" href="./schema.json" crossorigin>
+<link rel="preload" as="fetch" href="./source.json" crossorigin>
+<script type="application/ld+json" is:inline>
+{JSON.stringify({"@context":"https://schema.org","@type":"WebPage","@id": page.urlEM+"#page","url":page.urlEM,"name":page.title,"description":"LLM-optimized cache of a podcast episode with machine alternates.","isBasedOn":page.urlOriginal,"datePublished":page.published,"dateModified":page.lastmod,"inLanguage":"en","mainEntity":{"@id":page.urlEM+"#episode"},"mainEntityOfPage":{"@id":page.urlEM+"#episode"}})}
+</script>
+<style>:root{--maxw:880px;--fg:#161617;--muted:#5a5a5f;--bg:#f8f9fb;--border:#e6e7eb}.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:16px 0}body{margin:0;font:16px/1.6 system-ui;background:var(--bg);color:var(--fg)}header,main,footer{max-width:880px;margin:0 auto;padding:24px}.meta{color:var(--muted)}</style>
+</head><body>
+<header><h1>Eric Ries — The Lean Startup Revolution in an AI-Driven World</h1>
+<p class="meta">Original: <a href={page.urlOriginal}>{page.urlOriginal}</a></p>
+<p class="meta"><strong>Last updated:</strong> {page.lastmod}</p></header>
+<main>
+<section class="card" aria-labelledby="overview"><h2 id="overview">Overview</h2><Source /></section>
+<section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2><p class="meta">Upload later as <code>public/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/transcript.txt</code>.</p></section>
+<section class="card" aria-labelledby="resources"><h2 id="resources">Resources</h2><ul><li><a href="./schema.json">schema.json</a></li><li><a href="./source.json">source.json</a></li></ul></section>
+</main><footer><small>© {yr} {page.brandName}</small></footer>
+</body></html>
