@@ -1,7 +1,7 @@
 <!-- Source: https://www.nextipedia.com/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt -->
 <!-- Cached on: October 2, 2025 -->
 
-# Who’s Buying? — with Shay Brog (Burt)
+## Who’s Buying? — with Shay Brog (Burt)
 
 *Original:* https://www.nextipedia.com/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt  
 *Series:* [/cache/nextipedia/podcast/](/cache/nextipedia/podcast/)  

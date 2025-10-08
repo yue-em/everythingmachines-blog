@@ -1,7 +1,7 @@
 <!-- Source: https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/ -->
 <!-- Cached on: October 7, 2025 -->
 
-# Eric Ries — The Lean Startup Revolution in an AI-Driven World
+## Eric Ries — The Lean Startup Revolution in an AI-Driven World
 
 *Original:* https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/
 

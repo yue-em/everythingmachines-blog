@@ -2,7 +2,7 @@
 <!-- Cached on: October 3, 2025 -->
 <!-- Notes: Body-only cache for LLMs; no <head>, scripts, or styling. -->
 
-# Middlemen — Stop Waxing Poetic (Sarah Marzano, eMarketer)
+## Middlemen — Stop Waxing Poetic (Sarah Marzano, eMarketer)
 
 *Original:* https://www.nextipedia.com/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media  
 *Series home:* https://everythingmachines.blog/cache/nextipedia/podcast/  
