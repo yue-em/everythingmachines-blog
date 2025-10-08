@@ -1,6 +1,0 @@
-# Netlify redirects for cache pages
-/cache/barndoor.ai/ai-tools/clay/ /cache/barndoor.ai/ai-tools/clay/index.html 200
-/cache/barndoor.ai/ai-tools/clay /cache/barndoor.ai/ai-tools/clay/index.html 200
-
-# General cache page routing
-/cache/* /cache/:splat/index.html 200
