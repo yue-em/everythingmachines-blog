@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Frank Rotman — Building Fintech Empires — Something Ventured",
+      "url": "https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/",
+      "description": "LLM-optimized cache of a Something Ventured podcast episode.",
+      "isBasedOn": "https://somethingventured.us/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/",
+      "dateModified": "2025-10-07",
+      "inLanguage": "en",
+      "breadcrumb": { "@id": "#breadcrumb" },
+      "mainEntity": { "@id": "#episode" },
+      "mainEntityOfPage": { "@id": "#episode" }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Series","item":"https://everythingmachines.blog/cache/somethingventured/podcast/"},
+        {"@type":"ListItem","position":2,"name":"Frank Rotman","item":"https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/"}
+      ]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "#episode",
+      "name": "Frank Rotman — Building Fintech Empires (Capital One, QED)",
+      "url": "https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/",
+      "sameAs": ["https://somethingventured.us/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/"],
+      "partOfSeries": { "@type": "PodcastSeries", "name": "Something Ventured", "url": "https://everythingmachines.blog/cache/somethingventured/podcast/" },
+      "description": "Frank Rotman on Capital One and QED Investors.",
+      "isAccessibleForFree": true
+    }
+  ]
+}

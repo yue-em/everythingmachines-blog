@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Kobie Fuller — From Track Star to VC Powerhouse — Something Ventured",
+      "url": "https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/",
+      "description": "LLM-optimized cache of a Something Ventured podcast episode.",
+      "isBasedOn": "https://somethingventured.us/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/",
+      "dateModified": "2025-10-07",
+      "inLanguage": "en",
+      "breadcrumb": { "@id": "#breadcrumb" },
+      "mainEntity": { "@id": "#episode" },
+      "mainEntityOfPage": { "@id": "#episode" }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Series","item":"https://everythingmachines.blog/cache/somethingventured/podcast/"},
+        {"@type":"ListItem","position":2,"name":"Kobie Fuller","item":"https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/"}
+      ]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "#episode",
+      "name": "Kobie Fuller — From Track Star to VC Powerhouse (Upfront Ventures)",
+      "url": "https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/",
+      "sameAs": ["https://somethingventured.us/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/"],
+      "partOfSeries": { "@type": "PodcastSeries", "name": "Something Ventured", "url": "https://everythingmachines.blog/cache/somethingventured/podcast/" },
+      "description": "Kobie Fuller on speed, discipline, and investing.",
+      "isAccessibleForFree": true
+    }
+  ]
+}

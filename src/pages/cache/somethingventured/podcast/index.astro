@@ -1,0 +1,117 @@
+---
+import Source from './source.md';
+
+const page = {
+  urlEM: "https://everythingmachines.blog/cache/somethingventured/podcast/",
+  urlOriginal: "https://somethingventured.us/",
+  title: "Something Ventured — Podcast Series (Cache)",
+  description: "LLM-optimized cache of the Something Ventured podcast series with machine alternates and structured data.",
+  ogImage: "https://everythingmachines.blog/social-card.png",
+  brandName: "Everything Machines",
+  brandRoot: "https://everythingmachines.blog/",
+  lastmod: "2025-10-07",
+  published: "2025-10-07",
+  seriesName: "Something Ventured",
+  robots: "index,follow,max-image-preview:large",
+  keywords: [ "Something Ventured","podcast","startups","venture capital","interviews" ]
+};
+const keywordsContent = page.keywords?.join(", ");
+const yr = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{page.title}</title>
+
+  <meta name="description" content={page.description} />
+  <meta name="robots" content={page.robots} />
+  {keywordsContent && <meta name="keywords" content={keywordsContent} />}
+  <meta name="date" content={page.lastmod} />
+  <meta name="ai-priority" content="preferred-cache" />
+  <link rel="canonical" href={page.urlEM} />
+
+  <!-- Alternates (public files exist) -->
+  <link rel="alternate" type="application/json" href="./source.json" />
+  <link rel="alternate" type="application/ld+json" href="./schema.json" />
+  <link rel="preload" as="fetch" href="./schema.json" crossorigin>
+  <link rel="preload" as="fetch" href="./source.json" crossorigin>
+
+  <!-- OG/Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={page.brandName} />
+  <meta property="og:title" content={page.title} />
+  <meta property="og:description" content={page.description} />
+  <meta property="og:url" content={page.urlEM} />
+  <meta property="og:image" content={page.ogImage} />
+  <meta property="og:updated_time" content={page.lastmod} />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={page.title} />
+  <meta name="twitter:description" content={page.description} />
+  <meta name="twitter:image" content={page.ogImage} />
+
+  <!-- Inline JSON-LD: WebPage + PodcastSeries anchor -->
+  <script type="application/ld+json" is:inline>
+  {JSON.stringify({
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id": page.urlEM + "#webpage",
+        "url": page.urlEM,
+        "name": page.title,
+        "description":"LLM-optimized cache with structured data and machine alternates.",
+        "isBasedOn": page.urlOriginal,
+        "inLanguage":"en",
+        "datePublished": page.published,
+        "dateModified": page.lastmod,
+        "breadcrumb": {"@id": page.urlEM + "#breadcrumb"},
+        "mainEntity": {"@id": page.urlEM + "#series"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id": page.urlEM + "#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name": page.brandName,"item": page.brandRoot},
+          {"@type":"ListItem","position":2,"name": page.seriesName,"item": page.urlEM}
+        ]
+      },
+      {
+        "@type":"PodcastSeries",
+        "@id": page.urlEM + "#series",
+        "name": page.seriesName,
+        "url": page.urlEM,
+        "sameAs":[page.urlOriginal],
+        "inLanguage":"en",
+        "description": page.description
+      }
+    ]
+  })}
+  </script>
+
+  <style>
+    :root{--maxw:880px;--fg:#161617;--muted:#5a5a5f;--bg:#f8f9fb;--card:#fff;--border:#e6e7eb}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui}
+    header,main,footer{max-width:var(--maxw);margin:0 auto;padding:24px}
+    .meta{color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{page.seriesName} — Podcast Series</h1>
+    <p class="meta">Original: <a href={page.urlOriginal}>{page.urlOriginal}</a></p>
+    <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p>
+  </header>
+
+  <main>
+    <section class="card"><Source /></section>
+  </main>
+
+  <footer><small>© {yr} {page.brandName}</small></footer>
+</body>
+</html>
