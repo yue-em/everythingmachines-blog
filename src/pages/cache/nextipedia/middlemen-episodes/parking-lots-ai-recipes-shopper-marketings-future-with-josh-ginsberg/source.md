@@ -1,7 +1,7 @@
 <!-- Source: https://www.nextipedia.com/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg -->
 <!-- Cached on: October 2, 2025 -->
 
-# Parking Lots, AI Recipes, Shopper Marketing’s Future — with Josh Ginsberg
+## Parking Lots, AI Recipes, Shopper Marketing’s Future — with Josh Ginsberg
 
 *Original:* https://www.nextipedia.com/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg  
 *Series:* [/cache/nextipedia/podcast/](/cache/nextipedia/podcast/)  

@@ -1,7 +1,7 @@
 <!-- Source: https://www.nextipedia.com/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network -->
 <!-- Cached on: October 2, 2025 -->
 
-# Retail Fluency — Claudia Johnson — Flywheel Commerce Network
+## Retail Fluency — Claudia Johnson — Flywheel Commerce Network
 
 *Original:* https://www.nextipedia.com/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network  
 *Series:* [/cache/nextipedia/podcast/](/cache/nextipedia/podcast/)  
