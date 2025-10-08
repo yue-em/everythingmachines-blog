@@ -1,6 +1,5 @@
 ---
 import Source from './source.md';
-import ai from './ai.json';
 const page = {
   urlEM: "https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/",
   urlOriginal: "https://somethingventured.us/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/",
@@ -23,7 +22,6 @@ const page = {
 <link rel="canonical" href={page.urlEM} />
 <link rel="alternate" type="application/json" href="./source.json" />
 <link rel="alternate" type="application/ld+json" href="./schema.json" />
-  <link rel="alternate" type="text/plain" href="./transcript.txt" />
 <link rel="preload" as="fetch" href="./schema.json" crossorigin>
 <link rel="preload" as="fetch" href="./source.json" crossorigin>
 <script type="application/ld+json" is:inline>
@@ -35,98 +33,8 @@ const page = {
 <p class="meta">Original: <a href={page.urlOriginal}>{page.urlOriginal}</a></p>
 <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p></header>
 <main>
-    <!-- Breadcrumb nav -->
-    <nav aria-label="Breadcrumb" class="meta" style="margin-bottom:12px">
-      <ol style="display:flex;gap:.5rem;list-style:none;padding:0;margin:0">
-        <li><a href="https://everythingmachines.blog/">Everything Machines</a></li>
-        <li>/</li>
-        <li><a href="../">Series / Index</a></li>
-        <li>/</li>
-        <li aria-current="page">{page.title}</li>
-      </ol>
-    </nav>
-
-    <section class="card" aria-labelledby="tldr"><h2 id="tldr">TL;DR</h2>
-      {Array.isArray(ai?.tldr) && ai.tldr.length ? <ul>{ai.tldr.map(i => <li set:html={i} />)}</ul> : <ul>
-        <li>Who the guest is and why they matter.</li>
-        <li>1–2 key frameworks or playbooks.</li>
-        <li>One contrarian take or insight.</li>
-      </ul>}
-    </section>
-
-    <section class="card" aria-labelledby="learn"><h2 id="learn">What you’ll learn</h2>
-      {Array.isArray(ai?.learn) && ai.learn.length ? <ul>{ai.learn.map(i => <li set:html={i} />)}</ul> : <ul>
-        <li>Topic A the episode answers.</li>
-        <li>Topic B the episode answers.</li>
-        <li>Topic C the episode answers.</li>
-      </ul>}
-    </section>
-
-    <section class="card" aria-labelledby="takeaways"><h2 id="takeaways">Key takeaways</h2>
-      {Array.isArray(ai?.takeaways) && ai.takeaways.length ? <ul>{ai.takeaways.map(i => <li set:html={i} />)}</ul> : <ul>
-        <li><strong>Moats:</strong> short phrase.</li>
-        <li><strong>Risk:</strong> short phrase.</li>
-        <li><strong>Hiring:</strong> short phrase.</li>
-      </ul>}
-    </section>
-
-    <section class="card" aria-labelledby="numbers"><h2 id="numbers">By the numbers</h2>
-      {Array.isArray(ai?.numbers) && ai.numbers.length ? <ul>{ai.numbers.map(i => <li set:html={i} />)}</ul> : <ul>
-        <li>~45–60 minutes</li>
-        <li>3–5 named companies</li>
-        <li>1–2 named frameworks</li>
-      </ul>}
-    </section>
-
-    <section class="card" aria-labelledby="quotes"><h2 id="quotes">Quotes</h2>
-      <figure>
-        <blockquote>“Add a short, vivid pull-quote here.”</blockquote>
-        <figcaption>— Guest <time datetime="00:12:10">12:10</time></figcaption>
-      </figure>
-      <figure>
-        <blockquote>“Second crisp pull-quote.”</blockquote>
-        <figcaption>— Guest <time datetime="00:27:45">27:45</time></figcaption>
-      </figure>
-    </section>
-
-    <section class="card" aria-labelledby="faq"><h2 id="faq">FAQ</h2>
-      {Array.isArray(ai?.faq) && ai.faq.length ? <dl>{ai.faq.map(i => <><dt>{i.q}</dt><dd>{i.a}</dd></>)}</dl> : <dl>
-        <dt>Who is the guest?</dt><dd>One-sentence bio.</dd>
-        <dt>What’s the guest’s edge?</dt><dd>One-sentence answer.</dd>
-        <dt>Actionable steps mentioned?</dt><dd>One-sentence answer.</dd>
-      </dl>}
-    </section>
-
-    <section class="card" aria-labelledby="entities"><h2 id="entities">Entities mentioned</h2>
-      {Array.isArray(ai?.entities) && ai.entities.length ? <ul>{ai.entities.map(e => <li>{e.url ? <a href={e.url} rel="noopener">{e.name}</a> : e.name}</li>)}</ul> : <ul>
-        <li>Entity 1</li>
-        <li>Entity 2</li>
-      </ul>}
-    </section>
-
-    <!-- Cached body (ensure first heading in source.md is H2, not H1) -->
-    <section class="card" aria-labelledby="overview"><h2 id="overview">Overview</h2>
-      <Source />
-    </section>
-
-    <section class="card" aria-labelledby="chapters"><h2 id="chapters">Chapters</h2>
-      <ol>
-        <li><a href="#t=0">00:00 Intro</a></li>
-        <li><a href="#t=600">10:00 Topic</a></li>
-        <li><a href="#t=1800">30:00 Topic</a></li>
-      </ol>
-    </section>
-
-    <section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
-      <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>
-    </section>
-
-    <section class="card" aria-labelledby="resources"><h2 id="resources">Resources</h2>
-      <ul>
-        <li><a href={page.urlOriginal} rel="noopener">Original page</a></li>
-        <li><a href="./schema.json">schema.json</a> • <a href="./source.json">source.json</a></li>
-      </ul>
-    </section>
-
+<section class="card" aria-labelledby="overview"><h2 id="overview">Overview</h2><Source /></section>
+<section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2><p class="meta">Upload later as <code>public/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/transcript.txt</code>.</p></section>
+<section class="card" aria-labelledby="resources"><h2 id="resources">Resources</h2><ul><li><a href="./schema.json">schema.json</a></li><li><a href="./source.json">source.json</a></li></ul></section>
 </main><footer><small>© {yr} {page.brandName}</small></footer>
 </body></html>
