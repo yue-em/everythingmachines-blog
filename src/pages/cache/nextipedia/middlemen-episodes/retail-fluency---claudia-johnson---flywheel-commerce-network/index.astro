@@ -1,6 +1,7 @@
 ---
 import Source from './source.md';
 import ai from './ai.json';
+import AIBlocks from '../../../../../components/AIBlocks.astro';
 const page = {
   urlEM: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network/",
   urlOriginal: "https://www.nextipedia.com/middlemen-episodes/retail-fluency---claudia-johnson---flywheel-commerce-network",
@@ -76,7 +77,7 @@ header,main,footer{max-width:var(--maxw);margin:0 auto;padding:24px}
 </header>
 <main>
     <!-- AI blocks (component) -->
-    <AIBlocks ai={ai} page={page} />
+    <AIBlocks ai={ai} />
 
 <section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
       <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>

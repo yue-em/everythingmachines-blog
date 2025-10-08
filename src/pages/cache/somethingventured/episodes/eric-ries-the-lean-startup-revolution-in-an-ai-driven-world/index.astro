@@ -1,6 +1,7 @@
 ---
 import Source from './source.md';
 import ai from './ai.json';
+import AIBlocks from '../../../../../components/AIBlocks.astro';
 const page = {
   urlEM: "https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
   urlOriginal: "https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/",
@@ -37,7 +38,7 @@ const keywordsContent = page.keywords?.join(", "); const yr = new Date().getFull
 <p class="meta"><strong>Last updated:</strong> {page.lastmod}</p></header>
 <main>
     <!-- AI blocks (component) -->
-    <AIBlocks ai={ai} page={page} />
+    <AIBlocks ai={ai} />
 
 <section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
       <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>

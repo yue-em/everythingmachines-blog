@@ -1,6 +1,7 @@
 ---
 import Source from './source.md';
 import ai from './ai.json';
+import AIBlocks from '../../../../../components/AIBlocks.astro';
 
 const page = {
   urlEM: "https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/whos-buying-a-sell-side-view-with-shay-brog-of-burt/",
@@ -92,7 +93,7 @@ const yr = new Date().getFullYear();
   </header>
   <main>
     <!-- AI blocks (component) -->
-    <AIBlocks ai={ai} page={page} />
+    <AIBlocks ai={ai} />
 
 <section class="card" aria-labelledby="transcript"><h2 id="transcript">Transcript</h2>
       <p class="meta">Download (when available): <a href="./transcript.txt" rel="noopener">./transcript.txt</a></p>

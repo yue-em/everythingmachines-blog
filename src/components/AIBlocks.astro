@@ -10,9 +10,8 @@ type Ai = {
   quotes?: Quote[]; faq?: QA[]; entities?: Entity[];
 };
 
-const { ai = {}, page = {} } = Astro.props as {
+const { ai = {} } = Astro.props as {
   ai?: Ai;
-  page?: Record<string, unknown>;
 };
 
 const has = (v: unknown): boolean =>
