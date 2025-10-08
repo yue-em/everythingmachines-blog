@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "PodcastSeries", "@id": "#series", "name": "Something Ventured", "url": "https://everythingmachines.blog/cache/somethingventured/podcast/", "sameAs": ["https://somethingventured.us/podcast"] },
+    {
+      "@type": "ItemList",
+      "@id": "#episodes",
+      "name": "Episodes",
+      "itemListOrder": "http://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type":"ListItem","position":1,"name":"Frank Rotman — Building Fintech Empires (Capital One, QED)","url":"https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/" },
+        { "@type":"ListItem","position":2,"name":"Eric Ries — The Lean Startup Revolution in an AI-Driven World","url":"https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/" },
+        { "@type":"ListItem","position":3,"name":"Kobie Fuller — From Track Star to VC Powerhouse (Upfront Ventures)","url":"https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#page",
+      "name": "Something Ventured — Episodes",
+      "url": "https://everythingmachines.blog/cache/somethingventured/episodes/",
+      "description": "LLM-optimized episodes index for a podcast series.",
+      "isBasedOn": "https://somethingventured.us/episodes",
+      "dateModified": "2025-10-07",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "#episodes" },
+      "mentions": [{ "@id": "#series" }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumbs",
+      "itemListElement": [
+        { "@type":"ListItem","position":1,"name":"Podcast","item":"https://everythingmachines.blog/cache/somethingventured/podcast/" },
+        { "@type":"ListItem","position":2,"name":"Episodes","item":"https://everythingmachines.blog/cache/somethingventured/episodes/" }
+      ]
+    }
+  ]
+}

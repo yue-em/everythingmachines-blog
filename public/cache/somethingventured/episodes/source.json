@@ -1,0 +1,16 @@
+{
+  "page_url": "https://everythingmachines.blog/cache/somethingventured/episodes/",
+  "is_based_on": "https://somethingventured.us/episodes",
+  "title": "Something Ventured — Episodes",
+  "description": "Episodes index for Something Ventured podcast.",
+  "lastmod": "2025-10-07",
+  "og_image": "https://somethingventured.us/social-card.png",
+  "keywords": ["Something Ventured podcast","episodes index","venture capital","startups"],
+  "series_url": "https://everythingmachines.blog/cache/somethingventured/podcast/",
+  "episodes": [
+    { "title": "Frank Rotman — Building Fintech Empires (Capital One, QED)", "url": "https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/" },
+    { "title": "Eric Ries — The Lean Startup Revolution in an AI-Driven World", "url": "https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/" },
+    { "title": "Kobie Fuller — From Track Star to VC Powerhouse (Upfront Ventures)", "url": "https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/" }
+  ],
+  "sections": ["overview","episodes","resources"]
+}

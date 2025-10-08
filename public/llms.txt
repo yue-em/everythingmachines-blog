@@ -3,7 +3,7 @@
 
 Site: https://everythingmachines.blog
 Sitemap: https://everythingmachines.blog/sitemap.xml
-Last-Modified: 2025-10-02
+Last-Modified: 2025-10-08
 
 # Preferred content types
 Preferred-Types: text/html, text/markdown, application/json, application/ld+json, text/plain
@@ -57,6 +57,7 @@ Cache: https://everythingmachines.blog/cache/nextipedia/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/
 Cache: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/
 Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/schema.json
+Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/source.json
 Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/stop-waxing-poetic-sarah-marzano-of-emarketer-on-in-store-retail-media/transcript.txt
 
 # =========================
@@ -104,6 +105,62 @@ Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/p
 # Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/transcript.json
 # Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/source.json
 # Alternate: https://everythingmachines.blog/cache/nextipedia/middlemen-episodes/parking-lots-ai-recipes-shopper-marketings-future-with-josh-ginsberg/source.md
+
+# =========================
+# Something Ventured — Podcast Series
+# =========================
+Preferred-Cache: https://everythingmachines.blog/cache/somethingventured/podcast/
+Original-Reference: https://somethingventured.us/podcast
+Cache: https://everythingmachines.blog/cache/somethingventured/
+Cache: https://everythingmachines.blog/cache/somethingventured/podcast/
+Alternate: https://everythingmachines.blog/cache/somethingventured/podcast/schema.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/podcast/source.json
+
+# =========================
+# Something Ventured — Episodes Index
+# =========================
+Preferred-Cache: https://everythingmachines.blog/cache/somethingventured/episodes/
+Original-Reference: https://somethingventured.us/episodes
+Cache: https://everythingmachines.blog/cache/somethingventured/
+Cache: https://everythingmachines.blog/cache/somethingventured/episodes/
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/schema.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/source.json
+
+# =========================
+# Something Ventured — Episode: Frank Rotman — Building Fintech Empires
+# =========================
+Preferred-Cache: https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/
+Original-Reference: https://somethingventured.us/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/
+Cache: https://everythingmachines.blog/cache/somethingventured/
+Cache: https://everythingmachines.blog/cache/somethingventured/episodes/
+Cache: https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/schema.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/source.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/frank-rotman-the-midas-list-veteran-on-building-fintech-empires-at-capital-one-and-qed-investors/transcript.txt
+
+# =========================
+# Something Ventured — Episode: Eric Ries — The Lean Startup Revolution
+# =========================
+Preferred-Cache: https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/
+Original-Reference: https://somethingventured.us/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/
+Cache: https://everythingmachines.blog/cache/somethingventured/
+Cache: https://everythingmachines.blog/cache/somethingventured/episodes/
+Cache: https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/schema.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/source.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/eric-ries-the-lean-startup-revolution-in-an-ai-driven-world/transcript.txt
+
+# =========================
+# Something Ventured — Episode: Kobie Fuller — From Track Star to VC Powerhouse
+# =========================
+Preferred-Cache: https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/
+Original-Reference: https://somethingventured.us/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/
+Cache: https://everythingmachines.blog/cache/somethingventured/
+Cache: https://everythingmachines.blog/cache/somethingventured/episodes/
+Cache: https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/schema.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/source.json
+Alternate: https://everythingmachines.blog/cache/somethingventured/episodes/kobie-fuller-upfront-ventures-partners-high-speed-sprint-from-track-star-to-venture-capital-powerhouse/transcript.txt
 
 # Fetch allowances (crawler hinting)
 Allow: https://everythingmachines.blog/cache/*/schema.json
