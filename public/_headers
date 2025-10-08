@@ -37,3 +37,20 @@
 /cache/*/*/transcript.txt
   Content-Type: text/plain; charset=utf-8
   X-Robots-Tag: index,follow
+
+# three-level (brand/section/slug)
+/cache/*/*/*/schema.json
+  Content-Type: application/ld+json; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/*/source.json
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/*/source.md
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index,follow
+
+/cache/*/*/*/transcript.txt
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: index,follow
